@@ -30,7 +30,6 @@ from recommonmark.parser import CommonMarkParser
 # ones.
 extensions = [
     'recommonmark',
-    'sphinx_markdown_tables',
 ]
 
 source_parsers = {
