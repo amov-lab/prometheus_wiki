@@ -69,3 +69,12 @@ amovlab 文档
    联系我们 <docs/common/联系我们>
    社区论坛 <docs/common/社区论坛>
    致谢 <docs/common/致谢>
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: 测试专用
+
+   RST语法 <docs/test/RST语法>
+   
+
