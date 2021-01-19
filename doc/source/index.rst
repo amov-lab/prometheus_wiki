@@ -25,7 +25,7 @@ amovlab 文档
    硬件介绍 <docs/p450/1-硬件介绍>
    软件介绍 <docs/p450/2-软件介绍>
    首次飞行 <docs/p450/3-首次飞行>
-   常见问题处理 <docs/p450/4-常见问题处理>
+   常见问题处理 <docs/p450/4-常见问题处理md>
    进阶功能-室内指点飞行 <docs/p450/5-进阶功能-室内指点飞行md>
    进阶功能-室内自主跟踪 <docs/p450/5-进阶功能-室内自主跟踪md>
    进阶功能-室内自主降落 <docs/p450/5-进阶功能-室内自主降落md>
@@ -69,12 +69,3 @@ amovlab 文档
    联系我们 <docs/common/联系我们>
    社区论坛 <docs/common/社区论坛>
    致谢 <docs/common/致谢>
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: 测试专用
-
-   RST语法 <docs/test/RST语法>
-   
-
