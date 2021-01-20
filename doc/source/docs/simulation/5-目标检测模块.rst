@@ -1,4 +1,122 @@
 目标检测模块
 ==========================
 
+自主降落(静止目标)
+-------------
 
+.. image:: ../../images/p450/simulation/estimator.jpg
+   :height: 509px
+   :width: 1333px
+   :scale: 50 %
+   :alt: None
+   :align: center
+
+.. attention::
+    估计器参数PX4_ESTIMATOR默认是ekf2_vision，估计器参数选择可选ekf2_vision和ekf2_gps，ekf2_gps 使用GPS作为定位来源，ekf2_vision 使用外部输入（gazebo真值、slam等）作为定位来源
+
+1.室内仿真
+>>>>>>>>>>>>
+
+.. attention::
+    此场景下的估计器参数PX4_ESTIMATOR是ekf2_vision，ekf2_vision 使用外部输入（gazebo真值、slam等）作为定位来源
+
+
+
+在终端输入以下命令
+
+``roslaunch prometheus_gazebo sitl_landing_static_target.launch``
+
+
+
+.. image:: ../../images/p450/simulation/1sitl_landing_static_target.png
+   :height: 720px
+   :width: 1280px
+   :scale: 50 %
+   :alt: None
+   :align: center
+
+.. important::
+     应用启动后如上图所示，其中被蓝框圈中的是控制终端。根据提示，输入1选择继续
+
+.. image:: ../../images/p450/simulation/2sitl_landing_static_target.png
+   :height: 720px
+   :width: 1280px
+   :scale: 50 %
+   :alt: None
+   :align: center
+
+.. important::
+    输入1后如上图所示，其中被蓝框圈中的是显示的无人机位置信息等。
+
+
+演示视频
+>>>>>>>>>>>>
+
+
+
+2.室外仿真
+>>>>>>>>>>>>
+.. attention::
+    此场景下的估计器参数PX4_ESTIMATOR是ekf2_gps，ekf2_gps 使用GPS作为定位来源
+.. attention::
+    控制方式与室内仿真一样
+
+
+演示视频
+>>>>>>>>>>>>
+
+
+圆形识别与圆形穿越
+--------------------
+
+.. image:: ../../images/p450/simulation/estimator.jpg
+   :height: 509px
+   :width: 1333px
+   :scale: 50 %
+   :alt: None
+   :align: center
+
+.. attention::
+    估计器参数PX4_ESTIMATOR默认是ekf2_vision，估计器参数选择可选ekf2_vision和ekf2_gps，ekf2_gps 使用GPS作为定位来源，ekf2_vision 使用外部输入（gazebo真值、slam等）作为定位来源
+
+1.室内仿真
+>>>>>>>>>>>>
+
+.. attention::
+    此场景下的估计器参数PX4_ESTIMATOR是ekf2_vision，ekf2_vision 使用外部输入（gazebo真值、slam等）作为定位来源
+
+
+在终端输入以下命令
+
+``roslaunch prometheus_gazebo sitl_circle_crossing.launch``
+
+.. image:: ../../images/p450/simulation/1sitl_circle_crossing.png
+   :height: 720px
+   :width: 1280px
+   :scale: 50 %
+   :alt: None
+   :align: center
+
+.. tip::
+     应用启动后如上图所示，其中被蓝框圈中的是控制终端。根据提示，输入1选择开始
+
+
+
+
+
+
+
+演示视频
+>>>>>>>>>>>>
+
+
+2.室外仿真
+>>>>>>>>>>>>
+.. attention::
+    此场景下的估计器参数PX4_ESTIMATOR是ekf2_gps，ekf2_gps 使用GPS作为定位来源
+.. attention::
+    控制方式与室内仿真一样
+
+
+演示视频
+>>>>>>>>>>>>
