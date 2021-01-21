@@ -1,8 +1,8 @@
-﻿# 基于prometheus的室内自主降落
+﻿# 进阶功能-室外自主降落
 ##  硬件
 P200/P300无人机
 TX2
-T265
+GPS
 单目相机
 购买链接：[购买链接](https://item.taobao.com/item.htm?_u=g5bpko475d4&id=605447137649)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201203141459431.png)也可以用其他相机包括D435i
@@ -13,7 +13,6 @@ T265
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201203141342800.png)
 ##  软件
 prometheus
-T265驱动librealsense及对应ROS功能包
 单目摄像头驱动及对应ROS功能包
 
 
@@ -21,9 +20,7 @@ T265驱动librealsense及对应ROS功能包
 下面是标定板样张，注意打印出来粘在硬纸板上，一定要保证整个图片在一个平面上，否则会影响标定效果。标定效果好坏会直接影响到后面摄像头对二维码位置的估计进而影响到二维码降落，所以重视标定过程。
 棋盘格标定板下载地址：[Chessboard](http://jario.ren/images/2005/qipangebiaoding.jpg)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201203141922533.jpg)首先启动相机节点，如下命令启动相机ID=0<br/>
-```
-roslaunch prometheus_detection web_cam0.launch  
-```
+roslaunch prometheus_detection web_cam0.launch  <br/>
 然后利用ros自带的标定程序对相机进行标定<br/>
 ```
 rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.0245 image:=/prometheus/camera/rgb/image_raw
@@ -49,7 +46,7 @@ Skew:标定板在摄像头视野中的倾斜转动<br/>
 
 
 
-## 二维码检测确认
+##  二维码检测确认
 这里我们需要来确认摄像头对二维码的位置检测是否正确
 我们所使用的二维码如下
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201203143804569.png)
@@ -96,21 +93,26 @@ yaw_error显示的是偏航，所以是可以检测出这个二维码的 X Y Z �
 
 关于坐标系转换的说明：
 
-识别算法发布的目标位置位于相机坐标系（从相机往前看，物体在相机右方x为正，下方y为正，前方z为正）
-首先，从相机坐标系转换至机体坐标系（从机体往前看，物体在相机前方x为正，左方y为正，上方z为正）：由于此demo相机朝下安装，且xy方向无偏移量 pos_body_frame[0] = - Detection_raw.position[1]; pos_body_frame[1] = - Detection_raw.position[0]; pos_body_frame[2] = - Detection_raw.position[2];
-从机体坐标系转换至与机体固连的ENU系（原点位于质心，x轴指向yaw=0的方向，y轴指向yaw=90的方向，z轴指向上的坐标系）：直接乘上机体系到惯性系的旋转矩阵即可 R_Body_to_ENU = get_rotation_matrix(_DroneState.attitude[0], _DroneState.attitude[1], _DroneState.attitude[2]); pos_body_enu_frame = R_Body_to_ENU * pos_body_frame;
-从与机体固连的ENU系转换至ENU系（原点位于起飞点，x轴指向yaw=0的方向，y轴指向yaw=90的方向，z轴指向上的坐标系） Detection_ENU.position[0] = drone_pos[0] + pos_body_enu_frame[0]; Detection_ENU.position[1] = drone_pos[1] + pos_body_enu_frame[1]; Detection_ENU.position[2] = drone_pos[2] + pos_body_enu_frame[2];
+识别算法发布的目标位置位于相机坐标系（从相机往前看，物体在相机右方x为正，下方y为正，前方z为正）<br/>
+首先，从相机坐标系转换至机体坐标系（从机体往前看，物体在相机前方x为正，左方y为正，上方z为正）：由于此demo相机朝下安装，且xy方向无偏移量 pos_body_frame[0] = - Detection_raw.position[1]; pos_body_frame[1] = - Detection_raw.position[0]; pos_body_frame[2] = - Detection_raw.position[2];<br/>
+从机体坐标系转换至与机体固连的ENU系（原点位于质心，x轴指向yaw=0的方向，y轴指向yaw=90的方向，z轴指向上的坐标系）：直接乘上机体系到惯性系的旋转矩阵即可 R_Body_to_ENU = get_rotation_matrix(_DroneState.attitude[0], _DroneState.attitude[1], _DroneState.attitude[2]); pos_body_enu_frame = R_Body_to_ENU * pos_body_frame;<br/>
+从与机体固连的ENU系转换至ENU系（原点位于起飞点，x轴指向yaw=0的方向，y轴指向yaw=90的方向，z轴指向上的坐标系） Detection_ENU.position[0] = drone_pos[0] + pos_body_enu_frame[0]; Detection_ENU.position[1] = drone_pos[1] + pos_body_enu_frame[1]; Detection_ENU.position[2] = drone_pos[2] + pos_body_enu_frame[2];<br/>
 
-当二维码中心点位于摄像头图像右上方时，也就是处于第一象限时，终端打印的x坐标为正，y坐标为负，z坐标为正，代表相机坐标系正确。
+当二维码中心点位于摄像头图像右上方时，也就是处于第一象限时，终端打印（rostopic echo /prometheus/object_detection/landpad_det）的x坐标为正，y坐标为负，z坐标为正，代表相机坐标系正确。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201203224955464.png)安装相机到无人机机身上是，相机镜头朝向正下方，并且让相机图像上方方向（对着图像显示看，可以判断出相机哪个方向为上方）严格朝向机头方向。此时可以保证整个坐标系是正确的。
 在确认摄像头坐标系正确的情况下将摄像头固定到机身上。
 
 ## 实飞
+首先将二维码正方向和无人机机头方向都朝向正东方向摆放，然后给无人机上电。二维码正方向如下图所示。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20201207194752456.png)
+无人机上电后等待GPS由蓝灯慢闪变为绿灯慢闪，再执行以下操作。
+
 先设置一些基本参数
 打开autonomous_landing.yaml文件
 start_point_x  start_point_y  start_point_z 为设定的无人机起飞后飞到的目标点的坐标，单位是米，建议初始就设置一个比较低的高度。
 kpx_land   kpy_land   kpz_land  为检测到二维码进行降落过程中的X Y Z方向上的比例控制参数。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201207085428677.png)设置完后，保存autonomous_landing.yaml文件
+
 
 打开终端，启动命令：
 ```
@@ -120,11 +122,11 @@ roslaunch prometheus_experiment prometheus_px4_realsense_autoland.launch
 
 每个界面含义如下
 
-T265节点，看T265节点是否正常起来
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201207191856590.png)
 这个终端打印消息代表pos_estimator和px4_sender两个节点运行正常，每隔十秒会打印一次消息。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201207191942537.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201207182523750.png)
+看Drone State的Position的Z值是否在0附近
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118100410314.png)
+
 此终端会显示出之前你在autonomous_landing.yaml中设置的参数值，检查是否正确。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201207090438881.png)
 依次查看各个终端是否有报错，数据是否正确
@@ -135,10 +137,10 @@ T265节点，看T265节点是否正常起来
 以上都确认没有问题之后，在下面这个终端输入1并敲回车。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201207090150437.png)
 
-先遥控器切到定点模式，然后解锁，再遥控器切到offboard模式，无人机开始起飞。注意若设定的起飞目标点不高，不要把无人机放在里二维码比较远的地方起飞，不然可能摄像头拍不到二维码。
+在上面终端输入1并敲回车之后，再开始操作遥控器，先遥控器切到定点模式，然后解锁，再遥控器切到offboard模式，无人机开始起飞。注意若设定的起飞目标点不高，不要把无人机放在里二维码比较远的地方起飞，不然可能摄像头拍不到二维码。
 无人机会先飞到设定的目标点，识别到二维码后会开始自动降落，如果没有识别到二维码会保持悬停。
 可以手动切SWD，往上推SWD，退出offboard模式，回到定点模式，可以通过遥控器手控降落。
 
 
-还需要注意降落板二维码摆放的方向，此红箭头方向是二维码正方向，起飞前尽可能让机头方向朝向二维码正方向摆放。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201207194752456.png)
+
+
