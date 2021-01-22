@@ -6,9 +6,13 @@
 下面是标定板样张，注意打印出来粘在硬纸板上，一定要保证整个图片在一个平面上，否则会影响标定效果。标定效果好坏会直接影响到后面摄像头对二维码位置的估计进而影响到二维码降落，所以重视标定过程。
 棋盘格标定板下载地址：[Chessboard](http://jario.ren/images/2005/qipangebiaoding.jpg)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201203141922533.jpg)首先启动相机节点，如下命令启动相机ID=0<br/>
-roslaunch prometheus_detection web_cam0.launch  <br/>
+```
+roslaunch prometheus_detection web_cam0.launch  
+```
 然后利用ros自带的标定程序对相机进行标定<br/>
+```
 rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.0245 image:=/prometheus/camera/rgb/image_raw
+```
 
 其中：size为标点板尺寸，square为每个方格宽度(m)，注意单位是米，image:=相机话题<br/>
 如果是用我们给的标定图片并且用A4纸打印出来，则size后的值为9*6  square后面的值为0.01931

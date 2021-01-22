@@ -41,7 +41,9 @@ rs_t265.launch位于/home/nvidia/realsense_ws/src/realsense-ros/realsense2_camer
 ## 命令运行
 使用nomachine远程登录TX2
 打开一个新终端，运行以下命令
+```
 roslaunch prometheus_experiment prometheus_px4_realsense.launch
+```
 
 ## 飞行前的检查
 rostopic echo /tf      消息打印正常代表T265节点起来运行正常
