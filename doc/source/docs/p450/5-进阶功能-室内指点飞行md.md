@@ -2,7 +2,7 @@
 # 基于prometheus和T265实现室内无人机定点飞行
 ## 消息流
 消息流如下图所示
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201127005642921.png#pic_center)
+![](https://img-blog.csdnimg.cn/20201127005642921.png#pic_center)
 ## 软件和硬件环境
 ### 硬件
 P200无人机
@@ -17,9 +17,9 @@ nomachine（下载：[https://www.nomachine.com/](https://www.nomachine.com/)，
 EKF2_AID_MASK 	设置 视觉位置合成 和 视觉偏航合成<br/>
 EKF2_HGT_MODE 	设置为 Vision 使用视觉作为高度估计的主要来源。<br/>
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201126224905726.png#pic_center)<br/>
+![](https://img-blog.csdnimg.cn/20201126224905726.png#pic_center)<br/>
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201126224809796.png#pic_center)
+![](https://img-blog.csdnimg.cn/20201126224809796.png#pic_center)
 
 
 ## 软件环境搭建
@@ -30,10 +30,10 @@ EKF2_HGT_MODE 	设置为 Vision 使用视觉作为高度估计的主要来源。
 ## 硬件连接
 
 准备下面这一条线<br/>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020112711014747.png)<br/>
+![](https://img-blog.csdnimg.cn/2020112711014747.png)<br/>
 
 TX2一端这么插<br/>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201127110050829.png)<br/>
+![](https://img-blog.csdnimg.cn/20201127110050829.png)<br/>
 
 数据线的另一端接飞控telem2口，波特率为921600
 
@@ -41,10 +41,10 @@ TX2一端这么插<br/>
 修改rs_t265.launch里的设备号
 rs_t265.launch位于/home/nvidia/realsense_ws/src/realsense-ros/realsense2_camera/launch/文件夹下
 如果运行roslaunch realsense2_camera rs_t265.launch出现以下报错
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201203142716743.png)
+![](https://img-blog.csdnimg.cn/20201203142716743.png)
 
 双击打开rs_t265.launch文件，将下图红框内数字删除并保存此文件即可，数字两边的引号等等的不需要删除，仅需删除红框内数字。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201213194531547.png)
+![](https://img-blog.csdnimg.cn/20201213194531547.png)
 ## 命令运行
 使用nomachine远程登录TX2
 打开一个新终端，运行以下命令
@@ -57,7 +57,7 @@ rostopic echo /tf      消息打印正常代表T265节点起来运行正常
 rostopic echo /mavros/vision_pose/pose    消息打印正常代表px4_pose_estimate节点起来运行正常
 rostopic echo /mavros/state   为true代表MAVROS和飞控连接正常
 打开地面站（此时建议用USB线连接电脑与飞控）看到LOCAL_POSITION_NED消息频率为30Hz，而且移动无人机看xyz数据的变化是否符合北东地坐标系，默认一开始机头方向为正东方向，具体表现为：向上移动无人机，Z的数据是往负方向变大，往左移动无人机是X的数据往正方向变大，往前方向也就是机头方向移动无人机，y往正方向变大。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201127000451770.png)
+![](https://img-blog.csdnimg.cn/20201127000451770.png)
 
 ## 实际定点飞行
 以上检查确认正确之后
@@ -67,32 +67,32 @@ rostopic echo /mavros/state   为true代表MAVROS和飞控连接正常
 ## 实际指点飞行
 
 在弹出的以下终端先输入0并敲回车，选择命令输入控制<br/>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021011809100474.png)<br/>
+![](https://img-blog.csdnimg.cn/2021011809100474.png)<br/>
 
 再输入4，选择move指令（这里以move为例）<br/>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118092754801.png)<br/>
+![](https://img-blog.csdnimg.cn/20210118092754801.png)<br/>
 
 然后输入0并敲回车，表示在X Y Z方向上都进行位置控制，发送X Y Z上的期望位置坐标。<br/>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118092842629.png)<br/>
+![](https://img-blog.csdnimg.cn/20210118092842629.png)<br/>
 
 然后输入1并敲回车，表示选择BODY坐标系<br/>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118092943313.png)<br/>
+![](https://img-blog.csdnimg.cn/20210118092943313.png)<br/>
 
 然后接着输入期望的BODY坐标系下的无人机的X轴坐标并敲回车。<br/>
 这里对坐标系做下说明，x为正代表往机头方向飞，y为正代表往无人机左边飞，z为正代表无人机往上飞。<br/>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118090756850.png)<br/>
+![](https://img-blog.csdnimg.cn/20210118090756850.png)<br/>
 
 然后接着输入Y的坐标并敲回车<br/>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118093210828.png)<br/>
+![](https://img-blog.csdnimg.cn/20210118093210828.png)<br/>
 
 接着输入Z的坐标并敲回车<br/>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118093318669.png)<br/>
+![](https://img-blog.csdnimg.cn/20210118093318669.png)<br/>
 
 接着输入期望的偏航并敲回车（一般为0）<br/>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118093434421.png)<br/>
+![](https://img-blog.csdnimg.cn/20210118093434421.png)<br/>
 
 敲回车后终端会显示如下<br/>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118093602113.png)<br/>
+![](https://img-blog.csdnimg.cn/20210118093602113.png)<br/>
 
 然后遥控器定点模式（SWC切到中档）下解锁，再切到offboard模式（SWD切到下档，SWC不需要动），无人机会自动起飞到期望位置点，我上面演示设置的就是飞到无人机正上方一米处，偏航不变。
 如果无人机出现失控意外不符合预期或者想转为手动控制只需遥控器切出offboard模式（即SWD切到上档，SWC不需要动，保持中档），无人机会退出offboard模式并自动转为position模式也就是定点模式，此时可以通过遥控器手动操控无人机。
