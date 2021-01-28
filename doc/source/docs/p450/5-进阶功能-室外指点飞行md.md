@@ -12,11 +12,11 @@ GPS
 ubuntu16.04
 nomachine（下载：[https://www.nomachine.com/](https://www.nomachine.com/)，使用方法：[nomachine使用方法](https://www.ncnynl.com/archives/202007/3809.html)）
 ## 飞控参数修改
-EKF2_AID_MASK 	选择GPS
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118095225519.png)
+EKF2_AID_MASK 	选择GPS<br/>
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118095225519.png)<br/>
 
-EKF2_HGT_MODE 	选择气压计作为作为高度估计的主要来源。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118095243549.png)
+EKF2_HGT_MODE 	选择气压计作为作为高度估计的主要来源。<br/>
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118095243549.png)<br/>
 
 
 ## 软件环境搭建
