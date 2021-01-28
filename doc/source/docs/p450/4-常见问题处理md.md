@@ -5,7 +5,7 @@
 ###  摄像头标定
 下面是标定板样张，注意打印出来粘在硬纸板上，一定要保证整个图片在一个平面上，否则会影响标定效果。标定效果好坏会直接影响到后面摄像头对二维码位置的估计进而影响到二维码降落，所以重视标定过程。
 棋盘格标定板下载地址：[Chessboard](http://jario.ren/images/2005/qipangebiaoding.jpg)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201203141922533.jpg)首先启动相机节点，如下命令启动相机ID=0<br/>
+![](https://img-blog.csdnimg.cn/20201203141922533.jpg)首先启动相机节点，如下命令启动相机ID=0<br/>
 ```
 roslaunch prometheus_detection web_cam0.launch  
 ```
@@ -24,13 +24,13 @@ Y:标定板在摄像头视野中的上下移动<br/>
 Size:标定板在摄像头视野中的前后移动<br/>
 Skew:标定板在摄像头视野中的倾斜转动<br/>
 不断在视野中移动标定板，直到“CALIBRATE”按钮变色，表示标定程序的参数采集完成。点击“CALIBRATE”按钮，标定程序开始自动计算摄像头的标定参数，这个过程需要等待一段时间，界面可能会变成灰色无响应状态，注意千万不要关闭。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/202012072110329.png)
+![](https://img-blog.csdnimg.cn/202012072110329.png)
 
 等待几分钟后，计算出结果会自动在终端打印出来显示，这时dispaly方框又会由黑白恢复为彩色。如下图所示
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201207083342502.png)
+![](https://img-blog.csdnimg.cn/20201207083342502.png)
 将得到的参数写入如下文件(有关目标尺度的预定义也在这个文件中)：Prometheus/Modules/object_detection/config/camera_param.yaml
 具体数字对应可参考下图
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201203224211428.png)
+![](https://img-blog.csdnimg.cn/20201203224211428.png)
 
 
 ## 提问问题模板
