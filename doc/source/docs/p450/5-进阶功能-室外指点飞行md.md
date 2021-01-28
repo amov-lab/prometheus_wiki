@@ -72,6 +72,6 @@ roslaunch prometheus_experiment prometheus_px4_realsense.launch
 
 然后遥控器切到定点模式（SWC切到中档）下解锁，再切到offboard模式（SWD切到下档，SWC不需要动），无人机会自动起飞到期望位置点，我上面演示设置的就是飞到无人机正上方一米处，偏航不变。
 
-室外GPS指点飞行建议在BODY坐标系下。
+室外GPS指点飞行建议选择BODY坐标系发送期望位置坐标。
 
 如果无人机出现失控意外不符合预期或者想转为手动控制只需遥控器切出offboard模式（即SWD切到上档，SWC不需要动，保持中档），无人机会退出offboard模式并自动转为position模式也就是定点模式，此时可以通过遥控器手动操控无人机。
