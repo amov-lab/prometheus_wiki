@@ -51,7 +51,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = u'prometheus_wiki'
+project = u'P系列无人机-wiki'
 copyright = u'2020, amov-dev'
 author = u'amov-dev'
 
