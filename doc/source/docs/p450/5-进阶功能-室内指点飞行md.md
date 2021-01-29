@@ -1,17 +1,17 @@
 ﻿
-# 基于prometheus和T265实现室内无人机定点飞行
+# 进阶功能-室内指点飞行
 ## 消息流
 消息流如下图所示
 ![](https://img-blog.csdnimg.cn/20201127005642921.png#pic_center)
 ## 软件和硬件环境
 ### 硬件
-P200无人机
-TX2
-Holybro pixhawk4
-T265
+P200无人机<br/>
+TX2<br/>
+Holybro pixhawk4<br/>
+T265<br/>
 ### 软件
-1.10.0版本PX4固件
-ubuntu16.04
+1.10.0版本PX4固件<br/>
+ubuntu16.04<br/>
 nomachine（下载：[https://www.nomachine.com/](https://www.nomachine.com/)，使用方法：[nomachine使用方法](https://www.ncnynl.com/archives/202007/3809.html)）
 ## 飞控参数修改
 EKF2_AID_MASK 	设置 视觉位置合成 和 视觉偏航合成<br/>
