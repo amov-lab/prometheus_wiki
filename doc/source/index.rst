@@ -13,9 +13,11 @@ amovlab 文档
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: AMOV官网
+   :caption: 首页
 
    阿木实验室 <https://www.amovlab.com/>
+   免责声明 <docs/common/免责声明>
+   安全指导手册 <docs/common/安全指导手册>
 
 .. toctree::
    :maxdepth: 2
