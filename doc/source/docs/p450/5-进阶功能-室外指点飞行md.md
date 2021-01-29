@@ -3,13 +3,13 @@
 
 ## 软件和硬件环境
 ### 硬件
-P200无人机
-TX2
-Holybro pixhawk4
-GPS
+P200无人机<br/>
+TX2<br/>
+Holybro pixhawk4<br/>
+GPS<br/>
 ### 软件
-1.10.0版本PX4固件
-ubuntu16.04
+1.10.0版本PX4固件<br/>
+ubuntu16.04<br/>
 nomachine（下载：[https://www.nomachine.com/](https://www.nomachine.com/)，使用方法：[nomachine使用方法](https://www.ncnynl.com/archives/202007/3809.html)）
 ## 飞控参数修改
 EKF2_AID_MASK 	选择GPS<br/>
