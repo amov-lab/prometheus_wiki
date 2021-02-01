@@ -26,6 +26,53 @@ VMware
 安装镜像
 >>>>>>>>>>>>>>>>>>>
 
+- 选择第二项（Boot system installer）
+
+.. image:: ../../images/p450/simulation/用户名.jpg
+   :height: 780px
+   :width: 1056px
+   :scale: 40 %
+   :alt: None
+   :align: center
+
+- 输入用户名和新主机名，点击下一步
+
+.. image:: ../../images/p450/simulation/单系统分区.jpg
+   :height: 780px
+   :width: 1056px
+   :scale: 40 %
+   :alt: None
+   :align: center
+
+分区
+- 删除原有分区
+- 分区方式如下表
+- 注意：一定要勾选 ``transfer user configuration files``
+- install GRUB2 bootloader：Auto
+
+.. warning::
+    - 删除原有分区表的时候一定要谨慎！！！！
+
+==========  ==========  =====================
+分区          容量        挂载点（mount point）
+==========  ==========  =====================
+第一个分区      0.5G           ``/boot``
+第二个分区      4G           ``SWAP``
+第三个分区    剩余大小           ``/`` 
+==========  ==========  =====================
+
+- 点击 ``next`` ，开始安装系统
+
+.. image:: ../../images/p450/simulation/正在安装单系统.jpg
+   :height: 780px
+   :width: 1056px
+   :scale: 40 %
+   :alt: None
+   :align: center
+
+.. note::
+    - 安装过程中会虚拟机会黑屏，请耐心等待安装完成
+
 视频
 >>>>>>>>>>>>>>>>>>>>>
 
@@ -44,9 +91,6 @@ Oracle VM VirtualBox
 
 安装镜像
 >>>>>>>>>>>>>>>>>>>
-
-视频
->>>>>>>>>>>>>>>>>>>>>
 
 
 
