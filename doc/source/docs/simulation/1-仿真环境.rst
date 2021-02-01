@@ -1,13 +1,38 @@
-仿真系统搭建
+仿真环境
 =====================
 
-该仿真系统适配prometheus项目,如果你对prometheus项目感兴趣，不用为环境问题而头疼脑大，让你1个小时跑通prometheus代码。让你快速掌握无人机仿真与无人机实机实验的完美契合；让研发更高效！
+
 
 .. attention::
-    - 本镜像提供了三种安装方式：虚拟机安装、单系统安装和双系统安装
-    - 虚拟机安装不用制作启动盘，安装最简单
-    - 单系统安装需要制作启动盘，并且保证该电脑的硬盘数据备份
-    - 双系统安装需要制作启动盘，并且保证该电脑有60G以上未被分区的空间
+   如果您不想自己安装下面的仿真镜像且迫不及待想运行prometheus仿真，我们有prometheus仿真主机（到手就可以使用）（淘宝链接）
+
+`Prometheus项目主页 <https://github.com/amov-lab/Prometheus>`_
+
+
+.. image:: ../../images/p450/simulation/仿真介绍.png
+   :height: 664px
+   :width: 871px
+   :scale: 70 %
+   :alt: None
+   :align: center
+
+.. note::
+   该仿真系统适配prometheus项目,可以实现功能如上图所示。如果你对prometheus项目感兴趣，不用为仿真环境问题而头疼脑大，让你1个小时跑通prometheus代码。让你快速掌握无人机仿真与无人机实机实验的完美契合；让研发更高效！
+
+.. attention::
+    * 本镜像提供了三种安装方式：虚拟机安装、单系统安装和双系统安装      
+    * 虚拟机安装不用制作启动盘，安装最简单
+
+      * 推荐配置：CPU:i7 6700HQ 内存：16G 硬盘：60G 以上
+
+    * 单系统安装需要制作启动盘，并且保证该电脑的硬盘数据备份
+      
+      * 推荐配置：CPU:i7 6700HQ 内存：8G 硬盘：60G 以上
+
+    * 双系统安装需要制作启动盘，并且保证该电脑有60G以上未被分区的空间
+      
+      * 推荐配置：CPU:i7 6700HQ 内存：8G 硬盘：60G 以上
+
 
 虚拟机使用
 -----------------------
@@ -23,32 +48,111 @@ VMware
 新建一个虚拟机
 >>>>>>>>>>>>>>>>>>>>
 
+.. image:: ../../images/p450/simulation/虚拟机(1).png
+   :height: 864px
+   :width: 1488px
+   :scale: 40 %
+   :alt: None
+   :align: center
+
+.. tip::
+   - 客户端操作系统：Linux
+   - 版本：Ubuntu 64位
+
+.. image:: ../../images/p450/simulation/虚拟机(2).png
+   :height: 864px
+   :width: 1488px
+   :scale: 40 %
+   :alt: None
+   :align: center
+
+.. tip::
+   - 虚拟机名称：amovlab
+   - 位置：f: \\amovlab
+
+.. image:: ../../images/p450/simulation/虚拟机(3).png
+   :height: 864px
+   :width: 1488px
+   :scale: 40 %
+   :alt: None
+   :align: center
+
+.. tip::
+   - 最大磁盘大小：30GB
+   - 勾选将虚拟磁盘拆分成为多个文件
+
+
+.. image:: ../../images/p450/simulation/虚拟机(4).png
+   :height: 864px
+   :width: 1488px
+   :scale: 40 %
+   :alt: None
+   :align: center
+
+- 点击自定义硬件按钮
+
+.. image:: ../../images/p450/simulation/虚拟机(11).png
+   :height: 864px
+   :width: 1488px
+   :scale: 40 %
+   :alt: None
+   :align: center
+
+.. image:: ../../images/p450/simulation/虚拟机(5).png
+   :height: 864px
+   :width: 1488px
+   :scale: 40 %
+   :alt: None
+   :align: center
+
+.. image:: ../../images/p450/simulation/虚拟机(6).png
+   :height: 864px
+   :width: 1488px
+   :scale: 40 %
+   :alt: None
+   :align: center
+
+.. tip::
+   - 推荐内存大小8G以上 （此处是分配的4G，编译比较费时）
+   - 处理器数量4个以上（根据自己电脑调节）
+   - 网络适配器：桥接模式
+
+
+
 安装镜像
 >>>>>>>>>>>>>>>>>>>
 
+
+.. image:: ../../images/p450/simulation/虚拟机(7).png
+   :height: 864px
+   :width: 1488px
+   :scale: 40 %
+   :alt: None
+   :align: center
+
 - 选择第二项（Boot system installer）
 
-.. image:: ../../images/p450/simulation/用户名.jpg
-   :height: 780px
-   :width: 1056px
+.. image:: ../../images/p450/simulation/虚拟机(9).png
+   :height: 864px
+   :width: 1488px
    :scale: 40 %
    :alt: None
    :align: center
 
 - 输入用户名和新主机名，点击下一步
 
-.. image:: ../../images/p450/simulation/单系统分区.jpg
-   :height: 780px
-   :width: 1056px
+.. image:: ../../images/p450/simulation/虚拟机(10).png
+   :height: 864px
+   :width: 1488px
    :scale: 40 %
    :alt: None
    :align: center
 
-分区
-- 删除原有分区
-- 分区方式如下表
-- 注意：一定要勾选 ``transfer user configuration files``
-- install GRUB2 bootloader：Auto
+分区配置
+   - 删除原有分区
+   - 分区方式如下表
+   - 注意：一定要勾选 ``transfer user configuration files``
+   - install GRUB2 bootloader：Auto
 
 .. warning::
     - 删除原有分区表的时候一定要谨慎！！！！
@@ -63,14 +167,14 @@ VMware
 
 - 点击 ``next`` ，开始安装系统
 
-.. image:: ../../images/p450/simulation/正在安装单系统.jpg
-   :height: 780px
-   :width: 1056px
+.. image:: ../../images/p450/simulation/虚拟机(12).png
+   :height: 864px
+   :width: 1488px
    :scale: 40 %
    :alt: None
    :align: center
 
-.. note::
+.. attention::
     - 安装过程中会虚拟机会黑屏，请耐心等待安装完成
 
 视频
@@ -179,9 +283,9 @@ Oracle VM VirtualBox
 ==========  ==========  =====================
 分区          容量        挂载点（mount point）
 ==========  ==========  =====================
-第一个分区      1G        ``/boot/efi``
+第一个分区      0.5G        ``/boot/efi``
 第二个分区      8G           ``SWAP``
-第三个分区   剩余大小           ``/`` 
+第三个分区    剩余大小           ``/`` 
 ==========  ==========  =====================
 
 
