@@ -9,7 +9,7 @@
 
 .. image:: ../../images/baseconfig_for_px4/6-voltage-divider.png
 
-入图所示，在测量电压下输入已经测得的实际电压，然后点击“Calculate”
+如图所示，在测量电压下输入已经测得的实际电压，然后点击“Calculate”
 
 .. image:: ../../images/baseconfig_for_px4/6-voltage-divider-calculate.png
 

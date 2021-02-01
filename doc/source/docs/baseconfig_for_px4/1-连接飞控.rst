@@ -1,0 +1,18 @@
+连接飞控
+================
+
+连接飞控有两种方式：一种是通过数据线连接。另一种是通过飞机的WiFi数传连接。
+
+    1. 通过数据线连接
+连接飞机与电脑，此时会自动连接QGC
+
+    2. 通过WiFi数传连接
+首先连接wifi，选择WiFi名称并输入密码。WIFI的标签在飞机底部。
+
+.. image:: ../../images/baseconfig_for_px4/0-connect-wifiname.png
+
+.. image:: ../../images/baseconfig_for_px4/0-connect-ipname.png
+
+然后输入IP地址与端口号。点击连接即可。
+
+.. image:: ../../images/baseconfig_for_px4/0-connect-inputtcp.png
