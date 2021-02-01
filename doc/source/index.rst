@@ -39,6 +39,18 @@ amovlab 文档
 .. toctree::
    :maxdepth: 2
    :hidden:
+   :caption: 仿真使用手册
+
+   仿真环境 <docs/simulation/1-仿真环境>
+   飞行控制模块 <docs/simulation/2-飞行控制模块>
+   slam模块 <docs/simulation/3-slam模块>
+   规划模块 <docs/simulation/4-规划模块>
+   目标检测模块 <docs/simulation/5-目标检测模块>
+
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
    :caption: PX4基础配置
 
    固件刷写 <docs/baseconfig_for_px4/1-固件刷写>
@@ -51,17 +63,6 @@ amovlab 文档
    常用参数设置 <docs/baseconfig_for_px4/8-常用参数设置>
    PID调参 <docs/baseconfig_for_px4/9-PID调参>
    任务飞行 <docs/baseconfig_for_px4/10-任务飞行>
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: 仿真使用手册
-
-   仿真环境 <docs/simulation/1-仿真环境>
-   飞行控制模块 <docs/simulation/2-飞行控制模块>
-   slam模块 <docs/simulation/3-slam模块>
-   规划模块 <docs/simulation/4-规划模块>
-   目标检测模块 <docs/simulation/5-目标检测模块>
 
 .. toctree::
    :maxdepth: 2
