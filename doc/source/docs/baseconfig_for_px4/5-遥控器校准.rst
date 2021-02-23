@@ -18,7 +18,7 @@
 .. image:: ../../images/baseconfig_for_px4/4-radio-4.png
 
 演示视频
->>>>>>>>>>>>
+------------------
 
 .. raw:: html
 

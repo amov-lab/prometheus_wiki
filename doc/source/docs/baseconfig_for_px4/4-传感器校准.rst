@@ -35,7 +35,7 @@
 .. image:: ../../images/baseconfig_for_px4/3-level-horizo-calibrated.png
 
 演示视频
->>>>>>>>>>>>
+------------------
 
 .. raw:: html
 

@@ -6,7 +6,7 @@
 .. image:: ../../images/baseconfig_for_px4/2-airframe-f450.png
 
 演示视频
->>>>>>>>>>>>
+------------------
 
 .. raw:: html
 

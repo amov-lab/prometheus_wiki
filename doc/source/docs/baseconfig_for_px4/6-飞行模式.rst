@@ -85,7 +85,7 @@ MISSION：任务模式
 .. image:: ../../images/baseconfig_for_px4/5-flightmodes-additional.png
 
 演示视频
->>>>>>>>>>>>
+------------------
 
 .. raw:: html
 

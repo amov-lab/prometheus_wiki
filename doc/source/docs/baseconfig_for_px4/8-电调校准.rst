@@ -14,7 +14,7 @@
 .. image:: ../../images/baseconfig_for_px4/7-esc-calibrated.png
 
 演示视频
->>>>>>>>>>>>
+------------------
 
 .. raw:: html
 

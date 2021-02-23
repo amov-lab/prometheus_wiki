@@ -34,7 +34,7 @@ CBRK_I0_Safety：安全开关
 .. image:: ../../images/baseconfig_for_px4/8-parameters-safetyvalue.png
 
 演示视频
->>>>>>>>>>>>
+------------------
 
 .. raw:: html
 

@@ -18,7 +18,7 @@
 .. image:: ../../images/baseconfig_for_px4/6-voltage-divider-calculated.png
 
 演示视频
->>>>>>>>>>>>
+------------------
 
 .. raw:: html
 
