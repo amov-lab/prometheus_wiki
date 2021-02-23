@@ -16,3 +16,11 @@
 然后输入IP地址与端口号。点击连接即可。
 
 .. image:: ../../images/baseconfig_for_px4/0-connect-inputtcp.png
+
+
+演示视频
+>>>>>>>>>>>>
+
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV15o4y1d7bW&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

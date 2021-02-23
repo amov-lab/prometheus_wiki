@@ -20,7 +20,7 @@
    该仿真系统适配prometheus项目,可以实现功能如上图所示。如果你对prometheus项目感兴趣，不用为仿真环境问题而头疼脑大，让你1个小时跑通prometheus代码。让你快速掌握无人机仿真与无人机实机实验的完美契合；让研发更高效！
 
 .. attention::
-    * 本镜像提供了三种安装方式：虚拟机安装、单系统安装和双系统安装      
+    * 本镜像提供了两种安装方式：虚拟机安装和单系统安装    
     * 虚拟机安装不用制作启动盘，安装最简单
 
       * 推荐配置：CPU:i7 6700HQ 内存：16G 硬盘：60G 以上
@@ -29,9 +29,7 @@
       
       * 推荐配置：CPU:i7 6700HQ 内存：8G 硬盘：60G 以上
 
-    * 双系统安装需要制作启动盘，并且保证该电脑有60G以上未被分区的空间
-      
-      * 推荐配置：CPU:i7 6700HQ 内存：8G 硬盘：60G 以上
+
 
 
 虚拟机使用
@@ -177,8 +175,12 @@ VMware
 .. attention::
     - 安装过程中会虚拟机会黑屏，请耐心等待安装完成
 
-视频
+演示视频
 >>>>>>>>>>>>>>>>>>>>>
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1mA411u7My&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 
 
 
@@ -247,6 +249,13 @@ Oracle VM VirtualBox
     - 点击开始
     - 镜像写入到U盘后，拔下U盘，插入到需要装系统的电脑
 
+演示视频
+^^^^^^^^^^^^^^^
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1Tr4y1K7aF&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
 系统安装
 ^^^^^^^^^^^^^^
 
@@ -301,80 +310,11 @@ Oracle VM VirtualBox
 
 - 耐心等待安装完成
 
-视频
+演示视频
 ^^^^^^^^^^^^^^^
+.. raw:: html
 
-
-
-
-
-
-双系统使用
-------------------------
-
-.. attention::
-   首先进行 `启动盘制作`_ !!!
-
-硬盘分区
-^^^^^^^^^^^^^^
-
-右键 ``此电脑``，点击 ``管理``，再点击 ``磁盘管理器``
-
-我们可以看到 ``磁盘*``,右键点击硬盘的最后一个分区，找到 ``压缩卷`` 选项并点击。
-
-在 ``压缩空间量（MB）`` 中输入60000，然后点击 ``压缩选项`
-
-系统安装
-^^^^^^^^^^^^^^
-
-- 开机启动选择U盘启动 如图所示：
-
-.. image:: ../../images/p450/simulation/systemback安装界面.jpg
-   :height: 1080px
-   :width: 1440px
-   :scale: 30 %
-   :alt: None
-   :align: center
-
-- 选择第二项（Boot system installer）
-
-.. image:: ../../images/p450/simulation/用户名.jpg
-   :height: 780px
-   :width: 1056px
-   :scale: 40 %
-   :alt: None
-   :align: center
-
-- 输入用户名和新主机名，点击下一步
-
-.. image:: ../../images/p450/simulation/单系统分区.jpg
-   :height: 780px
-   :width: 1056px
-   :scale: 40 %
-   :alt: None
-   :align: center
-
-.. warning::
-    - 删除原有分区表的时候一定要谨慎！！！！
-
-==========  ==========  =====================
-分区          容量        挂载点（mount point）
-==========  ==========  =====================
-第一个分区      0.5G        ``/boot/efi``
-第二个分区      8G           ``SWAP``
-第三个分区    剩余大小           ``/`` 
-==========  ==========  =====================
-
-
-- 点击 ``next`` ，开始安装系统
-
-.. image:: ../../images/p450/simulation/正在安装单系统.jpg
-   :height: 780px
-   :width: 1056px
-   :scale: 40 %
-   :alt: None
-   :align: center
-
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1Sz4y1m7fP&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 
