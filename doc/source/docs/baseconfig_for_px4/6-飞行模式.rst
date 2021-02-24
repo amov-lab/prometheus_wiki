@@ -83,3 +83,11 @@ MISSION：任务模式
 如有需要板载计算机模式和返航模式，也可在开关设置下自行设置。如图所示，设置通道6为offboard模式，通道7为返航模式。
 
 .. image:: ../../images/baseconfig_for_px4/5-flightmodes-additional.png
+
+演示视频
+------------------
+
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1sN411R7of&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+

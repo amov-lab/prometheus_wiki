@@ -28,3 +28,17 @@ PD作用下，加快了调节时间减小了调节幅度，但是当系统稳定
 位置控制参数
 
 .. image:: ../../images/baseconfig_for_px4/9-pid-position.png
+演示视频
+------------------
+
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1Az4y1U76L&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
+演示视频
+------------------
+
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV16K4y1p71S&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

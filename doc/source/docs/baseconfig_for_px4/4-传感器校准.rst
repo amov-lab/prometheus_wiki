@@ -33,3 +33,10 @@
 水平面校准只需要将飞机放平即可，校准完成后会有“calibration done”的字样，意为校准完成。
 
 .. image:: ../../images/baseconfig_for_px4/3-level-horizo-calibrated.png
+
+演示视频
+------------------
+
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV17v4y1Z7as&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

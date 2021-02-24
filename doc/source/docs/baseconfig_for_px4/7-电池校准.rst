@@ -16,3 +16,10 @@
 等到“测量电压”与“飞机电压”数字接近时，表面电压校准已经完成，此时点击关闭即可。
 
 .. image:: ../../images/baseconfig_for_px4/6-voltage-divider-calculated.png
+
+演示视频
+------------------
+
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1No4y197cV&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

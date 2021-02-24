@@ -16,3 +16,10 @@
 当连续点击两次下一步后，会有如下界面，就表示此时校准已经完成。
 
 .. image:: ../../images/baseconfig_for_px4/4-radio-4.png
+
+演示视频
+------------------
+
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1iU4y1x7Ma&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
