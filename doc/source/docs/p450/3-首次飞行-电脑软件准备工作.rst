@@ -1,0 +1,16 @@
+电脑软件准备工作
+=================
+
+1.准备QGC4.0.8
+
+.. image:: ../../images/p450/first_fly/1-qgc.png
+
+注意最下方的版本是V4.0.8
+
+.. image:: ../../images/p450/first_fly/1-qgc-vision.png
+
+2.准备nomachine
+
+.. image:: ../../images/p450/first_fly/1-nomachine.png
+
+

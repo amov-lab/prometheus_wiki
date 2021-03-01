@@ -1,0 +1,17 @@
+遥控器定点模式飞行
+====================
+
+如下图所示，将“SWC”开关拨到最下面， 切到“定点模式”
+
+.. image:: ../../images/p450/first_fly/7-pos.png
+
+然后左手“右下”解锁飞机，如下图所示。
+
+.. image:: ../../images/p450/first_fly/7-arm.png
+
+起飞后如下图所示，进行定点模式飞行。
+
+.. image:: ../../images/p450/first_fly/7-viofly.png
+
+
+
