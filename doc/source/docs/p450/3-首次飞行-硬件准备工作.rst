@@ -1,0 +1,20 @@
+硬件准备工作
+===============
+
+p450无人机+富斯i6s遥控器
+
+.. image:: ../../images/p450/first_fly/2-p450vehicle.png
+
+5300mah/4000mah航模锂电池
+
+.. image:: ../../images/p450/first_fly/2-5300mah.png
+
+.. image:: ../../images/p450/first_fly/2-4000mah.png
+
+遥控器电池
+
+.. image:: ../../images/p450/first_fly/2-rcbattery.png
+
+安全绳
+
+.. image:: ../../images/p450/first_fly/2-safestring.png
