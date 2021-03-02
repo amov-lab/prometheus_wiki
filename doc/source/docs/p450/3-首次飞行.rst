@@ -1,27 +1,225 @@
 首次飞行
 ==============
 
-
-正在快马加鞭
+本节主要讲解T265相机配置下无人机的首次飞行。
 
 电脑软件准备工作
 ------------------
 
+准备一台笔记本电脑，电脑系统不做要求，可以是Windows7，Windows10或者是Ubuntu系统。需要安装QGroundControl(以下简称QGC)和nomachine。
+QGC的作用是连接到飞机，监控飞机本身的状态（传感器是否正常，参数配置是否正常）；nomachine用作远程连接到板载计算机。
+
+.. hint::
+
+    软件安装包请在百度网盘自主下载
+    `网盘链接 <https://pan.baidu.com/share/init?surl=M2ucIqRqnKoFI8ylLpgquQ>`_
+    
+    提取码: **amov**
+
+.. image:: ../../images/p450/first_fly/package.png
+
+从图中可以看到，有不同操作系统下的安装包，根据自己笔记本电脑系统安装相应的QGC和nomachine。
+
+安装QGC地面站
+^^^^^^^^^^^^^^^^^^^^^^^
+
+正确安装上面安装包之后，打开QGC地面站：
+
+.. image:: ../../images/p450/first_fly/1-qgc.png
+
+.. attention::
+
+    最下方的版本是V4.0.8
+
+.. image:: ../../images/p450/first_fly/1-qgc-vision.png
+
+安装nomachine
+^^^^^^^^^^^^^^^^^^^^^^^
+
+正常安装按完成之后，打开nomachine：
+
+.. image:: ../../images/p450/first_fly/1-nomachine.png
+
 硬件准备工作
 ------------------
+
+p450无人机+富斯i6s遥控器
+
+.. image:: ../../images/p450/first_fly/2-p450vehicle-logo.jpg
+
+5300mah/4000mah航模锂电池
+
+.. image:: ../../images/p450/first_fly/2-5300mah.png
+
+.. image:: ../../images/p450/first_fly/2-4000mah.png
+
+遥控器电池
+
+.. image:: ../../images/p450/first_fly/2-rcbattery.png
+
+安全绳
+
+.. image:: ../../images/p450/first_fly/2-safestring.png
+
 
 qgc远程连接到飞机
 -----------------
 
+首先连接到飞机的数传wifi，命名为amov-uav#####,“#####”代表出厂序列号。
+
+.. image:: ../../images/p450/first_fly/3-connectwifi.png
+
+密码为wifi名字去掉“-uav”。例如wifi名字是“amov-uav21120”,那么wifi密码就是“amov21120”
+
+.. image:: ../../images/p450/first_fly/3-wifipassword.png
+
+在通讯连接下面选择“添加”
+
+.. image:: ../../images/p450/first_fly/3-addwifi.png
+
+类型选择“	TCP”，主机地址为“192.168.1.###”，“###”为wifi名字的后三位数字。端口号为“6000”。
+
+.. image:: ../../images/p450/first_fly/3-tcp-ip.png
+
+然后点击“连接”，连接成功后如下图所示
+
+.. image:: ../../images/p450/first_fly/3-connectsuccess.png
+
+
+
 nomachine远程连接
 --------------------
+
+板载计算机连接p450飞机数传wifi
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+如下图所示，选择wifi名称，输入密码。密码连接可参考“qgc远程连接到飞机”
+
+.. image:: ../../images/p450/first_fly/4-boardwifi.png
+
+查看板载计算机ip
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+查看板载计算机ip有两种方法，第一种方法是点击右上角“wifi信号”，选择“Connection Information”，
+在IPv4-IP Address下，用“红框”标记的就是板载计算机的ip地址。
+
+.. image:: ../../images/p450/first_fly/4-boardip1.png
+
+.. image:: ../../images/p450/first_fly/4-boardip2.png
+
+第二种方法是点击右键，选择“Open Terminal”,输入“ifconfig”,在最下面wlan0下用“红框”标记的就是板载计算机的ip地址。
+
+.. image:: ../../images/p450/first_fly/4-boardip3.png
+
+.. image:: ../../images/p450/first_fly/4-boardip4.png
+
+.. image:: ../../images/p450/first_fly/4-boardip5.png
+
+nomachine远程连接板载计算机
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+点击New
+
+.. image:: ../../images/p450/first_fly/4-nom-1.png
+
+在Protocol下选择NX，点击Continue。
+
+.. image:: ../../images/p450/first_fly/4-nom-2.png
+
+在“Host”下填写板载计算机的ip地址，板载计算机地址参考步骤2，“Port”下默认4000。
+
+.. image:: ../../images/p450/first_fly/4-nom-3.png
+
+在Authentication下默认是Password，点击“Continue”。
+
+.. image:: ../../images/p450/first_fly/4-nom-4.png
+
+在Proxy下默认是“Don’t use a proxy”，点击“Continue”。
+
+.. image:: ../../images/p450/first_fly/4-nom-5.png
+
+在Save as下会生成默认的name，可以不做更改，点击“Done”。
+
+.. image:: ../../images/p450/first_fly/4-nom-6.png
+
+按照上述步骤操作，会自动生成如下图所示用红框标起的链接，点击“Connect”。
+
+.. image:: ../../images/p450/first_fly/4-nom-7.png
+
+在“Username”和“Password”下输入“amov”
+
+.. image:: ../../images/p450/first_fly/4-nom-8.png
+
+Nomachine成功连接板载计算机后会显示如下界面
+
+.. image:: ../../images/p450/first_fly/4-nom-9.png
+
+此时可同时连接qgc与板载计算机，方便后续实验操作。
+
+.. image:: ../../images/p450/first_fly/4-nom-10.png
+
+
 
 启动脚本
 -------------------
 
+首先在终端输入“rs-sensor-control”,查看有没有传感器连接，正常情况下如
+下图所示，会显示传感器的序列号。
+
+.. image:: ../../images/p450/first_fly/5-sensor-control.png
+
+启动脚本在下图所示的目录下面
+
+.. image:: ../../images/p450/first_fly/5-vio-onboard.png
+
+在终端输入如下命令，启动脚本
+
+.. image:: ../../images/p450/first_fly/5-run-script.png
+
+启动脚本后如下图所示
+
+.. image:: ../../images/p450/first_fly/5-roslaunch.png
+
+
+
 检查各项数据是否正常
 ---------------------
 
+在启动脚本后，首先查看地面站，地面站上会显示飞机的航向为正东，就是“E”。
+
+.. image:: ../../images/p450/first_fly/6-qgc-e.png
+
+第一个终端正常情况下如下图所示，各项数据均正常
+
+.. image:: ../../images/p450/first_fly/6-first.png
+
+第二个终端如下图所示，查看飞机的位置、速度、角度与角速度信息是否正常，主
+要移动飞机查看飞机的位置信息是否正常，飞机向前为X轴正方向，向左为Y轴正方
+向，向上为Z轴正方向。下图例子为将飞机向后向上移动大概1m，数据显示正常。
+
+ .. image:: ../../images/p450/first_fly/6-twice.png
+
+ 第三个终端如下图所示，显示“Program is running”即表示脚本正常运行。
+
+  .. image:: ../../images/p450/first_fly/6-third.png
+
+
 遥控器定点模式飞行
 -------------------------------------
+
+如下图所示，将“SWC”开关拨到最下面， 切到“定点模式”
+
+.. image:: ../../images/p450/first_fly/7-pos.png
+
+然后左手“右下”解锁飞机，如下图所示。
+
+.. image:: ../../images/p450/first_fly/7-arm.png
+
+起飞后如下图所示，进行定点模式飞行。
+
+.. image:: ../../images/p450/first_fly/7-viofly.png
+
+
+视频演示
+-------------------------
 
