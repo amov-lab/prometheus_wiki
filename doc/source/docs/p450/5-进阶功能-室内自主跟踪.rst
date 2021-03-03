@@ -1,0 +1,115 @@
+5-进阶功能-室内自主跟踪
+================================
+
+本节主要讲解P450系列无人机在室内的自主跟踪。视频紧接上节内容 **首次飞行**  ，默认已经通过WiFi数传连接到QGC地面站和nomachine远程连接到板载计算机，
+主要分为一下几点进行讲解：启动指令，命令行控制终端详解，起飞，指点飞，以及最后的视频演示。
+
+启动指令
+------------
+
+首先启动基本vio脚本 
+
+`roslaunch p450_experiment p450_vio_onboard.launch`
+
+.. image:: ../../images/p450/室内指点/启动指令onboard.png
+   :height: 411px
+   :width: 650 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+然后再启动跟踪脚本
+
+`roslaunch p450_experiment p450_indoor_circle_tracking.launch`
+
+.. image:: ../../images/p450/室内跟踪/启动跟踪脚本.png
+   :height: 458px
+   :width: 735 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+打开一个新的终端，将图像检测显示出来
+
+`rqt_image_view`
+
+.. image:: ../../images/p450/室内跟踪/打开图像话题.png
+   :height: 519px
+   :width: 959 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+稍微调整一下窗口显示位置，接下来就开始飞机起飞操作。
+
+起飞
+--------------
+
+先将遥控器切换到position模式
+
+然后通过控制终端发送1起飞指令，这时候飞机通过板载计算机已经给飞机一直发送起飞指令，但是目前飞机还没有进入offboard模式和解锁，所以飞机是没有响应的。
+
+.. image:: ../../images/p450/室内跟踪/起飞.png
+   :height: 716px
+   :width: 638 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+发送完起飞指令之后，接着遥控器操作“内八”进行解锁，最后拨动offboard飞行模式开关。飞机就会慢慢起飞起来，保持在1m高度。（我们在自主跟踪代码中设定的起飞高度为1m）
+
+跟踪
+-------------
+
+等待飞机起飞完成之后，保持在1m左右之后，且视野内识别到目标圆，再进行输入 1 ，进行跟踪保持
+
+.. image:: ../../images/p450/室内跟踪/跟踪.png
+   :height: 1080px
+   :width: 1920 px
+   :scale: 38 %
+   :alt: None
+   :align: center
+
+与目标圆保持一定距离
+
+.. image:: ../../images/p450/室内跟踪/跟踪保持.png
+   :height: 1080px
+   :width: 1920 px
+   :scale: 38 %
+   :alt: None
+   :align: center
+
+此时可以移动目标圆，进而飞机进行相应的移动
+
+.. image:: ../../images/p450/室内跟踪/跟踪移动过程.png
+   :height: 1080px
+   :width: 1920 px
+   :scale: 38 %
+   :alt: None
+   :align: center
+
+结束实验
+------------
+
+在想要结束室内自主跟踪实验时候，记得遥控器先退出offboard模式，
+
+.. image:: ../../images/p450/室内跟踪/退出offboard.png
+   :height: 1080px
+   :width: 1920 px
+   :scale: 38 %
+   :alt: None
+   :align: center
+
+然后慢慢降低油门，直至飞机安全着地，进入怠速，自动上锁。
+
+关闭所有终端，结束实验。
+
+视频演示
+----------------
+
+该功能演示也拍摄了两段视频，预祝复现室内自主跟踪实验成功完美。
+
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=929473629&bvid=BV1HK4y1D7NM&cid=305466382&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
