@@ -223,3 +223,10 @@ Nomachine成功连接板载计算机后会显示如下界面
 视频演示
 -------------------------
 
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=929398517&bvid=BV12K4y1S7Cp&cid=305458545&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
+
+

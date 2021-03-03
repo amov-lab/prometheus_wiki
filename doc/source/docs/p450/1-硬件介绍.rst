@@ -1,37 +1,85 @@
 硬件介绍
 =================
 
-.. image:: ../../images/p450/1-main-view.png
+**简介：** Prometheus450（简称P450）是一款专为科研工作者及无人机开发者设计的无人机实验平台，适用于无人机专业应用研究和开发。本开发平台基于Prometheus开源项目，提供丰富的demo例程，涵盖
+控制模块、slam模块、规划模块以及目标检测模块等多个无人机及机器视觉相关研究方向，为无人机科研开发助力，致力于让研发更加高效。
+
+最高配置为 P450+T265+D435I+S1+单目
+
+.. image:: ../../images/p450/hardware/介绍图.jpg
    :height: 700px
    :width: 700 px
-   :scale: 50 %
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+
+
+.. image:: ../../images/p450/hardware/前视图.jpg
+   :height: 800px
+   :width: 800 px
+   :scale: 80 %
    :alt: None
    :align: center
 .. note::
    无人机正视图
-.. image:: ../../images/p450/1-lateral-view.png
-   :height: 700px
-   :width: 700 px
-   :scale: 50 %
+.. image:: ../../images/p450/hardware/侧视图2.jpg
+   :height: 800px
+   :width: 800 px
+   :scale: 80 %
    :alt: None
    :align: center
 .. note::
    无人机侧视图
-.. image:: ../../images/p450/1-bird's-eye-view.png
-   :height: 700px
-   :width: 700 px
-   :scale: 50 %
+.. image:: ../../images/p450/hardware/俯视图.jpg
+   :height: 800px
+   :width: 800 px
+   :scale: 80 %
    :alt: None
    :align: center
 .. note::
    无人机俯视图
 
+.. image:: ../../images/p450/hardware/设计理念.png
+   :height: 653px
+   :width: 1338 px
+   :scale: 55 %
+   :alt: None
+   :align: center
+
+.. image:: ../../images/p450/hardware/安全可靠性能.png
+   :height: 733px
+   :width: 1338 px
+   :scale: 55 %
+   :alt: None
+   :align: center
+
+.. image:: ../../images/p450/hardware/产品介绍1.png
+   :height: 558px
+   :width: 1292 px
+   :scale: 55 %
+   :alt: None
+   :align: center
+
+.. image:: ../../images/p450/hardware/产品介绍2.png
+   :height: 570px
+   :width: 1292 px
+   :scale: 55 %
+   :alt: None
+   :align: center
+
+.. image:: ../../images/p450/hardware/产品介绍3.png
+   :height: 663px
+   :width: 1321 px
+   :scale: 55 %
+   :alt: None
+   :align: center
 
 
 开箱讲解
 -------------
 
-
+接下来主要说明飞机到手之后的开箱讲解
 
 1.检查产品外包装
 >>>>>>>>>>>>>
@@ -107,6 +155,8 @@
 
 5.开箱视频
 >>>>>>>>>>>>
+
+详细可以观看开箱视频：
 
 .. raw:: html
 
