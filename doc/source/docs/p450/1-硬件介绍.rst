@@ -167,7 +167,15 @@
 硬件设备说明及用途
 --------------------
 
+P450硬件接线图
+>>>>>>>>>>>>>>>>>>>>>>
 
+.. image:: ../../images/p450/hardware/P450-Pixhawk4线路图.jpg
+   :height: 4000px
+   :width: 6000 px
+   :scale: 12 %
+   :alt: None
+   :align: center
 
 
 
