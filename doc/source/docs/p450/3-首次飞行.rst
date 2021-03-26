@@ -50,16 +50,36 @@ p450无人机+富斯i6s遥控器
 5300mah/4000mah航模锂电池
 
 .. image:: ../../images/p450/first_fly/2-5300mah.png
+   :height: 800px
+   :width: 800px
+   :scale: 50%
+   :alt: None
+   :align: center
 
 .. image:: ../../images/p450/first_fly/2-4000mah.png
+   :height: 800px
+   :width: 800px
+   :scale: 50%
+   :alt: None
+   :align: center
 
 遥控器电池
 
 .. image:: ../../images/p450/first_fly/2-rcbattery.png
+   :height: 912px
+   :width: 807px
+   :scale: 40%
+   :alt: None
+   :align: center
 
 安全绳
 
 .. image:: ../../images/p450/first_fly/2-safestring.png
+   :height: 434px
+   :width: 769px
+   :scale: 60%
+   :alt: None
+   :align: center
 
 
 qgc远程连接到飞机
@@ -68,23 +88,47 @@ qgc远程连接到飞机
 首先连接到飞机的数传wifi，命名为amov-uav#####,“#####”代表出厂序列号。
 
 .. image:: ../../images/p450/first_fly/3-connectwifi.png
+   :height: 184px
+   :width: 453px
+   :scale: 80%
+   :alt: None
+   :align: center
 
 密码为wifi名字去掉“-uav”。例如wifi名字是“amov-uav21120”,那么wifi密码就是“amov21120”
 
 .. image:: ../../images/p450/first_fly/3-wifipassword.png
+   :height: 212px
+   :width: 441px
+   :scale: 80%
+   :alt: None
+   :align: center
 
 在通讯连接下面选择“添加”
 
 .. image:: ../../images/p450/first_fly/3-addwifi.png
+   :height: 924px
+   :width: 909px
+   :scale: 80%
+   :alt: None
+   :align: center
 
 类型选择“	TCP”，主机地址为“192.168.1.###”，“###”为wifi名字的后三位数字。端口号为“6000”。
 
 .. image:: ../../images/p450/first_fly/3-tcp-ip.png
+   :height: 317px
+   :width: 417px
+   :scale: 90%
+   :alt: None
+   :align: center
 
 然后点击“连接”，连接成功后如下图所示
 
 .. image:: ../../images/p450/first_fly/3-connectsuccess.png
-
+   :height: 452px
+   :width: 1267px
+   :scale: 60%
+   :alt: None
+   :align: center
 
 
 nomachine远程连接
@@ -96,6 +140,11 @@ nomachine远程连接
 如下图所示，选择wifi名称，输入密码。密码连接可参考“qgc远程连接到飞机”
 
 .. image:: ../../images/p450/first_fly/4-boardwifi.png
+   :height: 337px
+   :width: 275px
+   :scale: 100%
+   :alt: None
+   :align: center
 
 查看板载计算机ip
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -104,16 +153,41 @@ nomachine远程连接
 在IPv4-IP Address下，用“红框”标记的就是板载计算机的ip地址。
 
 .. image:: ../../images/p450/first_fly/4-boardip1.png
+   :height: 419px
+   :width: 281px
+   :scale: 100%
+   :alt: None
+   :align: center
 
 .. image:: ../../images/p450/first_fly/4-boardip2.png
+   :height: 446px
+   :width: 361px
+   :scale: 100%
+   :alt: None
+   :align: center
 
 第二种方法是点击右键，选择“Open Terminal”,输入“ifconfig”,在最下面wlan0下用“红框”标记的就是板载计算机的ip地址。
 
 .. image:: ../../images/p450/first_fly/4-boardip3.png
+   :height: 181px
+   :width: 312px
+   :scale: 100%
+   :alt: None
+   :align: center
 
 .. image:: ../../images/p450/first_fly/4-boardip4.png
+   :height: 54px
+   :width: 212px
+   :scale: 100%
+   :alt: None
+   :align: center
 
 .. image:: ../../images/p450/first_fly/4-boardip5.png
+   :height: 153px
+   :width: 701px
+   :scale: 100%
+   :alt: None
+   :align: center
 
 nomachine远程连接板载计算机
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -121,30 +195,65 @@ nomachine远程连接板载计算机
 点击New
 
 .. image:: ../../images/p450/first_fly/4-nom-1.png
+   :height: 232px
+   :width: 1004px
+   :scale: 50%
+   :alt: None
+   :align: center
 
 在Protocol下选择NX，点击Continue。
 
 .. image:: ../../images/p450/first_fly/4-nom-2.png
+   :height: 676px
+   :width: 956px
+   :scale: 70%
+   :alt: None
+   :align: center
 
 在“Host”下填写板载计算机的ip地址，板载计算机地址参考步骤2，“Port”下默认4000。
 
 .. image:: ../../images/p450/first_fly/4-nom-3.png
+   :height: 680px
+   :width: 978px
+   :scale: 70%
+   :alt: None
+   :align: center
 
 在Authentication下默认是Password，点击“Continue”。
 
 .. image:: ../../images/p450/first_fly/4-nom-4.png
+   :height: 685px
+   :width: 1000px
+   :scale: 70%
+   :alt: None
+   :align: center
 
 在Proxy下默认是“Don’t use a proxy”，点击“Continue”。
 
 .. image:: ../../images/p450/first_fly/4-nom-5.png
+   :height: 687px
+   :width: 983px
+   :scale: 70%
+   :alt: None
+   :align: center
 
 在Save as下会生成默认的name，可以不做更改，点击“Done”。
 
 .. image:: ../../images/p450/first_fly/4-nom-6.png
+   :height: 698px
+   :width: 1014px
+   :scale: 70%
+   :alt: None
+   :align: center
 
 按照上述步骤操作，会自动生成如下图所示用红框标起的链接，点击“Connect”。
 
 .. image:: ../../images/p450/first_fly/4-nom-7.png
+   :height: 677px
+   :width: 955px
+   :scale: 70%
+   :alt: None
+   :align: center
 
 在“Username”和“Password”下输入“amov”
 
@@ -167,6 +276,11 @@ Nomachine成功连接板载计算机后会显示如下界面
 下图所示，会显示传感器的序列号。
 
 .. image:: ../../images/p450/first_fly/5-sensor-control.png
+   :height: 187px
+   :width: 497px
+   :scale: 100%
+   :alt: None
+   :align: center
 
 启动脚本在下图所示的目录下面
 
@@ -188,6 +302,11 @@ Nomachine成功连接板载计算机后会显示如下界面
 在启动脚本后，首先查看地面站，地面站上会显示飞机的航向为正东，就是“E”。
 
 .. image:: ../../images/p450/first_fly/6-qgc-e.png
+   :height: 364px
+   :width: 248px
+   :scale: 100%
+   :alt: None
+   :align: center
 
 第一个终端正常情况下如下图所示，各项数据均正常
 
@@ -207,9 +326,15 @@ Nomachine成功连接板载计算机后会显示如下界面
 遥控器定点模式飞行
 -------------------------------------
 
-如下图所示，将“SWC”开关拨到最下面， 切到“定点模式”
+如下图所示，将“SWC”开关拨到中间一档， 切到“定点模式”
 
 .. image:: ../../images/p450/first_fly/7-pos.png
+   :height: 745px
+   :width: 998px
+   :scale: 60%
+   :alt: None
+   :align: center
+
 
 然后左手“右下”解锁飞机，如下图所示。
 
@@ -218,7 +343,11 @@ Nomachine成功连接板载计算机后会显示如下界面
 起飞后如下图所示，进行定点模式飞行。
 
 .. image:: ../../images/p450/first_fly/7-viofly.png
-
+   :height: 779px
+   :width: 821px
+   :scale: 80%
+   :alt: None
+   :align: center
 
 视频演示
 -------------------------
