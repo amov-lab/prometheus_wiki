@@ -10,9 +10,23 @@
 
 `roslaunch p450_experiment astar_onboard.launch`
 
+.. image:: ../../images/p450/室内避障/启动指令一.png
+   :height: 158px
+   :width: 740px
+   :scale: 100%
+   :alt: None
+   :align: center
+
 再启动第二个指令
 
 `roslaunch p450_experiment astar_ground.launch`
+
+.. image:: ../../images/p450/室内避障/启动指令二.png
+   :height: 158px
+   :width: 738 px
+   :scale: 100 %
+   :alt: None
+   :align: center
 
 
 起飞
@@ -22,16 +36,70 @@
 
 在此终端先输入0选择命令输入控制
 
-再输入1选择take off起飞指令
+.. image:: ../../images/p450/室内避障/输入0.png
+   :height: 913px
+   :width: 1077 px
+   :scale: 60 %
+   :alt: None
+   :align: center
 
+
+再输入1选择take off起飞指令，由于没有切入offboard模式，此时无人机还不会响应。
+
+.. image:: ../../images/p450/室内避障/输入1.png
+   :height: 915px
+   :width: 1075 px
+   :scale: 60 %
+   :alt: None
+   :align: center
+
+
+我们遥控器切定点，解锁，切offboard，这时无人机才会自动起飞。
+
+.. image:: ../../images/p450/室内避障/切offboard.png
+   :height: 1080px
+   :width: 1920 px
+   :scale: 35 %
+   :alt: None
+   :align: center
 
 等到无人机起飞到一个稳定高度，也即是我们设定的起飞高度后，回到rviz界面，点击选择3D Nav Goal
 
+.. image:: ../../images/p450/室内避障/选择3DNavGoal.png
+   :height: 802px
+   :width: 1054 px
+   :scale: 60 %
+   :alt: None
+   :align: center
 
-在rviz上点击一个点作为目标点，会自动生成一个绕开障碍物的路径
 
+在rviz上点击一个点作为目标点
+
+.. image:: ../../images/p450/室内避障/点目标点.png
+   :height: 903px
+   :width: 1054 px
+   :scale: 60 %
+   :alt: None
+   :align: center
+
+
+会自动生成一个绕开障碍物的路径
+
+.. image:: ../../images/p450/室内避障/规划出路径.png
+   :height: 913px
+   :width: 1054 px
+   :scale: 60 %
+   :alt: None
+   :align: center
 
 此时无人机会沿着这个生成的路径飞，绕开障碍物，且高度会保持不变。
+
+.. image:: ../../images/p450/室内避障/飞行.png
+   :height: 1080px
+   :width: 1920 px
+   :scale: 35%
+   :alt: None
+   :align: center
 
 
 .. attention::
@@ -44,5 +112,16 @@
 
 无人机飞到目标点后，可以遥控器拨动offboard飞行模式开关切出offboard模式，并缓慢手动降落。
 
+.. image:: ../../images/p450/室内避障/手动降落.png
+   :height: 1080px
+   :width: 1920 px
+   :scale: 35%
+   :alt: None
+   :align: center
+
 视频演示
 ---------------
+
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=801956085&bvid=BV1Hy4y177bC&cid=305459486&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
