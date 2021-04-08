@@ -21,7 +21,7 @@
 
 运行检测节点
 
-`roslaunch prometheus_detection landpad_det.launch`
+`roslaunch p450_experiment landpad_det.launch`
 
 查看检测效果（可视化）
 
