@@ -1,0 +1,23 @@
+.. 首次飞行:
+
+首次飞行
+==============
+
+本节主要讲解T265相机配置下无人机的首次飞行。
+
+电脑软件准备工作
+------------------
+
+准备一台笔记本电脑，电脑系统不做要求，可以是Windows7，Windows10或者是Ubuntu系统。需要安装QGroundControl(以下简称QGC)和nomachine。
+QGC的作用是连接到飞机，监控飞机本身的状态（传感器是否正常，参数配置是否正常）；nomachine用作远程连接到板载计算机。
+
+.. hint::
+
+    软件安装包请在百度网盘自主下载
+    `网盘链接 <https://pan.baidu.com/share/init?surl=M2ucIqRqnKoFI8ylLpgquQ>`_
+    
+    提取码: **amov**
+
+.. image:: ../../images/p450/first_fly/package.png
+
+从图中可以看到，有不同操作系统下的安装包，根据自己笔记本电脑系统安装相应的QGC和nomachine。

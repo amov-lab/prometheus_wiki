@@ -40,6 +40,19 @@ amovlab 文档
 .. toctree::
    :maxdepth: 2
    :hidden:
+   :caption: P600使用手册
+
+   硬件介绍 <docs/p600/1-硬件介绍>
+   软件介绍 <docs/p600/2-软件介绍>
+   首次飞行 <docs/p600/3-首次飞行>
+   常见问题处理 <docs/p600/4-常见问题处理md>
+   进阶功能-室外指点 <docs/p600/5-进阶功能-室外指点飞行>
+   进阶功能-吊舱跟踪 <docs/p600/5-进阶功能-框选跟踪飞行>
+   进阶功能-航点避障 <docs/p600/5-进阶功能-航点避障飞行>
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
    :caption: 仿真使用手册
 
    仿真环境 <docs/simulation/1-仿真环境>
