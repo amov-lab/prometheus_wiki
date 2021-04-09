@@ -83,9 +83,9 @@ rqt_image_view
 
 `roslaunch p450_experiment p450_gps_onboard.launch`
 
-.. image:: ../../images/p450/室内降落/启动指令onboard.png
-   :height: 147px
-   :width: 740px
+.. image:: ../../images/p450/室外降落/指令一.png
+   :height: 126px
+   :width: 611px
    :scale: 100%
    :alt: None
    :align: center
@@ -94,9 +94,9 @@ rqt_image_view
 
 `roslaunch p450_experiment p450_outdoor_landing_static_target.launch`
 
-.. image:: ../../images/p450/室内降落/启动自主降落脚本.png
-   :height: 128px
-   :width: 736px
+.. image:: ../../images/p450/室外降落/指令二.png
+   :height: 137px
+   :width: 737px
    :scale: 100%
    :alt: None
    :align: center
@@ -105,9 +105,9 @@ rqt_image_view
 
 `rqt_image_view`
 
-.. image:: ../../images/p450/室内降落/打开图像话题.png
-   :height: 525px
-   :width: 739px
+.. image:: ../../images/p450/室外降落/显示摄像头图像.png
+   :height: 535px
+   :width: 497px
    :scale: 100%
    :alt: None
    :align: center
@@ -127,12 +127,12 @@ rqt_image_view
    :alt: None
    :align: center
 
-先将遥控器切换到position模式，在运行自主降落脚本后板载计算机就一直在给飞机发送起飞指令，但是目前飞机还没有进入offboard模式和解锁，所以飞机是没有响应的。接着遥控器操作“内八”进行解锁，最后拨动offboard飞行模式开关切入offboard模式，此时无人机会先起飞到起飞点上方0.8米高度（我们在自主降落代码中设定的高度为0.8m）
+先将遥控器切换到position模式，在运行自主降落脚本后板载计算机就一直在给飞机发送起飞指令，但是目前飞机还没有进入offboard模式和解锁，所以飞机是没有响应的。接着遥控器操作“内八”进行解锁，然后在终端输入1并敲回车，最后拨动offboard飞行模式开关切入offboard模式，此时无人机会先起飞到起飞点上方0.8米高度（我们在自主降落代码中设定的高度为0.8m）
 
-.. image:: ../../images/p450/室内降落/起飞.png
-   :height: 773px
-   :width: 1030px
-   :scale: 65%
+.. image:: ../../images/p450/室外降落/起飞.png
+   :height: 1080px
+   :width: 1920px
+   :scale: 35%
    :alt: None
    :align: center
 
@@ -145,16 +145,16 @@ rqt_image_view
 .. image:: ../../images/p450/室内降落/降落.png
    :height: 1080px
    :width: 1920px
-   :scale: 40%
+   :scale: 35%
    :alt: None
    :align: center
 
 降落完成后会无人机自动上锁
 
-.. image:: ../../images/p450/室内降落/落地.png
+.. image:: ../../images/p450/室外降落/落地.png
    :height: 1080px
    :width: 1920px
-   :scale: 40%
+   :scale: 35%
    :alt: None
    :align: center
 
@@ -166,3 +166,7 @@ rqt_image_view
 -------------------
 
 室外自主降落功能演示视频如下：
+
+.. raw:: html
+
+    <iframe src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=318716278&page=14" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

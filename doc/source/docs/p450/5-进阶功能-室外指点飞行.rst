@@ -11,9 +11,23 @@
 
 `roslaunch p450_experiment p450_gps_onboard.launch`
 
+.. image:: ../../images/p450/室外指点/指令一.png
+   :height: 121px
+   :width: 615 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
 然后再启动控制脚本
 
 `roslaunch p450_experiment p450_gps_control.launch`
+
+.. image:: ../../images/p450/室外指点/指令二.png
+   :height: 116px
+   :width: 578 px
+   :scale: 100 %
+   :alt: None
+   :align: center
 
 
 之后会出现终端控制界面，提示有两种控制的输入方式，第一种是通过命令输入控制方式，另外一种是通过键盘按键控制方式。
@@ -23,6 +37,13 @@
 
 命令行控制终端详解
 ---------------------------
+
+.. image:: ../../images/p450/室外指点/控制终端.png
+   :height: 360px
+   :width: 733 px
+   :scale: 80 %
+   :alt: None
+   :align: center
 
 其中 0 表示的是 怠速；意思就是飞机会进入offboard模式，但是在该模式下，没有对飞机进行任何指令的发送。飞机也不会有任何动作。这个指令一般也可以不用。
 
@@ -51,4 +72,49 @@
 指点飞
 -------------
 
-选择 4 move飞行模式，然后选择 0 空间位置控制，然后选择 0 ENU_FRAME惯性坐标系，最后输入期望的状态，空间位置xyz和航向角yaw。
+然后我们在此命令行控制终端首先输入4并敲回车 ，表示选择move模式，然后输入 0 并敲回车，表示选择空间位置控制，然后输入 0 并敲回车，表示选择ENU_FRAME惯性坐标系，然后依次输入期望的位置坐标值（即ENU_FRAME惯性坐标系下的坐标，单位为米）x，y，z和航向角yaw（一般为0）。
+
+对坐标系做下说明：
+
+ENU_FRAME惯性坐标系始终以无人机初始上电点为原点，且x轴指向无人机机头方向，y轴指向无人机正左方，z轴指向无人机正上方，单位为米。给无人机发送绝对期望位置选择这个坐标系。
+
+BODY_FRAME机体坐标系始终以无人机本身为原点，无论无人机飞到哪里都是以无人机当前位置为原点，且x轴指向无人机机头方向，y轴指向无人机正左方，z轴指向无人机正上方，单位为米。给无人机发送相对期望位置选择这个坐标系。
+
+
+.. image:: ../../images/p450/室外指点/控制终端输入.png
+   :height: 441px
+   :width: 740 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+
+这里我们发送的期望位置是BODY_FRAME机体坐标系下x为0，y为0，z为2的坐标点，偏航yaw为0，表示让无人机飞到相对于初始上电点（原点）往前（x轴）0m，往左（y轴）0m，往上（z轴）2m的期望位置，航向角保持不变。
+
+在输完期望航向角并敲回车后，我们再遥控器定点模式（SWC拨杆切到中档）下解锁并切到offboard模式（SWD拨杆切到下档），无人机会自动起飞到发送给PX4飞控的期望位置点。
+
+.. image:: ../../images/p450/室外指点/到达期望位置点.png
+   :height: 1080px
+   :width: 1920 px
+   :scale: 35 %
+   :alt: None
+   :align: center
+
+无人机飞到期望位置点之后，我们还可以继续在终端进行指点飞行操作，让无人机飞往下一个期望位置点。
+
+.. image:: ../../images/p450/室外指点/继续输入指点命令.png
+   :height: 1080px
+   :width: 1920 px
+   :scale: 35 %
+   :alt: None
+   :align: center
+
+需要降落时我们可以将遥控器SWD拨杆切至上档退出offboard模式，飞控会自动进入position模式（注意SWC拨杆是一直保持在中档，不需要动），然后我们可以手动操控无人机降落。
+
+
+视频演示
+-----------------------
+
+.. raw:: html
+
+   <iframe src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=318715792&page=13" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
