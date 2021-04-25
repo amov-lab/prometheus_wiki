@@ -228,15 +228,49 @@ config
 
 launch_basic
 >>>>>>>>>>>>>>>>>>
+p450_circle_det.launch
+
+p450_gps_onboard.launch
+
+p450_landpad_det.launch
+
+p450_vio_onboard.launch
+
+rs_t265.launch
+
 
 launch_control
 >>>>>>>>>>>>>>>>>>>>
+p450_gps_control.launch
+
+p450_vio_control.launch
 
 launch_detection
 >>>>>>>>>>>>>>>>>>>>>>
+p450_indoor_circle_tracking.launch
+
+p450_indoor_landing_static_target.launch
+
+p450_outdoor_circle_tracking.launch
+
+p450_outdoor_landing_static_target.launch
+
 
 launch_planning
 >>>>>>>>>>>>>>>>>>>>
+astar_ground.launch
+
+astar_ground_gps.launch
+
+astar_onboard.launch
+
+astar_onboard_gps.launch
+
+p450_indoor_astar_2dlidar.launch
+
+tf_transform.launch
+
+tf_transform_gps.launch
 
 px4_firmware
 >>>>>>>>>>>>>>>>>>>>>
