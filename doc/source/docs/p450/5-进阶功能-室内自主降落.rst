@@ -4,6 +4,12 @@
 本节主要讲解P450系列无人机在室内的自主降落演示。视频紧接上节内容 **首次飞行**  ，默认已经通过WiFi数传连接到QGC地面站和nomachine远程连接到板载计算机，
 主要分为一下几点进行讲解：摄像头标定，二维码检测确认，坐标系确认，启动指令，起飞，降落，以及最后的视频演示。
 
+.. attention::
+
+    每次飞行前需重新上电以重启飞控和板载计算机
+
+
+
 摄像头标定
 -------------
 具体步骤见常见问题处理中的摄像头标定
@@ -21,7 +27,7 @@
 
 运行检测节点
 
-`roslaunch p450_experiment landpad_det.launch`
+`roslaunch p450_experiment p450_landpad_det.launch`
 
 查看检测效果（可视化）
 
@@ -170,24 +176,23 @@ rqt_image_view
 
 .. raw:: html
 
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=801956085&bvid=BV1Hy4y177bC&cid=305784278&page=5" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=311393945&page=8" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 无人机在二维码左边起飞
 
 .. raw:: html
 
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=801956085&bvid=BV1Hy4y177bC&cid=305785411&page=6" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=311394521&page=9" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 无人机在二维码右边起飞
 
 .. raw:: html
 
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=801956085&bvid=BV1Hy4y177bC&cid=305785229&page=7" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=311394855&page=10" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 无人机在二维码前面起飞
 
 .. raw:: html
 
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=801956085&bvid=BV1Hy4y177bC&cid=305786053&page=8" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+   <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=311395762&page=11" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

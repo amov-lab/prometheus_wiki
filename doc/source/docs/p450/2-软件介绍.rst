@@ -228,15 +228,86 @@ config
 
 launch_basic
 >>>>>>>>>>>>>>>>>>
+.. image:: ../../images/p450/软件介绍/launch_basic.png
+   :height: 132px
+   :width: 455 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+
+p450_circle_det.launch：  圆框检测launch文件
+
+p450_gps_onboard.launch：  室外GPS定点launch文件
+
+p450_landpad_det.launch：  二维码检测launch文件
+
+p450_vio_onboard.launch：  室内T265定点launch文件
+
+rs_t265.launch：  T265启动launch文件
 
 launch_control
 >>>>>>>>>>>>>>>>>>>>
+.. image:: ../../images/p450/软件介绍/launch_control.png
+   :height: 67px
+   :width: 456 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+
+p450_gps_control.launch：  室外GPS指点launch文件
+
+p450_vio_control.launch：  室内T265指点launch文件
+
 
 launch_detection
 >>>>>>>>>>>>>>>>>>>>>>
+.. image:: ../../images/p450/软件介绍/launch_detection.png
+   :height: 109px
+   :width: 458 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+
+p450_indoor_circle_tracking.launch：  室内圆框跟踪launch文件
+
+p450_indoor_landing_static_target.launch：  室内二维码降落launch文件
+
+p450_outdoor_circle_tracking.launch：  室外圆框跟踪launch文件
+
+p450_outdoor_landing_static_target.launch：  室外二维码降落launch文件
+
 
 launch_planning
 >>>>>>>>>>>>>>>>>>>>
+.. image:: ../../images/p450/软件介绍/launch_planning.png
+   :height: 179px
+   :width: 463 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+
+室内避障launch文件：
+
+astar_onboard.launch
+
+astar_ground.launch
+
+tf_transform.launch
+
+室外避障launch文件：
+
+astar_onboard_gps.launch
+
+astar_ground_gps.launch
+
+tf_transform_gps.launch
+
+
+
 
 px4_firmware
 >>>>>>>>>>>>>>>>>>>>>
