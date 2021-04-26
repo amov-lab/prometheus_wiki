@@ -309,32 +309,6 @@ tf_transform_gps.launch
 
 
 
-px4_firmware
->>>>>>>>>>>>>>>>>>>>>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.. image:: ../../images/p450/软件介绍/p450_experiment.png
-   :height: 766px
-   :width: 1023 px
-   :scale: 70 %
-   :alt: None
-   :align: center
 
 

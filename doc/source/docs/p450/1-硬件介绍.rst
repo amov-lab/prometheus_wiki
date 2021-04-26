@@ -177,4 +177,8 @@ P450硬件接线图
    :align: center
 
 
+视频介绍如下：
 
+.. raw:: html
+
+   <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=321023958&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
