@@ -148,7 +148,7 @@ rqt_image_view
 
 飞到指定高度0.8米后，如果摄像头检测到二维码，无人机便会开始自主降落
 
-.. image:: ../../images/p450/室内降落/降落.png
+.. image:: ../../images/p450/室外降落/降落.png
    :height: 1080px
    :width: 1920px
    :scale: 35%
