@@ -28,7 +28,7 @@ Skew:标定板在摄像头视野中的倾斜转动<br/>
 
 等待几分钟后，计算出结果会自动在终端打印出来显示，这时dispaly方框又会由黑白恢复为彩色。如下图所示
 ![](https://img-blog.csdnimg.cn/20201207083342502.png)
-将得到的参数写入如下文件(有关目标尺度的预定义也在这个文件中)：Prometheus/Modules/object_detection/config/camera_param.yaml
+将得到的参数写入如下文件(有关目标尺度的预定义也在这个文件中)： amovlab_ws/src/p450_experiment/config/prometheus_detection_config/camera_param.yaml
 具体数字对应可参考下图
 ![](https://img-blog.csdnimg.cn/20201203224211428.png)
 
