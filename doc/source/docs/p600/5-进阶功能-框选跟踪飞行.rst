@@ -10,4 +10,100 @@
 启动指令
 ------------
 
-首先启动基本vio脚本 
+首先启动基本脚本
+
+
+`/home/amov/track_ws/src/px4_command/sh/sh_for_P200/fly_tracking_outdoor.sh`
+
+.. image:: ../../images/p600/框选跟踪飞行/启动命令.png
+   :height: 122px
+   :width: 630 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+
+待吊舱图像弹出后，依次检查各个终端是否有报错。
+
+.. image:: ../../images/p600/框选跟踪飞行/弹出吊舱图像.png
+   :height: 681px
+   :width: 874 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+
+没有问题后先在倒数第三个终端输入0
+
+
+.. image:: ../../images/p600/框选跟踪飞行/倒数第三个终端输入0.png
+   :height: 437px
+   :width: 649 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+
+再在倒数第三个终端输入1
+
+.. image:: ../../images/p600/框选跟踪飞行/倒数第三个终端输入1.png
+   :height: 437px
+   :width: 649 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+
+再在倒数第二个终端输入1
+
+.. image:: ../../images/p600/框选跟踪飞行/倒数第二个终端输入1.png
+   :height: 453px
+   :width: 654 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+
+再在倒数第二个终端输入777
+
+.. image:: ../../images/p600/框选跟踪飞行/倒数第二个终端输入777.png
+   :height: 452px
+   :width: 657 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+
+
+然后再遥控器切定点解锁，并手动起飞到一定高度，并让人站在机头方向，在吊舱视野范围内。
+
+
+然后手动框选人
+
+.. image:: ../../images/p600/框选跟踪飞行/框选人.png
+   :height: 414px
+   :width: 635 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+
+框好之后遥控器切offboard，然后无人机会开始进行跟踪，人可以进行自由走动。
+
+.. image:: ../../images/p600/框选跟踪飞行/切offboard.png
+   :height: 1080px
+   :width: 1920 px
+   :scale: 35 %
+   :alt: None
+   :align: center
+
+
+
+结束跟踪只需要遥控器切出offboard，无人机自动进入定点，然后手动操控遥控器降落。
+
+.. image:: ../../images/p600/框选跟踪飞行/切出offboard.png
+   :height: 1080px
+   :width: 1920 px
+   :scale: 35 %
+   :alt: None
+   :align: center

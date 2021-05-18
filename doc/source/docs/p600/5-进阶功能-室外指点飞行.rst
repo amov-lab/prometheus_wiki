@@ -10,4 +10,41 @@
 启动指令
 ------------
 
-首先启动基本vio脚本 
+首先启动命令一
+
+.. image:: ../../images/p600/室外指点飞行/启动指令一.png
+   :height: 129px
+   :width: 577 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+
+再启动命令二
+
+.. image:: ../../images/p600/室外指点飞行/启动指令二.png
+   :height: 130px
+   :width: 565 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+
+输入
+
+.. image:: ../../images/p600/室外指点飞行/指点一.png
+   :height: 400px
+   :width: 632 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+
+输入
+
+.. image:: ../../images/p600/室外指点飞行/指点依次输入.png
+   :height: 407px
+   :width: 636 px
+   :scale: 100 %
+   :alt: None
+   :align: center
