@@ -3,11 +3,168 @@
 5-进阶功能-航点避障飞行
 ================================
 
-本节主要讲解P450系列无人机在室内的指点飞行演示。视频紧接上节内容 **首次飞行**  ，默认已经通过WiFi数传连接到QGC地面站和nomachine远程连接到板载计算机，
-主要分为一下几点进行讲解：启动指令，命令行控制终端详解，起飞，指点飞，以及最后的视频演示。
+本节主要讲解P600系列无人机在室外的航点避障飞行演示。视频紧接上节内容 **首次飞行**  ，默认已经通过home图数传连接到QGC地面站和nomachine远程连接到板载计算机，
+主要分为一下几点进行讲解：启动指令，起飞，避障飞行，以及最后的视频演示。
 
 
 启动指令
 ------------
 
-首先启动基本vio脚本 
+首先启动
+
+`roslaunch p600_experiment astar_onboard_gps.launch`
+
+.. image:: ../../images/p600/规划避障飞行/启动指令一.png
+   :height: 98px
+   :width: 515 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+
+再启动第二个指令
+
+`roslaunch p600_experiment astar_ground_gps.launch`
+
+.. image:: ../../images/p600/规划避障飞行/启动指令二.png
+   :height: 112px
+   :width: 495 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+
+
+
+起飞
+------------
+
+接着在此终端依次输入指令让无人机起飞到1.4米高度。
+
+先输入0
+
+.. image:: ../../images/p600/规划避障飞行/起飞指令一.png
+   :height: 463px
+   :width: 637 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+
+再输入4
+
+.. image:: ../../images/p600/规划避障飞行/起飞指令二.png
+   :height: 526px
+   :width: 639 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+
+再输入0
+
+.. image:: ../../images/p600/规划避障飞行/起飞指令三.png
+   :height: 579px
+   :width: 640 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+再输入0
+
+.. image:: ../../images/p600/规划避障飞行/起飞指令四.png
+   :height: 592px
+   :width: 643 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+
+
+再依据当前飞机的本地位置数据的x输入对应期望x
+
+.. image:: ../../images/p600/规划避障飞行/起飞指令五.png
+   :height: 592px
+   :width: 639 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+
+再对应输入y的位置
+
+.. image:: ../../images/p600/规划避障飞行/起飞指令六.png
+   :height: 600px
+   :width: 650 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+
+
+再输入高度z为1.4，这个不需要根据当前无人机本地位置来写
+
+.. image:: ../../images/p600/规划避障飞行/起飞指令七.png
+   :height: 604px
+   :width: 647 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+
+
+期望偏航为0
+
+.. image:: ../../images/p600/规划避障飞行/起飞指令八.png
+   :height: 411px
+   :width: 644 px
+   :scale: 100 %
+   :alt: None
+   :align: center
+
+
+
+
+然后遥控器切定点解锁切offboard，无人机会自动起飞到1.4米高度。
+
+避障飞行
+--------------
+
+先点击rviz里的3D Nav Goal
+
+.. image:: ../../images/p600/规划避障飞行/3DNavGoal.png
+   :height: 652px
+   :width: 875 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+
+然后在rviz中点一个目标点
+
+
+.. image:: ../../images/p600/规划避障飞行/点目标点.png
+   :height: 650px
+   :width: 874 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+无人机会自动规划出绕开障碍物的路径
+
+.. image:: ../../images/p600/规划避障飞行/规划出路径.png
+   :height: 653px
+   :width: 876 px
+   :scale: 80 %
+   :alt: None
+   :align: center
+
+
+
+
+无人机到达目标点后，可以遥控器切出offboard，然后手动操控遥控器降落。
+
+
+
+视频演示
+-----------------
