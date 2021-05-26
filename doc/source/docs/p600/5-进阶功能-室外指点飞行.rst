@@ -167,6 +167,8 @@
 视频演示
 --------------------
 
+视频链接： https://www.bilibili.com/video/BV17V411j7Em?p=2
+
 视频演示如下：
 
 .. raw:: html
