@@ -188,10 +188,10 @@
 1.检查产品外包装
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-.. image:: ../../images/p450/2检查外包装.png
-   :height: 1080px
-   :width: 1920px
-   :scale: 20 %
+.. image:: ../../images/p600/硬件介绍/检查产品外包装.png
+   :height: 690px
+   :width: 1121px
+   :scale: 40 %
    :alt: None
    :align: center
 
@@ -201,26 +201,26 @@
 2.打开产品外包装
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-.. image:: ../../images/p450/3平放_标语在上.png
-   :height: 1080px
-   :width: 1920px
-   :scale: 20 %
+.. image:: ../../images/p600/硬件介绍/打开产品外包装.png
+   :height: 690px
+   :width: 1121px
+   :scale: 40 %
    :alt: None
    :align: center
 
 
 
 .. tip::
-   打开产品外包装，注意请将产品包装箱平放，印有标语的一面向上，然后打开侧面的箱盖，请注意在此处不宜使用较大的力气，以免损坏包装箱，后期可能影响产品相关的售后服务，打开包装箱，我们可以看到黑色的内衬，这时您可一只手按住产品外箱，一只手轻轻将内衬抽出。
+   打开产品外包装，注意请将产品包装箱平放，印有logo标语朝上，然后打开上面箱盖，打开包装箱，我们可以看到黑色的泡沫，需要轻轻将各个产品配件从中取出。
 
 
 3.清点产品数量
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-.. image:: ../../images/p450/4检查飞机和配件.png
-   :height: 1080px
-   :width: 1920px
-   :scale: 20 %
+.. image:: ../../images/p600/硬件介绍/清点产品数量.png
+   :height: 690px
+   :width: 1121px
+   :scale: 40 %
    :alt: None
    :align: center
 
@@ -229,38 +229,31 @@
    清点产品数量，首先请对照发货清单检查飞机和附件数量，然后检查飞机和随机附件外观是否有破损及异常.
 
 
-4.安装飞机脚架
+4.基本上电查看
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-.. image:: ../../images/p450/5安装机架.png
-   :height: 1080px
-   :width: 1920px
-   :scale: 20 %
+.. image:: ../../images/p600/硬件介绍/基本上电查看.png
+   :height: 690px
+   :width: 1121px
+   :scale: 40 %
    :alt: None
    :align: center
 
 
 .. important::
-   安装飞机脚架，首先将脚架从内衬两侧取出，然后轻轻插入飞机两侧的脚架安装孔位。
-
-.. attention::
-   此处请注意印有AMOV字样的面向外!
-
-.. image:: ../../images/p450/6安装机架螺丝.png
-   :height: 1080px
-   :width: 1920px
-   :scale: 20 %
-   :alt: None
-   :align: center
-
-.. important::
-   从箱底取出附带的M1.5X8螺丝，使用随机附赠的螺丝刀将其拧紧，注意此处请适当用力，以免损坏螺丝。
-
+   注意查看其他清单内容
 
 5.开箱视频
 >>>>>>>>>>>>
 
 详细可以观看开箱视频：
+
+链接如下： https://v.qq.com/x/page/y3248yfm33h.html
+
+.. raw:: html
+
+    <iframe width="696" height="422" src="https://v.qq.com/txp/iframe/player.html?vid=y3248yfm33h" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 
 硬件设备说明及用途
 --------------------
@@ -274,4 +267,15 @@ P600硬件接线图
    :scale: 10 %
    :alt: None
    :align: center
+
+P600硬件设备简单介绍
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+可观看硬件设备介绍视频：
+
+链接如下： https://v.qq.com/x/page/z32486xl8pv.html
+
+.. raw:: html
+
+    <iframe width="696" height="422" src="https://v.qq.com/x/page/z32486xl8pv.html" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
