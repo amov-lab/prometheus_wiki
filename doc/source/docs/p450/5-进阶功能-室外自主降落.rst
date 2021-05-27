@@ -21,9 +21,7 @@
 
 .. image:: ../../images/p450/室内降落/二维码.png
  
-请根据自己的相机节点选择（如果是上面所用的单目摄像头，则命令如下）
 
-`roslaunch prometheus_detection web_cam0.launch`
 
 运行检测节点
 
