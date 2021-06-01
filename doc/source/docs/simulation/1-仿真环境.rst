@@ -317,6 +317,19 @@ Oracle VM VirtualBox
     <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1Sz4y1m7fP&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
+.. tip::
+    - 如果遇到NVMe固态硬盘读取不了的情况！
+    - 首先进入Ubuntu系统，打开GParted分区软件
+    - 新建三个分区(此处只做分区不做挂载)：第一个分区大小：0.5G ,第二个分区分区大小：8G，第三个分区大小：>50G
+    - 然后打开终端：输入 
+    - ``sudo ln /dev/nvme0n1 /dev/sdd``
+    - ``sudo ln /dev/nvme0n1p1 /dev/sdd1``
+    - ``sudo ln /dev/nvme0n1p2 /dev/sdd2``
+    - ``sudo ln /dev/nvme0n1p* /dev/sdd*``
+    - 以此类推
+    - 如果有Ubuntu更新报错或者系统报错弹窗，请关闭！！！
+    - 打开SystemBack 点击系统安装，这个时候会发现NVMe固态硬盘已经可以显示了，之后的操作跟之前的一样的。
+
 
 
 
