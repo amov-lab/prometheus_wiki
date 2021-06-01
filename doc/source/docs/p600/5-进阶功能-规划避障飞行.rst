@@ -168,3 +168,7 @@
 
 视频演示
 -----------------
+
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=418128941&bvid=BV17V411j7Em&cid=345272923&page=4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
