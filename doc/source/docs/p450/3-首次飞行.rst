@@ -108,16 +108,9 @@ qgc远程连接到飞机
    :alt: None
    :align: center
 
-密码为wifi名字去掉“-uav”。例如wifi名字是“amov-uav21120”,那么wifi密码就是“amov21120”
+密码为12345678
 
-.. image:: ../../images/p450/first_fly/3-wifipassword.png
-   :height: 212px
-   :width: 441px
-   :scale: 80%
-   :alt: None
-   :align: center
-
-在通讯连接下面选择“添加”
+电脑连上飞机的数传wifi后，打开QGC地面站，在通讯连接下面选择“添加”
 
 .. image:: ../../images/p450/first_fly/3-addwifi.png
    :height: 924px
@@ -143,6 +136,34 @@ qgc远程连接到飞机
    :scale: 60%
    :alt: None
    :align: center
+
+.. attention::
+    如果做无人机室内测试，需要在地面站修改参数EKF2_AID_MASK，EKF2_HGT_MODE。
+
+    .. image:: ../../images/p450/first_fly/3-parameters.png
+
+    在search栏输入aid，选择EKF2_AID_MASK参数
+
+    .. image:: ../../images/p450/first_fly/3-aid1.png
+
+    在窗口右上侧会弹出子页面,如下图所示。
+
+    .. image:: ../../images/p450/first_fly/3-aid2.png
+
+    一般默认选择第一项use GPS,室内飞行需改为4、5项，修改后保存。
+
+    在search栏输入hgt,选择EKF2_HGT_MODE参数栏
+
+    .. image:: ../../images/p450/first_fly/3-hgt1.png
+
+    在窗口右上弹出的子页面上，点击下拉菜单，选择vision，如下图所示
+
+    .. image:: ../../images/p450/first_fly/3-hgt2.png
+
+    最后保存退出。
+
+
+
 
 
 nomachine远程连接
