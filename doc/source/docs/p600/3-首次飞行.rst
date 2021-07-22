@@ -45,8 +45,9 @@ QGC的作用是连接到飞机，监控飞机本身的状态（传感器是否�
 
     最下方的版本是V4.0.8
 
-.. image:: ../../images/p450/first_fly/1-qgc-vision.png
 
+.. image:: ../../images/p450/first_fly/1-qgc-vision.png
+   :align: center
 安装nomachine
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -90,244 +91,235 @@ P600电池
    :align: center
 
 
+飞行前准备
+-----------------
+将螺旋桨摆好，同时检查螺旋桨是否有松动，再检查下螺丝是否有松动，以及连接线是否对螺旋桨有影响
+
+.. image:: ../../images/p600/首次飞行/将螺旋桨拨至外面.png
+   :height: 800px
+   :width: 800px
+   :scale: 50%
+   :alt: None
+   :align: center
+如下图所示
+
+.. image:: ../../images/p600/首次飞行/拨正.png
+   :height: 800px
+   :width: 800px
+   :scale: 50%
+   :alt: None
+   :align: center
+接着我们检查下电池是否有破损、漏液等情况
+
+.. image:: ../../images/p600/首次飞行/检查电池.png
+   :height: 800px
+   :width: 800px
+   :scale: 50%
+   :alt: None
+   :align: center
+确保电池没问题后，将电池固定在飞机上，确保电池不会松动，放在水平位置
+
+.. image:: ../../images/p600/首次飞行/将电池固定在飞机上.png
+   :height: 800px
+   :width: 800px
+   :scale: 50%
+   :alt: None
+   :align: center
+打开遥控器，查看遥控器电量TX（在遥控器显示屏的右上角）
+
+.. image:: ../../images/p600/首次飞行/检查遥控器电量.png
+   :height: 800px
+   :width: 800px
+   :scale: 50%
+   :alt: None
+   :align: center
+首次飞行用到遥控器的两个摇杆和一个拨杆：
+
+左边的摇杆：上下控制无人机的高度，左右控制无人机的偏航；
+
+右边的摇杆：上下控制无人机的前进与后退，左右控制无人机的向左与向右；
+
+拨杆（SWC）：飞行模式切换开关，上位代表自稳模式，中位代表定点模式，下位代表降落模式。
+
+确保遥控器、飞机上的桨叶与螺丝没有松动的情况下，给无人机上电，并且按下开机按钮
+
+.. image:: ../../images/p600/首次飞行/上电开机.png
+   :height: 800px
+   :width: 800px
+   :scale: 50%
+   :alt: None
+   :align: center
+电机灯亮以后证明开机成功
+
+.. image:: ../../images/p600/首次飞行/电机灯亮后.png
+   :height: 800px
+   :width: 800px
+   :scale: 50%
+   :alt: None
+   :align: center
 QGC连接到飞机
 -----------------
 
 首先将地面端的图数传连接到自己电脑（最好将wifi关掉），如下图所示
 
 .. image:: ../../images/p600/首次飞行/地面端连接电脑.png
-   :height: 900px
-   :width: 900px
-   :scale: 80%
+   :height: 800px
+   :width: 800px
+   :scale: 50%
    :alt: None
    :align: center
-.. image:: ../../images/p600/首次飞行/电脑端IP配置.png
+
+
+然后按照图示所示：
+
 1、点击“未识别的网络”
+
 2、点击“更改适配器”
-3、点击“以太网”，
+
+3、点击“以太网”
+
 4、点击“属性”
+
 5、点击Internet协议版本4（TCP/IPv4）
+
 6、选中“使用下面的IP地址（s）”
+
 7、IP地址栏中写只要不和飞机端的地面站重合的即可，如192.168.1.188，子网掩码点击后自己填充
+
+.. image:: ../../images/p600/首次飞行/电脑端IP配置.png
 
 然后打开地面站，连接方式如下面两张图所示
 
 打开地面站后：1、点击右上角图标 2、点击通讯连接 3、点击添加
 
 .. image:: ../../images/p600/首次飞行/添加连接.png
-
+   :height: 1100px
+   :width: 1000px
+   :scale: 50%
+   :alt: None
+   :align: center
 
 
 点击添加后：1、名称自定义 2、类型选择TCP 3、主机地址为192.168.1.***（最后三位看自己的飞控端地址） 4、端口是8080
 
 .. image:: ../../images/p600/首次飞行/编辑连接.png
+   :height: 1100px
+   :width: 1000px
+   :scale: 50%
+   :alt: None
+   :align: center
 
 
 然后点击“连接”，连接成功后如下图所示
 
 .. image:: ../../images/p450/first_fly/3-connectsuccess.png
-   :height: 452px
-   :width: 1267px
-   :scale: 60%
-   :alt: None
-   :align: center
 
+地面站连接成功后，记得检查GPS搜星数量（至少保证搜星数量在10颗以上，即GPS指示灯变为绿色），如下图所示（图示中搜星17颗）
 
-nomachine远程连接
---------------------
-.. attention::
-
-    注意查看板载IP首先需要准备个显示器来连接板载计算机。
-
-查看板载计算机ip
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-查看板载计算机ip有两种方法，第一种方法是点击右上角“wifi信号”，选择“Connection Information”，
-在IPv4-IP Address下，用“红框”标记的就是板载计算机的ip地址。
-
-.. image:: ../../images/p450/first_fly/4-boardip1.png
-   :height: 419px
-   :width: 281px
-   :scale: 100%
-   :alt: None
-   :align: center
-
-.. image:: ../../images/p600/首次飞行/查看板载IP_1.png
-   :height: 446px
-   :width: 361px
-   :scale: 100%
-   :alt: None
-   :align: center
-
-第二种方法是点击右键，选择“Open Terminal”,输入“ifconfig”,在最下面wlan0下用“红框”标记的就是板载计算机的ip地址。
-
-.. image:: ../../images/p600/首次飞行/查看板载IP_2.png
-   :height: 676px
-   :width: 956px
-   :scale: 70%
-   :alt: None
-   :align: center
-
-
-nomachine远程连接板载计算机
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-点击New
-
-.. image:: ../../images/p450/first_fly/4-nom-1.png
-   :height: 232px
-   :width: 1004px
+.. image:: ../../images/p600/首次飞行/卫星搜星数.png
+   :height: 800px
+   :width: 800px
    :scale: 50%
    :alt: None
    :align: center
 
-在Protocol下选择NX，点击Continue。
+查看无人机电池电量，此时显示的是23.52V，还可以飞行，降到22.0V时建议充电
 
-.. image:: ../../images/p450/first_fly/4-nom-2.png
-   :height: 676px
-   :width: 956px
-   :scale: 70%
+.. image:: ../../images/p600/首次飞行/查看电池电量.png
+   :height: 800px
+   :width: 800px
+   :scale: 50%
    :alt: None
    :align: center
 
-在“Host”下填写板载计算机的ip地址，板载计算机地址参考步骤2，“Port”下默认4000。
+查看无人机的姿态球，下图1表示姿态球，2、表示无人机的高度，3表示航向角
 
-.. image:: ../../images/p600/首次飞行/nomochine设置1.png
-   :height: 680px
-   :width: 978px
-   :scale: 70%
-   :alt: None
+.. attention::
+
+    若姿态球中倾斜的程度过大，则需要重新校准水平仪
+
+.. image:: ../../images/p600/首次飞行/姿态球.png
+
    :align: center
 
-在Authentication下默认是Password，点击“Continue”。
+校准水平仪的位置
 
-.. image:: ../../images/p450/first_fly/4-nom-4.png
-   :height: 685px
-   :width: 1000px
-   :scale: 70%
-   :alt: None
+.. image:: ../../images/p600/首次飞行/校准水平仪的位置.png
    :align: center
 
-在Proxy下默认是“Don’t use a proxy”，点击“Continue”。
+查看控制模式，操作方式为控制遥控器SWC通道，分为上、中、下三通道，分别对应不同的模式
 
-.. image:: ../../images/p450/first_fly/4-nom-5.png
-   :height: 687px
-   :width: 983px
-   :scale: 70%
-   :alt: None
-   :align: center
+.. attention::
 
-在Save as下会生成默认的name，可以不做更改，点击“Done”。
+    新手的话建议使用position定点模式
 
-.. image:: ../../images/p600/首次飞行/nomochine设置2.png
-   :height: 698px
-   :width: 1014px
-   :scale: 70%
-   :alt: None
-   :align: center
+.. image:: ../../images/p600/首次飞行/模式.png
+  :align: center
 
-按照上述步骤操作，会自动生成如下图所示用红框标起的链接，点击“Connect”。
+也可以查看下安全模式，主要是看低电量保护、地理围栏、以及返航高度（需根据周围环境进行设置），如下图：
 
-.. image:: ../../images/p600/首次飞行/nomochine设置3.png
-   :height: 677px
-   :width: 955px
-   :scale: 70%
-   :alt: None
-   :align: center
+.. image:: ../../images/p600/首次飞行/安全模式.png
 
-在“Username”和“Password”下输入“amov”
+确认切到定点模式后，内八解锁，然后缓慢往上推
 
-.. image:: ../../images/p450/first_fly/4-nom-8.png
+.. image:: ../../images/p600/首次飞行/定点飞行.png
+  :align: center
 
-Nomachine成功连接板载计算机后会显示如下界面
+然后缓慢拉低油门，降落下来后，外八上锁，开始测试任务规划，首先我们需要清除上次规划的航点，然后设置起飞点
 
-.. image:: ../../images/p450/first_fly/4-nom-9.png
+清除航点
 
-此时可同时连接qgc与板载计算机，方便后续实验操作。
+.. image:: ../../images/p600/首次飞行/清除航点.png
 
-.. image:: ../../images/p450/first_fly/4-nom-10.png
+设置起飞点
 
+.. image:: ../../images/p600/首次飞行/起飞点.png
 
+设置航点，途中标记3的位置为航点距飞机的距离
 
-启动脚本
--------------------
+.. image:: ../../images/p600/首次飞行/设置航点.png
 
+可以设置飞机飞航点的高度与距离，设置完成后点击右上角的上传
 
-启动脚本在下图所示的目录下面
+.. image:: ../../images/p600/首次飞行/上传航点.png
 
-.. image:: ../../images/p600/首次飞行/文件路径.png
+滑动解锁任务
 
-在终端输入如下命令，启动脚本
+.. image:: ../../images/p600/首次飞行/解锁任务.png
+  :align: center
 
-.. image:: ../../images/p600/首次飞行/命令.png
+确认为定点模式，gps信号正常后即可解锁飞航点
 
-启动脚本后如下图所示
+.. attention::
 
-.. image:: ../../images/p450/first_fly/5-roslaunch.png
+    若有异常，比如不按照航线去飞，则通过切到定高模式，再切回定点模式，会取消任务进行手动控制
 
+.. image:: ../../images/p600/首次飞行/执行航点.png
 
+飞完航点后，可进行一键返航，点飞行模式，然后选择return即可
 
-检查各项数据是否正常
----------------------
+.. image:: ../../images/p600/首次飞行/一键返航.png
+  :align: center
 
-在启动脚本后，首先查看地面站，地面站上会显示飞机的航向为正东，就是“E”。
+之后飞机会回到其实起飞的高度并自动降落
 
-.. image:: ../../images/p450/first_fly/6-qgc-e.png
-   :height: 364px
-   :width: 248px
-   :scale: 100%
-   :alt: None
-   :align: center
+.. image:: ../../images/p600/首次飞行/返航之后并降落.png
+  :align: center
 
-第一个终端正常情况下如下图所示，各项数据均正常
+降落后外八字上锁
 
-.. image:: ../../images/p450/first_fly/6-first.png
+.. image:: ../../images/p600/首次飞行/上锁.png
+  :align: center
 
-第二个终端如下图所示，查看飞机的位置、速度、角度与角速度信息是否正常，主
-要移动飞机查看飞机的位置信息是否正常，飞机向前为X轴正方向，向左为Y轴正方
-向，向上为Z轴正方向。下图例子为将飞机向后向上移动大概1m，数据显示正常。
+上锁后，长按电源键五秒给无人机断电，电机灯熄灭后证明断电成功，然后拔掉电池，关闭遥控器
 
- .. image:: ../../images/p450/first_fly/6-twice.png
+.. image:: ../../images/p600/首次飞行/断电.png
+  :align: center
 
- 第三个终端如下图所示，显示“Program is running”即表示脚本正常运行。
-
-  .. image:: ../../images/p450/first_fly/6-third.png
-
-
-遥控器定点模式飞行
--------------------------------------
-
-如下图所示，将“SWC”开关拨到中间一档， 切到“定点模式”
-
-.. image:: ../../images/p450/first_fly/7-pos.png
-   :height: 745px
-   :width: 998px
-   :scale: 60%
-   :alt: None
-   :align: center
-
-
-然后左手“右下”解锁飞机，如下图所示。
-
-.. image:: ../../images/p450/first_fly/7-arm.png
-
-起飞后如下图所示，进行定点模式飞行。
-
-.. image:: ../../images/p600/首次飞行/起飞后.png
-
-   :height: 779px
-   :width: 821px
-   :scale: 80%
-   :alt: None
-   :align: center
 
 视频演示
 -------------------------
 
 .. raw:: html
 
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=311386031&page=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-首次飞行地址：
-
-https://www.bilibili.com/video/BV17V411j7Em?t=365
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=418128941&bvid=BV17V411j7Em&cid=345269545&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
