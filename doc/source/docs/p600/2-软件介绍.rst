@@ -39,7 +39,7 @@ Prometheus的软件框架如下图所示，
 控制模块主要与MAVROS进行信息交互，分为两个部分，一部分是输入，一部分是输出.
 
 -   px4_pos_estimator.cpp   ：主要将板载计算机处理之后的位置数据传给飞控，读取飞控当前的状态信息
--   px4_sender.cpp  ：主要将控制指令借口通过px4_sender发送给mavros，从而控制飞机进行相应的动作指令
+-   px4_sender.cpp  ：主要将控制指令接口通过px4_sender发送给mavros，从而控制飞机进行相应的动作指令
 
 支持的板载计算机提供位置的数据来源有：动捕系统mocap，英特尔T265双目相机，激光雷达定位建图，仿真器gazebo提供模型位置数据，以及SLAM提供位置数据
 
@@ -243,13 +243,13 @@ launch_basic
    :align: center
 
 
-p450_circle_det.launch：  圆框检测launch文件
+p600_circle_det.launch：  圆框检测launch文件
 
-p450_gps_onboard.launch：  室外GPS定点launch文件
+p600_gps_onboard.launch：  室外GPS定点launch文件
 
-p450_landpad_det.launch：  二维码检测launch文件
+p600_landpad_det.launch：  二维码检测launch文件
 
-p450_vio_onboard.launch：  室内T265定点launch文件
+p600_vio_onboard.launch：  室内T265定点launch文件
 
 rs_t265.launch：  T265启动launch文件
 
@@ -263,9 +263,9 @@ launch_control
    :align: center
 
 
-p450_gps_control.launch：  室外GPS指点launch文件
+p600_gps_control.launch：  室外GPS指点launch文件
 
-p450_vio_control.launch：  室内T265指点launch文件
+p600_vio_control.launch：  室内T265指点launch文件
 
 
 launch_detection
@@ -278,13 +278,13 @@ launch_detection
    :align: center
 
 
-p450_indoor_circle_tracking.launch：  室内圆框跟踪launch文件
+p600_indoor_circle_tracking.launch：  室内圆框跟踪launch文件
 
-p450_indoor_landing_static_target.launch：  室内二维码降落launch文件
+p600_indoor_landing_static_target.launch：  室内二维码降落launch文件
 
-p450_outdoor_circle_tracking.launch：  室外圆框跟踪launch文件
+p600_outdoor_circle_tracking.launch：  室外圆框跟踪launch文件
 
-p450_outdoor_landing_static_target.launch：  室外二维码降落launch文件
+p600_outdoor_landing_static_target.launch：  室外二维码降落launch文件
 
 
 launch_planning
