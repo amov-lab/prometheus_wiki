@@ -84,6 +84,9 @@ rqt_image_view
 
 启动指令
 ------------
+.. attention::
+      在室内操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定如下图，EKF2_HGT_MODE设定为Vision。
+        .. image:: ../../images/p450/first_fly/3-aid2.png
 
 首先启动基本vio脚本 
 

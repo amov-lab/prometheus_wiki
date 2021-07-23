@@ -85,7 +85,13 @@ rqt_image_view
 启动指令
 ------------
 
-首先启动基本vio脚本 
+.. attention::
+      在室外操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定为use gps，EKF2_HGT_MODE设定为Barometric pressure。
+
+
+
+      
+首先启动基本gps脚本 
 
 `roslaunch p450_experiment p450_gps_onboard.launch`
 
