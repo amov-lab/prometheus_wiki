@@ -58,7 +58,7 @@
 输完以上指令后，遥控器切定点解锁然后切offboard，无人机会自动起飞，等到无人机起飞到一个稳定高度，也即是我们设定的起飞高度后，回到rviz界面，点击选择3D Nav Goal
 
 .. image:: ../../images/p450/室外避障/选择3DNavGoal.png
-   :height: 784px
+   :height: 750px
    :width: 1035px
    :scale: 80%
    :alt: None

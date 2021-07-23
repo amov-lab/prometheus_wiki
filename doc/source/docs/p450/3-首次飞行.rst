@@ -113,11 +113,7 @@ qgc远程连接到飞机
 电脑连上飞机的数传wifi后，打开QGC地面站，在通讯连接下面选择“添加”
 
 .. image:: ../../images/p450/first_fly/3-addwifi.png
-   :height: 924px
-   :width: 909px
-   :scale: 80%
-   :alt: None
-   :align: center
+
 
 
 
@@ -135,11 +131,7 @@ qgc远程连接到飞机
 然后点击“连接”，连接成功后如下图所示
 
 .. image:: ../../images/p450/first_fly/3-connectsuccess.png
-   :height: 452px
-   :width: 1267px
-   :scale: 60%
-   :alt: None
-   :align: center
+ 
 
 .. attention::
     如果做无人机室内测试，需要在地面站修改参数EKF2_AID_MASK，EKF2_HGT_MODE，详细操作如下：

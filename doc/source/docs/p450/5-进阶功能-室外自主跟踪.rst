@@ -70,7 +70,7 @@
 然后通过控制终端发送1起飞指令，这时候飞机通过板载计算机已经给飞机一直发送起飞指令，但是目前飞机还没有进入offboard模式和解锁，所以飞机是没有响应的。
 
 .. image:: ../../images/p450/室外跟踪/起飞.png
-   :height: 882px
+   :height: 850px
    :width: 1048 px
    :scale: 60 %
    :alt: None

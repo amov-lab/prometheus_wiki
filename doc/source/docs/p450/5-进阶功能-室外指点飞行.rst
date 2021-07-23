@@ -95,20 +95,12 @@ BODY_FRAME机体坐标系始终以无人机本身为原点，无论无人机飞�
 在输完期望航向角并敲回车后，我们再遥控器定点模式（SWC拨杆切到中档）下解锁并切到offboard模式（SWD拨杆切到下档），无人机会自动起飞到发送给PX4飞控的期望位置点。
 
 .. image:: ../../images/p450/室外指点/到达期望位置点.png
-   :height: 1080px
-   :width: 1920 px
-   :scale: 35 %
-   :alt: None
-   :align: center
+  
 
 无人机飞到期望位置点之后，我们还可以继续在终端进行指点飞行操作，让无人机飞往下一个期望位置点。
 
 .. image:: ../../images/p450/室外指点/继续输入指点命令.png
-   :height: 1080px
-   :width: 1920 px
-   :scale: 35 %
-   :alt: None
-   :align: center
+
 
 需要降落时我们可以将遥控器SWD拨杆切至上档退出offboard模式，飞控会自动进入position模式（注意SWC拨杆是一直保持在中档，不需要动），然后我们可以手动操控无人机降落。
 

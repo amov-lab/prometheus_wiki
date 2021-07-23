@@ -52,7 +52,7 @@
 会自动弹出rviz界面，并可以看到建图效果，里面可以看到障碍物
 
 .. image:: ../../images/p450/fastplanner/rviz界面.png
-   :height: 768px
+   :height: 730px
    :width: 1027px
    :scale: 70%
    :alt: None
@@ -62,7 +62,7 @@
 确认参数和设置没有问题后，在此终端输入1并敲回车
 
 .. image:: ../../images/p450/fastplanner/确认参数.png
-   :height: 770px
+   :height: 730px
    :width: 1025px
    :scale: 70%
    :alt: None
@@ -71,7 +71,7 @@
 然后遥控器先切到定点模式，在此终端继续输入1并敲回车，解锁无人机
 
 .. image:: ../../images/p450/fastplanner/解锁.png
-   :height: 769px
+   :height: 730px
    :width: 1026px
    :scale: 70%
    :alt: None
@@ -89,7 +89,7 @@
 等到无人机起飞到一个稳定高度，也即是我们设定的起飞高度后，回到rviz界面，点击选择2D Nav Goal
 
 .. image:: ../../images/p450/fastplanner/选择2DNavGoal.png
-   :height: 768px
+   :height: 730px
    :width: 952px
    :scale: 70%
    :alt: None
@@ -98,7 +98,7 @@
 在rviz上点击一个点作为目标点，会自动生成一个绕开障碍物的路径
 
 .. image:: ../../images/p450/fastplanner/创建点.png
-   :height: 769px
+   :height: 730px
    :width: 955px
    :scale: 70%
    :alt: None

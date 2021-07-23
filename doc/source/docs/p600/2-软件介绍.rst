@@ -188,15 +188,14 @@ p600_experiment功能包是适配prometheus开源代码的实机闭源功能包�
 
 该文件位置：amovlab_ws/src/p600_experiment
 
-.. image:: ../../images/p450/软件介绍/p450_experiment文件目录.png
+.. image:: ../../images/p600/软件介绍/P600-experiment.png
    :height: 226px
    :width: 855 px
    :scale: 70 %
    :alt: None
    :align: center
 
-.. attention::
-   此处图片更换为P600截图
+
 
 
 此功能包主要包含
@@ -213,15 +212,14 @@ p600_experiment功能包是适配prometheus开源代码的实机闭源功能包�
 config
 >>>>>>>>>>>>>>>>>>>
 
-.. image:: ../../images/p450/软件介绍/config文件.png
+.. image:: ../../images/p600/软件介绍/P600-config.png
    :height: 418px
    :width: 368 px
    :scale: 70 %
    :alt: None
    :align: center
 
-.. attention::
-   此处图片更换为P600截图
+
 
 -   mavros_config：对mavros相关参数的配置（分为室内一组，室外一组）
 
@@ -235,8 +233,8 @@ config
 
 launch_basic
 >>>>>>>>>>>>>>>>>>
-.. image:: ../../images/p450/软件介绍/launch_basic.png
-   :height: 132px
+.. image:: ../../images/p600/软件介绍/P600-launch-basic.png
+   :height: 150px
    :width: 455 px
    :scale: 80 %
    :alt: None
@@ -255,8 +253,8 @@ rs_t265.launch：  T265启动launch文件
 
 launch_control
 >>>>>>>>>>>>>>>>>>>>
-.. image:: ../../images/p450/软件介绍/launch_control.png
-   :height: 67px
+.. image:: ../../images/p600/软件介绍/P600-launch-control.png
+   :height: 80px
    :width: 456 px
    :scale: 80 %
    :alt: None
@@ -270,8 +268,8 @@ p600_vio_control.launch：  室内T265指点launch文件
 
 launch_detection
 >>>>>>>>>>>>>>>>>>>>>>
-.. image:: ../../images/p450/软件介绍/launch_detection.png
-   :height: 109px
+.. image:: ../../images/p600/软件介绍/P600-launch-detection.png
+   :height: 120px
    :width: 458 px
    :scale: 80 %
    :alt: None
@@ -289,7 +287,7 @@ p600_outdoor_landing_static_target.launch：  室外二维码降落launch文件
 
 launch_planning
 >>>>>>>>>>>>>>>>>>>>
-.. image:: ../../images/p450/软件介绍/launch_planning.png
+.. image:: ../../images/p600/软件介绍/P600-launch-planning.png
    :height: 179px
    :width: 463 px
    :scale: 80 %
