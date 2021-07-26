@@ -108,25 +108,16 @@ qgc远程连接到飞机
    :alt: None
    :align: center
 
-密码为wifi名字去掉“-uav”。例如wifi名字是“amov-uav21120”,那么wifi密码就是“amov21120”
+密码为12345678
 
-.. image:: ../../images/p450/first_fly/3-wifipassword.png
-   :height: 212px
-   :width: 441px
-   :scale: 80%
-   :alt: None
-   :align: center
-
-在通讯连接下面选择“添加”
+电脑连上飞机的数传wifi后，打开QGC地面站，在通讯连接下面选择“添加”
 
 .. image:: ../../images/p450/first_fly/3-addwifi.png
-   :height: 924px
-   :width: 909px
-   :scale: 80%
-   :alt: None
-   :align: center
 
-类型选择“	TCP”，主机地址为“192.168.1.###”，“###”为wifi名字的后三位数字。端口号为“6000”。
+
+
+
+类型选择“	TCP”，主机地址为“192.168.10.###”，“###”为wifi名字的后三位数字。端口号为“6000”。
 
 .. image:: ../../images/p450/first_fly/3-tcp-ip.png
    :height: 317px
@@ -135,14 +126,44 @@ qgc远程连接到飞机
    :alt: None
    :align: center
 
+
+
 然后点击“连接”，连接成功后如下图所示
 
 .. image:: ../../images/p450/first_fly/3-connectsuccess.png
-   :height: 452px
-   :width: 1267px
-   :scale: 60%
-   :alt: None
-   :align: center
+ 
+
+.. attention::
+    如果做无人机室内测试，需要在地面站修改参数EKF2_AID_MASK，EKF2_HGT_MODE，详细操作如下：
+
+    首先点击参数（Parameters）按钮，进入参数修改界面，如下。
+
+    .. image:: ../../images/p450/first_fly/3-parameters.png
+
+    在search栏输入aid，选择EKF2_AID_MASK参数
+
+    .. image:: ../../images/p450/first_fly/3-aid1.png
+
+    在窗口右上侧会弹出子页面,如下图所示。
+
+    .. image:: ../../images/p450/first_fly/3-aid2.png
+
+
+
+    一般默认选择第一项use GPS,由于我们室内飞行使用的是T265作为位置定位源，所以需将此参数改为4、5项，修改后保存。
+
+    在search栏输入hgt,选择EKF2_HGT_MODE参数栏
+
+    .. image:: ../../images/p450/first_fly/3-hgt1.png
+
+    在窗口右上弹出的子页面上，点击下拉菜单，选择vision，如下图所示
+
+    .. image:: ../../images/p450/first_fly/3-hgt2.png
+
+    最后保存退出。
+
+
+
 
 
 nomachine远程连接
@@ -326,9 +347,8 @@ Nomachine成功连接板载计算机后会显示如下界面
 
 .. image:: ../../images/p450/first_fly/6-first.png
 
-第二个终端如下图所示，查看飞机的位置、速度、角度与角速度信息是否正常，主
-要移动飞机查看飞机的位置信息是否正常，飞机向前为X轴正方向，向左为Y轴正方
-向，向上为Z轴正方向。下图例子为将飞机向后向上移动大概1m，数据显示正常。
+第二个终端如下图所示，查看飞机的位置、速度、角度与角速度信息是否正常,移动飞机,查看飞机的位置信息是否正常，飞机向前为X轴正方向，向左为Y轴正方
+向，向上为Z轴正方向。下图例子为将飞机向后向上各移动大概1m，数据显示正常。
 
  .. image:: ../../images/p450/first_fly/6-twice.png
 

@@ -48,8 +48,10 @@ rqt_image_view
 .. image:: ../../images/p450/室内降落/二维码检测结果.png
 
 如果有较大大差距
-一，重新标定，修改相机参数和畸变参数
-二，确认参数文件中二维码边长，降落板边长为实际的真实值（这个非常重要），如果不是，修改为真实值，否则直接影响到二维码位置估计。
+
+一，重新标定，修改相机参数和畸变参数；
+
+二，确认参数文件中二维码边长为降落板边长的真实值（这个非常重要），如果不是，修改为真实值，否则直接影响到二维码位置估计。
 
 .. image:: ../../images/p450/室内降落/参数文件.png
 
@@ -83,7 +85,13 @@ rqt_image_view
 启动指令
 ------------
 
-首先启动基本vio脚本 
+.. attention::
+      在室外操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定为use gps，EKF2_HGT_MODE设定为Barometric pressure。
+
+
+
+      
+首先启动基本gps脚本 
 
 `roslaunch p450_experiment p450_gps_onboard.launch`
 
@@ -123,7 +131,7 @@ rqt_image_view
 `rqt_image_view`
 
 .. image:: ../../images/p450/室外降落/显示摄像头图像.png
-   :height: 535px
+   :height: 500px
    :width: 497px
    :scale: 100%
    :alt: None
@@ -147,11 +155,7 @@ rqt_image_view
 先将遥控器切换到position模式，在运行自主降落脚本后板载计算机就一直在给飞机发送起飞指令，但是目前飞机还没有进入offboard模式和解锁，所以飞机是没有响应的。接着遥控器操作“内八”进行解锁，然后在终端输入1并敲回车，最后拨动offboard飞行模式开关切入offboard模式，此时无人机会先起飞到起飞点上方0.8米高度（我们在自主降落代码中设定的高度为0.8m）
 
 .. image:: ../../images/p450/室外降落/起飞.png
-   :height: 1080px
-   :width: 1920px
-   :scale: 35%
-   :alt: None
-   :align: center
+
 
 
 降落
@@ -160,20 +164,12 @@ rqt_image_view
 飞到指定高度0.8米后，如果摄像头检测到二维码，无人机便会开始自主降落
 
 .. image:: ../../images/p450/室外降落/降落.png
-   :height: 1080px
-   :width: 1920px
-   :scale: 35%
-   :alt: None
-   :align: center
+
 
 降落完成后会无人机自动上锁
 
 .. image:: ../../images/p450/室外降落/落地.png
-   :height: 1080px
-   :width: 1920px
-   :scale: 35%
-   :alt: None
-   :align: center
+
 
 
 

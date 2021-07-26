@@ -103,12 +103,19 @@ P600电池
    :align: center
 如下图所示
 
+
+.. image:: ../../images/p600/首次飞行/地面端连接电脑.png
+   :height: 800px
+   :width: 900px
+   :scale: 80%
+
 .. image:: ../../images/p600/首次飞行/拨正.png
    :height: 800px
    :width: 800px
    :scale: 50%
    :alt: None
    :align: center
+   
 接着我们检查下电池是否有破损、漏液等情况
 
 .. image:: ../../images/p600/首次飞行/检查电池.png
@@ -119,13 +126,18 @@ P600电池
    :align: center
 确保电池没问题后，将电池固定在飞机上，确保电池不会松动，放在水平位置
 
+
+打开地面站后：1、点击左上角图标 2、点击通讯连接 3、点击添加
+
 .. image:: ../../images/p600/首次飞行/将电池固定在飞机上.png
    :height: 800px
    :width: 800px
    :scale: 50%
    :alt: None
    :align: center
+   
 打开遥控器，查看遥控器电量TX（在遥控器显示屏的右上角）
+
 
 .. image:: ../../images/p600/首次飞行/检查遥控器电量.png
    :height: 800px
@@ -180,7 +192,16 @@ QGC连接到飞机
 
 4、点击“属性”
 
+
+.. image:: ../../images/p600/首次飞行/查看板载IP_1.png
+   :height: 400px
+   :width: 361px
+   :scale: 100%
+   :alt: None
+   :align: center
+
 5、点击Internet协议版本4（TCP/IPv4）
+
 
 6、选中“使用下面的IP地址（s）”
 
@@ -321,5 +342,10 @@ QGC连接到飞机
 -------------------------
 
 .. raw:: html
+    <iframe width="696" height="422"  src="//player.bilibili.com/player.html?aid=418128941&bvid=BV17V411j7Em&cid=345269545&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=418128941&bvid=BV17V411j7Em&cid=345269545&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+首次飞行地址：
+
+https://www.bilibili.com/video/BV17V411j7Em?t=365
+
+

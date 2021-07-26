@@ -39,7 +39,7 @@ Prometheus的软件框架如下图所示，
 控制模块主要与MAVROS进行信息交互，分为两个部分，一部分是输入，一部分是输出.
 
 -   px4_pos_estimator.cpp   ：主要将板载计算机处理之后的位置数据传给飞控，读取飞控当前的状态信息
--   px4_sender.cpp  ：主要将控制指令借口通过px4_sender发送给mavros，从而控制飞机进行相应的动作指令
+-   px4_sender.cpp  ：主要将控制指令接口通过px4_sender发送给mavros，从而控制飞机进行相应的动作指令
 
 支持的板载计算机提供位置的数据来源有：动捕系统mocap，英特尔T265双目相机，激光雷达定位建图，仿真器gazebo提供模型位置数据，以及SLAM提供位置数据
 
@@ -188,15 +188,14 @@ p600_experiment功能包是适配prometheus开源代码的实机闭源功能包�
 
 该文件位置：amovlab_ws/src/p600_experiment
 
-.. image:: ../../images/p450/软件介绍/p450_experiment文件目录.png
+.. image:: ../../images/p600/软件介绍/P600-experiment.png
    :height: 226px
    :width: 855 px
    :scale: 70 %
    :alt: None
    :align: center
 
-.. attention::
-   此处图片更换为P600截图
+
 
 
 此功能包主要包含
@@ -213,15 +212,14 @@ p600_experiment功能包是适配prometheus开源代码的实机闭源功能包�
 config
 >>>>>>>>>>>>>>>>>>>
 
-.. image:: ../../images/p450/软件介绍/config文件.png
+.. image:: ../../images/p600/软件介绍/P600-config.png
    :height: 418px
    :width: 368 px
    :scale: 70 %
    :alt: None
    :align: center
 
-.. attention::
-   此处图片更换为P600截图
+
 
 -   mavros_config：对mavros相关参数的配置（分为室内一组，室外一组）
 
@@ -235,61 +233,61 @@ config
 
 launch_basic
 >>>>>>>>>>>>>>>>>>
-.. image:: ../../images/p450/软件介绍/launch_basic.png
-   :height: 132px
+.. image:: ../../images/p600/软件介绍/P600-launch-basic.png
+   :height: 150px
    :width: 455 px
    :scale: 80 %
    :alt: None
    :align: center
 
 
-p450_circle_det.launch：  圆框检测launch文件
+p600_circle_det.launch：  圆框检测launch文件
 
-p450_gps_onboard.launch：  室外GPS定点launch文件
+p600_gps_onboard.launch：  室外GPS定点launch文件
 
-p450_landpad_det.launch：  二维码检测launch文件
+p600_landpad_det.launch：  二维码检测launch文件
 
-p450_vio_onboard.launch：  室内T265定点launch文件
+p600_vio_onboard.launch：  室内T265定点launch文件
 
 rs_t265.launch：  T265启动launch文件
 
 launch_control
 >>>>>>>>>>>>>>>>>>>>
-.. image:: ../../images/p450/软件介绍/launch_control.png
-   :height: 67px
+.. image:: ../../images/p600/软件介绍/P600-launch-control.png
+   :height: 80px
    :width: 456 px
    :scale: 80 %
    :alt: None
    :align: center
 
 
-p450_gps_control.launch：  室外GPS指点launch文件
+p600_gps_control.launch：  室外GPS指点launch文件
 
-p450_vio_control.launch：  室内T265指点launch文件
+p600_vio_control.launch：  室内T265指点launch文件
 
 
 launch_detection
 >>>>>>>>>>>>>>>>>>>>>>
-.. image:: ../../images/p450/软件介绍/launch_detection.png
-   :height: 109px
+.. image:: ../../images/p600/软件介绍/P600-launch-detection.png
+   :height: 120px
    :width: 458 px
    :scale: 80 %
    :alt: None
    :align: center
 
 
-p450_indoor_circle_tracking.launch：  室内圆框跟踪launch文件
+p600_indoor_circle_tracking.launch：  室内圆框跟踪launch文件
 
-p450_indoor_landing_static_target.launch：  室内二维码降落launch文件
+p600_indoor_landing_static_target.launch：  室内二维码降落launch文件
 
-p450_outdoor_circle_tracking.launch：  室外圆框跟踪launch文件
+p600_outdoor_circle_tracking.launch：  室外圆框跟踪launch文件
 
-p450_outdoor_landing_static_target.launch：  室外二维码降落launch文件
+p600_outdoor_landing_static_target.launch：  室外二维码降落launch文件
 
 
 launch_planning
 >>>>>>>>>>>>>>>>>>>>
-.. image:: ../../images/p450/软件介绍/launch_planning.png
+.. image:: ../../images/p600/软件介绍/P600-launch-planning.png
    :height: 179px
    :width: 463 px
    :scale: 80 %

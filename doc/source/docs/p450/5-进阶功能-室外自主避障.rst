@@ -14,6 +14,10 @@
 
 启动指令
 -----------------
+
+.. attention::
+      在室外操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定为use gps，EKF2_HGT_MODE设定为Barometric pressure。
+
 先启动第一个指令
 
 `roslaunch p450_experiment astar_onboard_gps.launch`
@@ -45,7 +49,7 @@
 
 在此终端先输入0选择命令输入控制
 
-再依次输入4 move  0 XYZ_POS  0 ENU_FRAME  x的坐标(需要和无人机当前本地x坐标一致，差不多即可)  y的坐标(需要和无人机当前本地y坐标一致，差不多即可)   z的坐标为0.9，这个不需要根据当前无人机本地位置坐标来写
+根据终端提示，再依次输入4 move 、 0 XYZ_POS  、0 ENU_FRAME 、 x的坐标(需要和无人机当前本地x坐标一致，差不多即可)  、y的坐标(需要和无人机当前本地y坐标一致，差不多即可) 、  z的坐标为0.9，这个不需要根据当前无人机本地位置坐标来写
 
 .. image:: ../../images/p450/室外避障/起飞.png
    :height: 671px
@@ -58,7 +62,7 @@
 输完以上指令后，遥控器切定点解锁然后切offboard，无人机会自动起飞，等到无人机起飞到一个稳定高度，也即是我们设定的起飞高度后，回到rviz界面，点击选择3D Nav Goal
 
 .. image:: ../../images/p450/室外避障/选择3DNavGoal.png
-   :height: 784px
+   :height: 750px
    :width: 1035px
    :scale: 80%
    :alt: None

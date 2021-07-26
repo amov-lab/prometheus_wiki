@@ -12,8 +12,13 @@
 
 启动指令
 ------------
+.. attention::
+      在室外操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定为use gps，EKF2_HGT_MODE设定为Barometric pressure。
 
-首先启动基本vio脚本 
+
+
+
+首先启动基本gps脚本 
 
 `roslaunch p450_experiment p450_gps_onboard.launch`
 
@@ -70,7 +75,7 @@
 然后通过控制终端发送1起飞指令，这时候飞机通过板载计算机已经给飞机一直发送起飞指令，但是目前飞机还没有进入offboard模式和解锁，所以飞机是没有响应的。
 
 .. image:: ../../images/p450/室外跟踪/起飞.png
-   :height: 882px
+   :height: 850px
    :width: 1048 px
    :scale: 60 %
    :alt: None
