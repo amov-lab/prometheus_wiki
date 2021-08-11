@@ -61,6 +61,7 @@ amovlab 文档
    slam模块 <docs/simulation/3-slam模块>
    规划模块 <docs/simulation/4-规划模块>
    目标检测模块 <docs/simulation/5-目标检测模块>
+   问题总结<docs/simulation/6-问题总结>
 
 
 .. toctree::
