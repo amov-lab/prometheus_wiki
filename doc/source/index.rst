@@ -36,7 +36,7 @@ amovlab 文档
    进阶功能-室外自主降落 <docs/p450/5-进阶功能-室外自主降落>
    进阶功能-室外自主跟踪 <docs/p450/5-进阶功能-室外自主跟踪>
    进阶功能-室外自主避障 <docs/p450/5-进阶功能-室外自主避障>
-   进阶功能-FastPlanner <docs/p450/5-进阶功能-fastplanner>
+   进阶功能-EGOPlanner <docs/p450/5-进阶功能-egoplanner>
 
 .. toctree::
    :maxdepth: 2
