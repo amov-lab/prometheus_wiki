@@ -10,9 +10,9 @@
 
 
 
-NX版最高配置为：P450+T265+D435I+S1+单目
+NX版最高配置为：P450+T265+D435I+单目+雷达
 
-Nano版最高配置为：P450+T265+单目
+Nano版最高配置为：P450+T265+单目+雷达
 
 .. image:: ../../images/p450/hardware/介绍图.jpg
    :height: 700px
