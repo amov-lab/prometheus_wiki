@@ -36,7 +36,7 @@ amovlab 文档
    进阶功能-室外自主降落 <docs/p450/5-进阶功能-室外自主降落>
    进阶功能-室外自主跟踪 <docs/p450/5-进阶功能-室外自主跟踪>
    进阶功能-室外自主避障 <docs/p450/5-进阶功能-室外自主避障>
-   进阶功能-FastPlanner <docs/p450/5-进阶功能-fastplanner>
+   进阶功能-EGOPlanner <docs/p450/5-进阶功能-egoplanner>
 
 
 
@@ -65,6 +65,7 @@ amovlab 文档
    硬件介绍 <docs/p600/1-硬件介绍>
    软件介绍 <docs/p600/2-软件介绍>
    首次飞行 <docs/p600/3-首次飞行>
+    首次飞行 (H16遥控器版）<docs/p600/3-2-首次飞行（H16版）>
    常见问题处理 <docs/p600/4-常见问题处理md>
    进阶功能-室外指点 <docs/p600/5-进阶功能-室外指点飞行>
    进阶功能-吊舱跟踪 <docs/p600/5-进阶功能-框选跟踪飞行>
@@ -80,6 +81,7 @@ amovlab 文档
    slam模块 <docs/simulation/3-slam模块>
    规划模块 <docs/simulation/4-规划模块>
    目标检测模块 <docs/simulation/5-目标检测模块>
+   问题总结<docs/simulation/6-问题总结>
 
 
 .. toctree::
