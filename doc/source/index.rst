@@ -38,6 +38,25 @@ amovlab 文档
    进阶功能-室外自主避障 <docs/p450/5-进阶功能-室外自主避障>
    进阶功能-FastPlanner <docs/p450/5-进阶功能-fastplanner>
 
+
+
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: P230使用手册
+   
+   概述 <docs/p230/1-概述>
+   技术参数 <docs/p230/2-技术参数>
+   快速入门 <docs/p230/3-快速入门>
+   使用手册 <docs/p230/4-使用手册>
+   PX4基础功能及配置 <docs/p230/6-PX4基础功能及配置>
+   常见问题汇总 <docs/p230/7-常见问题汇总>
+   售后 <docs/p230/8-售后>
+
+   
+
+
 .. toctree::
    :maxdepth: 2
    :hidden:
