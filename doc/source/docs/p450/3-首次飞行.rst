@@ -288,7 +288,7 @@ nomachine远程连接板载计算机
    :width: 955px
    :scale: 70%
    :alt: None
-   :align: center
+   :align: centerf
 
 在“Username”和“Password”下输入“amov”
 
