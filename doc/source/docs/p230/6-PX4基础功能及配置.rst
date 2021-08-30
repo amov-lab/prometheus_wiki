@@ -5,12 +5,101 @@ PX4基础功能及配置
 1.PX4基本介绍
 >>>>>>>>>>>>>>>>>>>>>>>>>
 
+PX4是一款自动驾驶软件，可以驱动无人机或者无人车。它可以被烧写在某些硬件内，并与地面控制站一起组成一个完全独立的自动驾驶系统。
 
 
 
 
 2.连接飞控
 >>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+p230不同于其他p系列无人机，由于自身不携带wifi数传，所以我们需要通过UDP的方式连接QGC
+
+首先需要一个局域网，可以用路由器，主机和板载计算机需要都连接上局域网
+
+
+查看板载计算机ip
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+我们需要一个局域网，P230和我们的笔记本需要在同一个局域网内。
+
+.. image:: ../../images/p230/10.png
+   :alt: None
+   :align: center
+
+nomachine远程连接板载计算机
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+点击New
+
+.. image:: ../../images/p450/first_fly/4-nom-1.png
+   :height: 232px
+   :width: 1004px
+   :scale: 50%
+   :alt: None
+   :align: center
+
+在Protocol下选择NX，点击Continue。
+
+.. image:: ../../images/p450/first_fly/4-nom-2.png
+   :height: 676px
+   :width: 956px
+   :scale: 70%
+   :alt: None
+   :align: center
+
+在“Host”下填写板载计算机的ip地址，板载计算机地址参考步骤2，“Port”下默认4000。
+
+.. image:: ../../images/p230/12.png
+   :align: center
+
+
+在Proxy下默认是“Don’t use a proxy”，点击“Continue”。
+
+.. image:: ../../images/p450/first_fly/4-nom-5.png
+   :height: 687px
+   :width: 983px
+   :scale: 70%
+   :alt: None
+   :align: center
+
+在Save as下会生成默认的name，可以不做更改，点击“Done”。
+
+.. image:: ../../images/p230/13.png
+   :align: center
+
+按照上述步骤操作，会自动生成如下图所示用红框标起的链接，点击“Connect”。
+
+.. image:: ../../images/p230/14.png
+   :alt: None
+   :align: center
+
+在“Username”和“Password”下输入“amov”
+
+.. image:: ../../images/p450/first_fly/4-nom-8.png
+
+Nomachine成功连接板载计算机后会显示如下界面
+
+.. image:: ../../images/p230/26.png
+
+qgc远程连接到飞机
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+不同于P450的wifi数传，P230并不携带数传，我们需要通过UDP的方式连接到地面站。
+这里的IP地址是自己主机的IP地址，并且需要在一个区域网内。
+
+.. image:: ../../images/p230/11.png
+   :alt: None
+   :align: center
+
+然后修改p230_vio_onboard.launch文件中的内容：
+
+.. image:: ../../images/p230/24.png
+   :alt: None
+   :align: center
+
+在终端执行roslaunch p230_experimentp230_vio_onboard.launch,就可以连接到地面站。
 
 
 

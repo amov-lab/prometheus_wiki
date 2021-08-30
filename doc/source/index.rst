@@ -1,12 +1,22 @@
 .. home:
 
-amovlab 文档
+Prometheus系列科研无人机使用文档
 ==============================
 
-.. note::
-   本教程正在积极完善中。
+本文档是Prometheus系列无人机的在线资源平台，您可以在这里了解到所有关于Prometheus系列无人机的内容。
 
-本文档提供了产品使用手册/仿真使用手册/PX4基础配置说明
+我们建议第一次使用Prometheus无人机的朋友，通过文档左边的目录找到对应产品并逐章节阅读。Prometheus无人机是基于ROS和PX4的开源开发平台，需要使用者掌握一定的Linux/ROS/C++/Python/PX4基本知识。
+
+祝您使用愉快！
+
+.. note::
+   本手册由阿木实验室实时维护。若您有对本手册的内容有疑问，可以通过电子邮件或论坛发帖的方式向我们提问。若您希望对本手册提出修改意见，请发送邮件至service@amovauto.com，对于有建设性的意见我们将赠与阿木币！
+
+.. note::
+   可以在这些地方获得其他有关Prometheus项目的信息 Prometheus自主无人机项目：https://github.com/amov-lab/Prometheus 
+
+   阿木实验室B站频道：https://space.bilibili.com/432575320?from=search&seid=13705682698139641872
+
 
 -------------------------
 
