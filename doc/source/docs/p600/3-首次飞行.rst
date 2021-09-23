@@ -277,6 +277,148 @@ QGC连接到飞机
 
 .. image:: ../../images/p600/首次飞行/安全模式.png
 
+
+nomachine远程连接
+--------------------
+
+
+板载计算机连接p600飞机数传wifi
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+如下图所示，选择wifi名称，输入密码。密码连接可参考“qgc远程连接到飞机”
+
+.. image:: ../../images/p450/first_fly/4-boardwifi.png
+   :height: 337px
+   :width: 275px
+   :scale: 100%
+   :alt: None
+   :align: center
+
+查看板载计算机ip
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+查看板载计算机ip有两种方法，第一种方法是点击右上角“wifi信号”，选择“Connection Information”，
+在IPv4-IP Address下，用“红框”标记的就是板载计算机的ip地址。
+
+.. image:: ../../images/p450/first_fly/4-boardip1.png
+   :height: 419px
+   :width: 281px
+   :scale: 100%
+   :alt: None
+   :align: center
+
+.. image:: ../../images/p450/first_fly/4-boardip2.png
+   :height: 446px
+   :width: 361px
+   :scale: 100%
+   :alt: None
+   :align: center
+
+第二种方法是点击右键，选择“Open Terminal”,输入“ifconfig”,在最下面wlan0下用“红框”标记的就是板载计算机的ip地址。
+
+.. image:: ../../images/p450/first_fly/4-boardip3.png
+   :height: 181px
+   :width: 312px
+   :scale: 100%
+   :alt: None
+   :align: center
+
+.. image:: ../../images/p450/first_fly/4-boardip4.png
+   :height: 54px
+   :width: 212px
+   :scale: 100%
+   :alt: None
+   :align: center
+
+.. image:: ../../images/p450/first_fly/4-boardip5.png
+   :height: 153px
+   :width: 701px
+   :scale: 100%
+   :alt: None
+   :align: center
+
+nomachine远程连接板载计算机
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+点击New
+
+.. image:: ../../images/p450/first_fly/4-nom-1.png
+   :height: 232px
+   :width: 1004px
+   :scale: 50%
+   :alt: None
+   :align: center
+
+在Protocol下选择NX，点击Continue。
+
+.. image:: ../../images/p450/first_fly/4-nom-2.png
+   :height: 676px
+   :width: 956px
+   :scale: 70%
+   :alt: None
+   :align: center
+
+在“Host”下填写板载计算机的ip地址，板载计算机地址参考步骤2，“Port”下默认4000。
+
+.. image:: ../../images/p450/first_fly/4-nom-3.png
+   :height: 680px
+   :width: 978px
+   :scale: 70%
+   :alt: None
+   :align: center
+
+在Authentication下默认是Password，点击“Continue”。
+
+.. image:: ../../images/p450/first_fly/4-nom-4.png
+   :height: 685px
+   :width: 1000px
+   :scale: 70%
+   :alt: None
+   :align: center
+
+在Proxy下默认是“Don’t use a proxy”，点击“Continue”。
+
+.. image:: ../../images/p450/first_fly/4-nom-5.png
+   :height: 687px
+   :width: 983px
+   :scale: 70%
+   :alt: None
+   :align: center
+
+在Save as下会生成默认的name，可以不做更改，点击“Done”。
+
+.. image:: ../../images/p450/first_fly/4-nom-6.png
+   :height: 698px
+   :width: 1014px
+   :scale: 70%
+   :alt: None
+   :align: center
+
+按照上述步骤操作，会自动生成如下图所示用红框标起的链接，点击“Connect”。
+
+.. image:: ../../images/p450/first_fly/4-nom-7.png
+   :height: 677px
+   :width: 955px
+   :scale: 70%
+   :alt: None
+   :align: centerf
+
+在“Username”和“Password”下输入“amov”
+
+.. image:: ../../images/p450/first_fly/4-nom-8.png
+
+Nomachine成功连接板载计算机后会显示如下界面
+
+.. image:: ../../images/p450/first_fly/4-nom-9.png
+
+此时可同时连接qgc与板载计算机，方便后续实验操作。
+
+.. image:: ../../images/p450/first_fly/4-nom-10.png
+
+
+解锁起飞
+-------------------
+
 确认切到定点模式后，内八解锁，然后缓慢往上推
 
 .. image:: ../../images/p600/首次飞行/定点飞行.png
@@ -318,7 +460,7 @@ QGC连接到飞机
 .. image:: ../../images/p600/首次飞行/一键返航.png
   :align: center
 
-之后飞机会回到其实起飞的高度并自动降落
+之后飞机会回到起始起飞的高度并自动降落
 
 .. image:: ../../images/p600/首次飞行/返航之后并降落.png
   :align: center
