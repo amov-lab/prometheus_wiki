@@ -6,7 +6,7 @@ qgc远程连接到飞机
 .. image:: ../../images/p450/first_fly/3-connectwifi.png
 
 密码为wifi名字去掉“-uav”。例如wifi名字是“amov-uav21120”,那么wifi密码就是“amov21120”
-
+新数传也可能是"12345678"
 .. image:: ../../images/p450/first_fly/3-wifipassword.png
 
 在通讯连接下面选择“添加”
