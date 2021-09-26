@@ -11,7 +11,7 @@
 
 点击日志，将想下载的日志选为蓝色，点击下载。
 
-.. image:: ../../images/baseconfig_for_px4/12-downLog.png
+.. image:: ../../images/baseconfig_for_px4/12-downlog.png
 
 最新的日志后缀为.ulg 可以使用 `px4在线分析网站<https://logs.px4.io>来分析日志
 不需用特殊工具,多刷新几次就会出来
@@ -19,11 +19,13 @@
 .. image:: ../../images/baseconfig_for_px4/12-logNet.png
 
 选择文件后点击upload就可以上传到网站分析也可以复制链接分享给分析人员
+
 .. image:: ../../images/baseconfig_for_px4/12-logShare.png
 
 
 可以分析各项参数与姿态还有对应的模式
 可以看到现在是定点模式可以如果出现t265掉线的情况可能就会切到定高模式
+
 .. image:: ../../images/baseconfig_for_px4/12-ansLockX.png
 
 
@@ -31,11 +33,4 @@
 ------------------
 .. raw:: html
 
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV18p4y1s77c&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-演示视频
-------------------
-
-.. raw:: html
-
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1xf4y1r785&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=bv1D64y1b7sC&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
