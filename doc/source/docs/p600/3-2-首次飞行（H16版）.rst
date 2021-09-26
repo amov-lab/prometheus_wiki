@@ -235,3 +235,16 @@ H16遥控器
 .. image:: ../../images/p600/首次飞行/断电.png
   :align: center
 
+
+视频演示
+-------------------------
+
+H16使用教程链接：
+
+https://www.bilibili.com/video/BV17V411j7Em?p=2
+
+视频演示如下：
+
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=418128941&bvid=BV17V411j7Em&cid=395842748&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
