@@ -13,7 +13,7 @@
 
 .. image:: ../../images/baseconfig_for_px4/12-downlog.png
 
-最新的日志后缀为.ulg 可以使用 `px4在线分析网站<https://logs.px4.io>来分析日志
+最新的日志后缀为.ulg 可以使用 `px4在线分析网站<https://logs.px4.io>`来分析日志
 不需用特殊工具,多刷新几次就会出来
 
 .. image:: ../../images/baseconfig_for_px4/12-logNet.png
