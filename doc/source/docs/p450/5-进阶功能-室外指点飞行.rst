@@ -116,6 +116,9 @@ BODY_FRAME机体坐标系始终以无人机本身为原点，无论无人机飞�
 视频演示
 -----------------------
 
+.. note::
+   视频若需全屏播放，可跳转至哔哩哔哩观看。
+
 .. raw:: html
 
    <iframe  width="696" height="422" src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=318715792&page=13" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
