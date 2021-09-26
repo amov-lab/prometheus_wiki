@@ -19,11 +19,13 @@
 .. image:: ../../images/baseconfig_for_px4/12-logNet.png
 
 选择文件后点击upload就可以上传到网站分析也可以复制链接分享给分析人员
+
 .. image:: ../../images/baseconfig_for_px4/12-logShare.png
 
 
 可以分析各项参数与姿态还有对应的模式
 可以看到现在是定点模式可以如果出现t265掉线的情况可能就会切到定高模式
+
 .. image:: ../../images/baseconfig_for_px4/12-ansLockX.png
 
 
