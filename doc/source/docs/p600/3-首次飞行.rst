@@ -479,11 +479,11 @@ Nomachine成功连接板载计算机后会显示如下界面
 视频演示
 -------------------------
 
-.. raw:: html
-    <iframe width="696" height="422"  src="//player.bilibili.com/player.html?aid=418128941&bvid=BV17V411j7Em&cid=345269545&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 首次飞行地址：
 
 https://www.bilibili.com/video/BV17V411j7Em?t=365
 
+.. raw:: html
 
+     <iframe width="696" height="422"   src="//player.bilibili.com/player.html?aid=418128941&bvid=BV17V411j7Em&cid=345269545&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

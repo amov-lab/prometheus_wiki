@@ -110,6 +110,7 @@ Prometheus系列科研无人机使用文档
    常用参数设置 <docs/baseconfig_for_px4/9-常用参数设置>
    PID调参 <docs/baseconfig_for_px4/10-PID调参>
    任务飞行 <docs/baseconfig_for_px4/11-任务飞行>
+   日志分析与导出 <docs/baseconfig_for_px4/12-日志分析与导出>
 
 .. toctree::
    :maxdepth: 2
