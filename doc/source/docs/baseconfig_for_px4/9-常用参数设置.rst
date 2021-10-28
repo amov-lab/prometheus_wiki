@@ -19,7 +19,7 @@ Mag_sides:传感器校准面数选择
 
 .. image:: ../../images/baseconfig_for_px4/8-parameters-mag-sides.png
 
-Usb_chk：当用数据线调试飞机时，有时会显示“usb is not safe”，此时搜索“usb_chk”把数值调到197847最大值即可。
+Usb_chk：当用数据线调试飞机时，有时会显示“usb is not safe”，此时搜索“usb_chk”把数值调到197848最大值即可。
 
 .. image:: ../../images/baseconfig_for_px4/8-parameters-usb.png
 

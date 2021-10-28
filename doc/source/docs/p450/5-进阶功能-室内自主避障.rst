@@ -109,6 +109,9 @@
 视频演示
 ---------------
 
+.. note::
+   视频若需全屏播放，可跳转至哔哩哔哩观看。
+
 .. raw:: html
 
     <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=315446738&page=12" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
