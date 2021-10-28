@@ -86,7 +86,7 @@ rqt_image_view
 ------------
 
 .. attention::
-      在室外操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定为use gps，EKF2_HGT_MODE设定为Barometric pressure。
+      在室外操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定为use gps，EKF2_HGT_MODE设定为Barometric pressure。同时机头要一定指向东方。
 
 
 
