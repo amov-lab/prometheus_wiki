@@ -2,6 +2,7 @@
 =================
 
 打开日志
+--------------
 
 .. image:: ../../images/baseconfig_for_px4/12-openLog.png
 
@@ -13,7 +14,7 @@
 
 .. image:: ../../images/baseconfig_for_px4/12-downlog.png
 
-最新的日志后缀为.ulg 可以使用 `px4在线分析网站<https://logs.px4.io>`来分析日志
+最新的日志后缀为.ulg 可以使用 `px4在线分析网站 <https://logs.px4.io>`来分析日志
 不需用特殊工具,多刷新几次就会出来
 
 .. image:: ../../images/baseconfig_for_px4/12-logNet.png
@@ -33,4 +34,4 @@
 ------------------
 .. raw:: html
 
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=bv1D64y1b7sC&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=590699450&bvid=BV1Hq4y1o7Dt&cid=414719130&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

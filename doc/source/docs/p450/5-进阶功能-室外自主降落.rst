@@ -91,7 +91,7 @@ rqt_image_view
 
 
       
-首先启动基本gps脚本 
+首先启动基本gps脚本,启动后需要检查一下高度和位置信息是否正常可以手动拿一下看 图中 Postion [X Y Z] 那一行的数据是否显示正常。
 
 `roslaunch p450_experiment p450_gps_onboard.launch`
 
