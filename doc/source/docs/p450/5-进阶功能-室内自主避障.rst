@@ -17,7 +17,7 @@
         .. image:: ../../images/p450/first_fly/3-aid2.png
 
         
-先启动第一个指令
+先启动第一个指令，起飞前需要检查一下高度和位置信息是否正常可以手动拿一下看 图中 Postion [X Y Z] 那一行的数据是否显示正常。
 
 `roslaunch p450_experiment astar_onboard.launch`
 

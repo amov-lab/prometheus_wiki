@@ -18,7 +18,7 @@
 .. attention::
       在室外操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定为use gps，EKF2_HGT_MODE设定为Barometric pressure。
 
-先启动第一个指令
+先启动第一个指令,启动后需要检查一下高度和位置信息是否正常可以手动拿一下看 图中 Postion [X Y Z] 那一行的数据是否显示正常。
 
 `roslaunch p450_experiment astar_onboard_gps.launch`
 
