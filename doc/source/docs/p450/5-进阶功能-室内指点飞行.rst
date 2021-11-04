@@ -16,7 +16,7 @@
       在室内操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定如下图，EKF2_HGT_MODE设定为Vision。
         .. image:: ../../images/p450/first_fly/3-aid2.png
 
-首先启动基本vio脚本 
+首先启动基本vio脚本，启动后需要检查一下高度和位置信息是否正常可以手动拿一下看 图中 Postion [X Y Z] 那一行的数据是否显示正常。 
 
 `roslaunch p450_experiment p450_vio_onboard.launch`
 
