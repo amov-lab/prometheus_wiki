@@ -104,11 +104,28 @@ p450无人机+富斯i6s遥控器
    :alt: None
    :align: center
 
+桨叶安装
+
+.. image:: ../../images/p450/first_fly/8-桨叶和电机关系.png
+   :height: 434px
+   :width: 769px
+   :scale: 60%
+   :alt: None
+   :align: center
+
+.. image:: ../../images/p450/first_fly/8-桨叶和电机关系2.png
+   :height: 434px
+   :width: 769px
+   :scale: 60%
+   :alt: None
+   :align: center
+电机要和桨叶对应，有白色的点桨叶对应有白色点的电机，黑色电机对黑色电机。
 
 qgc远程连接到飞机
 -----------------
 
-首先连接到飞机的数传wifi，命名为amov-uav#####,“#####”代表出厂序列号。
+首先连接到飞机的数传wifi，命名为amov-uav#####,“#####”代表出厂序列号，或者名为amov-uav2100x 
+
 
 .. image:: ../../images/p450/first_fly/3-connectwifi.png
    :height: 184px
@@ -193,7 +210,7 @@ nomachine远程连接
 查看板载计算机ip
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-查看板载计算机ip有两种方法，第一种方法是点击右上角“wifi信号”，选择“Connection Information”，
+查看板载计算机ip有三种方法，第一种方法是直接用板载计算机连接显示器，点击右上角“wifi信号”，选择“Connection Information”，
 在IPv4-IP Address下，用“红框”标记的就是板载计算机的ip地址。
 
 .. image:: ../../images/p450/first_fly/4-boardip1.png
@@ -227,6 +244,17 @@ nomachine远程连接
    :align: center
 
 .. image:: ../../images/p450/first_fly/4-boardip5.png
+   :height: 153px
+   :width: 701px
+   :scale: 100%
+   :alt: None
+   :align: center
+
+第三种方法使用arp报文,打卡windows的控制台输入
+'arp -a'
+可能会出现很多行，找到192.168.10.xx这个网段开头的网络,里面有192.168.10.1 ,还有一个192.168.10.10x就是板载计算机的ip
+
+.. image:: ../../images/p450/first_fly/9-NoMip的搜索.png
    :height: 153px
    :width: 701px
    :scale: 100%
