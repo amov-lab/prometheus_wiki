@@ -1,5 +1,8 @@
+充电
+=============
+
 用到的设备
-==========
+----------
 
 #. 充电线
 #. 转接线
@@ -9,14 +12,14 @@
 | |arc/Pasted image 20211126173757.png|
 
 视频讲解
-========
+--------
 
 .. raw:: html
 
-   <iframe src="//player.bilibili.com/player.html?aid=337009877&bvid=BV1ER4y147jz&cid=453585694&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+   <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=337009877&bvid=BV1ER4y147jz&cid=453585694&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 开始充电
-========
+--------
 
 #. 连接充电器与电源
 #. 根据相应的电池设置充电器.\ **请确保相应电池使用相应的充电设置,否则可能导致电池报废**
