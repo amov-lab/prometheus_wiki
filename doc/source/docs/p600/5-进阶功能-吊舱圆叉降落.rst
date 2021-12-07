@@ -49,6 +49,13 @@ roll+pitch控制,无万向锁问题,全程使用roll,pitch计算降落点的位�
 
 **降落过程中确保遥控器在手中,如果发生意外,请手动切出\ ``offboard``\ 遥控器控制无人机,如果仍然无法控制则切换\ ``炸机模式``\ 无人机会直接失去供电,掉了下来.**
 
+视频演示
+--------
+.. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=934628898&bvid=BV1vM4y1w776&cid=456169034&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
 常见问题
 --------
 
