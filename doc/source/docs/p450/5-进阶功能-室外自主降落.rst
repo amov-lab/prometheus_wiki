@@ -33,11 +33,11 @@ rqt_image_view
 
 弹出图形界面后，选择对应要显示的图像消息，选择下面红框内的这个消息可以既显示出图像又显示出二维码检测结果。
 
-.. image:: ../../images/p450/室内降落/二维码检测图像显示.png
+.. image:: ../../images/p450/室内降落/1二维码检测图像显示.png
 
 点击后在显示的消息列表里选择相应的图像消息。
 
-.. image:: ../../images/p450/室内降落/二维码检测图像话题选择.png
+.. image:: ../../images/p450/室内降落/1二维码检测图像话题选择.png
 
 打印二维码实时检测结果
 
@@ -45,13 +45,13 @@ rqt_image_view
 
 终端上打印出的消息如下图所示： position后面三个值分别代表摄像头检测到的二维码在摄像头坐标系下的坐标的X,Y,Z的值。我们可以移动二维码看所显示的位置值是否显示出真实实际二维码相对于摄像头的位置，如果有较大差距，需要更改摄像头配置参数文件里的参数。 yaw_error显示的是偏航，所以是可以检测出这个二维码的 X Y Z 以及偏航也就是转的角度。
 
-.. image:: ../../images/p450/室内降落/二维码检测结果.png
+.. image:: ../../images/p450/室内降落/1二维码检测结果.png
 
 如果有较大大差距
 
 一，重新标定，修改相机参数和畸变参数；
 
-二，确认参数文件中二维码边长为降落板边长的真实值（这个非常重要），如果不是，修改为真实值，否则直接影响到二维码位置估计。
+二，确认路径/home/amov/amovlab_ws/src/p450_experiment/config/prometheus_detection_config文件下camera_param.yaml参数文件中二维码边长为降落板边长的真实值（这个非常重要），如果不是，修改为真实值，否则直接影响到二维码位置估计。
 
 .. image:: ../../images/p450/室内降落/参数文件.png
 
@@ -76,7 +76,7 @@ rqt_image_view
 
 当二维码中心点位于摄像头图像右上方时，也就是处于第一象限时，终端打印的x坐标为正，y坐标为负，z坐标为正，代表相机坐标系正确。
 
-.. image:: ../../images/p450/室内降落/坐标系确认.png
+.. image:: ../../images/p450/室内降落/1坐标系确认.png
 
 安装相机到无人机机身上是，相机镜头朝向正下方，并且让相机图像上方方向（对着图像显示看，可以判断出相机哪个方向为上方）严格朝向机头方向。此时可以保证整个坐标系是正确的。 在确认摄像头坐标系正确的情况下将摄像头固定到机身上。
 
@@ -88,17 +88,24 @@ rqt_image_view
 .. attention::
       在室外操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定为use gps，EKF2_HGT_MODE设定为Barometric pressure。
 
+在启动脚本前，我们需要在QGC中先将飞控重启一下，操作如下，
 
+.. image:: ../../images/p450/first_fly/重启飞控1.png
+
+点击红框所圈出的图标，进入如下界面
+
+.. image:: ../../images/p450/first_fly/重启飞控2.png
+
+选择MAVLink Console，进入MAVLink控制终端，输入reboot,回车，听到飞控重启的提示音，即重启飞控成功。
+
+.. image:: ../../images/p450/first_fly/重启飞控3.png        
 
       
 首先启动基本gps脚本 
 
 `roslaunch p450_experiment p450_gps_onboard.launch`
 
-.. image:: ../../images/p450/室外降落/指令一.png
-   :height: 126px
-   :width: 611px
-   :scale: 100%
+.. image:: ../../images/p450/室外降落/1指令一.png
    :alt: None
    :align: center
 
@@ -106,10 +113,7 @@ rqt_image_view
 
 `roslaunch p450_experiment p450_outdoor_landing_static_target.launch`
 
-.. image:: ../../images/p450/室外降落/指令二.png
-   :height: 137px
-   :width: 737px
-   :scale: 100%
+.. image:: ../../images/p450/室外降落/1指令二.png
    :alt: None
    :align: center
 

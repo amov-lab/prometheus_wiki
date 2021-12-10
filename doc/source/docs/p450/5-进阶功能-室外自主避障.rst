@@ -18,14 +18,23 @@
 .. attention::
       在室外操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定为use gps，EKF2_HGT_MODE设定为Barometric pressure。
 
-先启动第一个指令
+在启动脚本前，我们需要在QGC中先将飞控重启一下，操作如下，
+
+.. image:: ../../images/p450/first_fly/重启飞控1.png
+
+点击红框所圈出的图标，进入如下界面
+
+.. image:: ../../images/p450/first_fly/重启飞控2.png
+
+选择MAVLink Console，进入MAVLink控制终端，输入reboot,回车，听到飞控重启的提示音，即重启飞控成功。
+
+.. image:: ../../images/p450/first_fly/重启飞控3.png        
+
+启动第一个指令
 
 `roslaunch p450_experiment astar_onboard_gps.launch`
 
-.. image:: ../../images/p450/室外避障/指令一.png
-   :height: 124px
-   :width: 624px
-   :scale: 100%
+.. image:: ../../images/p450/室外避障/1指令一.png
    :alt: None
    :align: center
 
@@ -34,10 +43,7 @@
 
 `roslaunch p450_experiment astar_ground_gps.launch`
 
-.. image:: ../../images/p450/室外避障/指令二.png
-   :height: 138px
-   :width: 614px
-   :scale: 100%
+.. image:: ../../images/p450/室外避障/1指令二.png
    :alt: None
    :align: center
 

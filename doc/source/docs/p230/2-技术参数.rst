@@ -14,20 +14,14 @@ P230基于Px4 mini开源飞控架构，通过自主设计的走线设计完成�
 
 作为Prometheus系列的第四代无人机平台，P230采用了轻量化碳管机架和环外保护架的设计。在进一步压缩重量的同时，提高了传感器的使用率，提高了续航时间。
 
-.. image:: ../../images/p230/41.png
-   :alt: None
-   :align: center
-
-
-
-.. image:: ../../images/p230/42.png
+.. image:: ../../images/p230/整体图.png
    :alt: None
    :align: center
 
 
 硬件接线图
 
-.. image:: ../../images/p230/51.png
+.. image:: ../../images/p230/硬件接线图.jpg
    :alt: None
    :align: center
 
@@ -35,11 +29,19 @@ P230基于Px4 mini开源飞控架构，通过自主设计的走线设计完成�
 3.参数
 >>>>>>>>>>>>>>>>>>>>>>>>>>
 
-.. image:: ../../images/p230/40.png
+.. image:: ../../images/p230/技术参数1.jpg
    :alt: None
    :align: center
 
 
-.. image:: ../../images/p230/49.png
+.. image:: ../../images/p230/技术参数2.jpg
+   :alt: None
+   :align: center
+
+.. image:: ../../images/p230/技术参数3.jpg
+   :alt: None
+   :align: center
+
+.. image:: ../../images/p230/技术参数4.jpg
    :alt: None
    :align: center

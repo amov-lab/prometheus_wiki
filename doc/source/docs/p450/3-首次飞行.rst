@@ -184,7 +184,11 @@ nomachine远程连接
 查看板载计算机ip
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-查看板载计算机ip有两种方法，第一种方法是点击右上角“wifi信号”，选择“Connection Information”，
+查看板载计算机ip，首先需要将板载计算机连接显示屏，下图是板载的HDMI接口
+
+.. image:: ../../images/p450/first_fly/HDMI接口.jpg
+
+有两种方法查看板载的ip地址，第一种方法是点击右上角“wifi信号”，选择“Connection Information”，
 在IPv4-IP Address下，用“红框”标记的就是板载计算机的ip地址。
 
 .. image:: ../../images/p450/first_fly/4-boardip1.png
@@ -307,13 +311,22 @@ Nomachine成功连接板载计算机后会显示如下界面
 启动脚本
 -------------------
 
-首先在终端输入“rs-sensor-control”,查看有没有传感器连接，正常情况下如
+在启动脚本前，我们需要在QGC中先将飞控重启一下，操作如下，
+
+.. image:: ../../images/p450/first_fly/重启飞控1.png
+
+点击红框所圈出的图标，进入如下界面
+
+.. image:: ../../images/p450/first_fly/重启飞控2.png
+
+选择MAVLink Console，进入MAVLink控制终端，输入reboot,回车，听到飞控重启的提示音，即重启飞控成功。
+
+.. image:: ../../images/p450/first_fly/重启飞控3.png
+
+然后进入nomachine,在板载终端输入“rs-sensor-control”,查看有没有传感器连接，正常情况下如
 下图所示，会显示传感器的序列号。
 
-.. image:: ../../images/p450/first_fly/5-sensor-control.png
-   :height: 187px
-   :width: 497px
-   :scale: 100%
+.. image:: ../../images/p450/first_fly/sensor-control.png
    :alt: None
    :align: center
 
@@ -323,11 +336,11 @@ Nomachine成功连接板载计算机后会显示如下界面
 
 在终端输入如下命令，启动脚本
 
-.. image:: ../../images/p450/first_fly/5-run-script.png
+.. image:: ../../images/p450/first_fly/run-script.png
 
 启动脚本后如下图所示
 
-.. image:: ../../images/p450/first_fly/5-roslaunch.png
+.. image:: ../../images/p450/first_fly/roslaunch.png
 
 
 
@@ -345,16 +358,16 @@ Nomachine成功连接板载计算机后会显示如下界面
 
 第一个终端正常情况下如下图所示，各项数据均正常
 
-.. image:: ../../images/p450/first_fly/6-first.png
+.. image:: ../../images/p450/first_fly/roslaunch.png
 
 第二个终端如下图所示，查看飞机的位置、速度、角度与角速度信息是否正常,移动飞机,查看飞机的位置信息是否正常，飞机向前为X轴正方向，向左为Y轴正方
-向，向上为Z轴正方向。下图例子为将飞机向后向上各移动大概1m，数据显示正常。
+向，向上为Z轴正方向。
 
- .. image:: ../../images/p450/first_fly/6-twice.png
+ .. image:: ../../images/p450/first_fly/twice.png
 
  第三个终端如下图所示，显示“Program is running”即表示脚本正常运行。
 
-  .. image:: ../../images/p450/first_fly/6-third.png
+  .. image:: ../../images/p450/first_fly/third.png
 
 
 遥控器定点模式飞行

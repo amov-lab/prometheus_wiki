@@ -15,17 +15,24 @@
 .. attention::
       在室外操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定为use gps，EKF2_HGT_MODE设定为Barometric pressure。
 
+在启动脚本前，我们需要在QGC中先将飞控重启一下，操作如下，
+
+.. image:: ../../images/p450/first_fly/重启飞控1.png
+
+点击红框所圈出的图标，进入如下界面
+
+.. image:: ../../images/p450/first_fly/重启飞控2.png
+
+选择MAVLink Console，进入MAVLink控制终端，输入reboot,回车，听到飞控重启的提示音，即重启飞控成功。
+
+.. image:: ../../images/p450/first_fly/重启飞控3.png        
 
 
-
-首先启动基本gps脚本 
+启动基本gps脚本 
 
 `roslaunch p450_experiment p450_gps_onboard.launch`
 
-.. image:: ../../images/p450/室外跟踪/指令一.png
-   :height: 127px
-   :width: 608 px
-   :scale: 80 %
+.. image:: ../../images/p450/室外指点/1指令一.png
    :alt: None
    :align: center
 
@@ -33,10 +40,7 @@
 
 `roslaunch p450_experiment p450_outdoor_circle_tracking.launch`
 
-.. image:: ../../images/p450/室外跟踪/指令二.png
-   :height: 125px
-   :width: 724 px
-   :scale: 80 %
+.. image:: ../../images/p450/室外跟踪/1指令二.png
    :alt: None
    :align: center
 
@@ -74,10 +78,7 @@
 
 然后通过控制终端发送1起飞指令，这时候飞机通过板载计算机已经给飞机一直发送起飞指令，但是目前飞机还没有进入offboard模式和解锁，所以飞机是没有响应的。
 
-.. image:: ../../images/p450/室外跟踪/起飞.png
-   :height: 850px
-   :width: 1048 px
-   :scale: 60 %
+.. image:: ../../images/p450/室外跟踪/1起飞.png
    :alt: None
    :align: center
 

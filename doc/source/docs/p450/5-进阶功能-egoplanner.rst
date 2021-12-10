@@ -17,26 +17,31 @@
 
 `rs-sensor-control`
 
-.. image:: ../../images/p450/egoplanner/传感器检查.png
-   :height: 270px
-   :width: 593px
-   :scale: 100%
+.. image:: ../../images/p450/first_fly/sensor-control.png
    :alt: None
    :align: center
 
 
-
 操作
 -------------
+
+在启动脚本前，我们需要在QGC中先将飞控重启一下，操作如下，
+
+.. image:: ../../images/p450/first_fly/重启飞控1.png
+
+点击红框所圈出的图标，进入如下界面
+
+.. image:: ../../images/p450/first_fly/重启飞控2.png
+
+选择MAVLink Console，进入MAVLink控制终端，输入reboot,回车，听到飞控重启的提示音，即重启飞控成功。
+
+.. image:: ../../images/p450/first_fly/重启飞控3.png        
 
 在终端输入下面命令启动
 
 `/home/amov/amovlab_ws/src/p450_experiment/ego_sh/ego.sh`
 
 .. image:: ../../images/p450/egoplanner/启动命令.png
-   :height: 76px
-   :width: 429px
-   :scale: 100%
    :alt: None
    :align: center
 

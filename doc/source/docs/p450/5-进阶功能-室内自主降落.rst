@@ -23,11 +23,11 @@
  
 
 
-运行检测节点
+通过Nomachine访问板载终端，输入如下命令，运行检测节点
 
 `roslaunch p450_experiment p450_landpad_det.launch`
 
-查看检测效果（可视化）
+重新打开一个新终端，输入如下命令，查看检测效果（可视化）
 
 rqt_image_view
 
@@ -39,7 +39,7 @@ rqt_image_view
 
 .. image:: ../../images/p450/室内降落/二维码检测图像话题选择.png
 
-打印二维码实时检测结果
+再开一个终端，输入如下命令，打印二维码实时检测结果
 
 `rostopic echo /prometheus/object_detection/landpad_det`
 
@@ -88,25 +88,42 @@ rqt_image_view
       在室内操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定如下图，EKF2_HGT_MODE设定为Vision。
         .. image:: ../../images/p450/first_fly/3-aid2.png
 
-首先启动基本vio脚本 
+先将无人机摆放在降落二维码附近，可放在二维码的前后左右上等位置，注意不要距离太远，否则起飞后摄像头无法检测到二维码。且机头方向注意要和二维码正方向一致，二维码正方向如下图所示。
+说明一下，由于摄像头固定在无人机前方，所以无人机放在二维码前方的位置起飞效果会比较差，因为此时摄像头距离二维码距离较远，容易丢失二维码。
+
+.. image:: ../../images/p450/室内降落/二维码方向.png
+   :alt: None
+   :align: center
+
+
+在启动脚本前，我们需要在QGC中先将飞控重启一下，操作如下，
+
+.. image:: ../../images/p450/first_fly/重启飞控1.png
+
+点击红框所圈出的图标，进入如下界面
+
+.. image:: ../../images/p450/first_fly/重启飞控2.png
+
+选择MAVLink Console，进入MAVLink控制终端，输入reboot,回车，听到飞控重启的提示音，即重启飞控成功。
+
+.. image:: ../../images/p450/first_fly/重启飞控3.png
+
+启动基本vio脚本 ，通过Nomachine访问板载终端，输入如下命令
 
 `roslaunch p450_experiment p450_vio_onboard.launch`
 
-.. image:: ../../images/p450/室内降落/启动指令onboard.png
+.. image:: ../../images/p450/first_fly/run-script.png
    :height: 147px
    :width: 740px
    :scale: 100%
    :alt: None
    :align: center
 
-然后再启动自主降落脚本
+然后再打开一个新终端，输入如下命令，启动自主降落脚本
 
 `roslaunch p450_experiment p450_indoor_landing_static_target.launch`
 
-.. image:: ../../images/p450/室内降落/启动自主降落脚本.png
-   :height: 128px
-   :width: 736px
-   :scale: 100%
+.. image:: ../../images/p450/室内降落/1启动自主降落脚本.png
    :alt: None
    :align: center
 
@@ -138,22 +155,9 @@ rqt_image_view
 
 起飞
 --------------
-先将无人机摆放在二维码附近，可放在二维码的前后左右上等位置，注意不要距离太远，否则起飞后摄像头无法检测到二维码。且机头方向注意要和二维码正方向一致，二维码正方向如下图所示。
-说明一下，由于摄像头固定在无人机前方，所以无人机放在二维码前方的位置起飞效果会比较差，因为此时摄像头距离二维码距离较远，容易丢失二维码。
-
-.. image:: ../../images/p450/室内降落/二维码方向.png
-   :height: 927px
-   :width: 1245px
-   :scale: 65%
-   :alt: None
-   :align: center
-
 先将遥控器切换到position模式，在运行自主降落脚本后板载计算机就一直在给飞机发送起飞指令，但是目前飞机还没有进入offboard模式和解锁，所以飞机是没有响应的。接着遥控器操作单杆内八进行解锁，最后拨动offboard飞行模式开关切入offboard模式，此时无人机会先起飞到起飞点上方0.8米高度（我们在自主降落代码中设定的高度为0.8m）
 
-.. image:: ../../images/p450/室内降落/起飞.png
-   :height: 773px
-   :width: 1030px
-   :scale: 65%
+.. image:: ../../images/p450/室内降落/1起飞.png
    :alt: None
    :align: center
 
@@ -164,18 +168,12 @@ rqt_image_view
 飞到指定高度0.8米后，如果摄像头检测到二维码，无人机便会开始自主降落
 
 .. image:: ../../images/p450/室内降落/降落.png
-   :height: 1080px
-   :width: 1920px
-   :scale: 40%
    :alt: None
    :align: center
 
 降落完成后会无人机自动上锁
 
 .. image:: ../../images/p450/室内降落/落地.png
-   :height: 1080px
-   :width: 1920px
-   :scale: 40%
    :alt: None
    :align: center
 
