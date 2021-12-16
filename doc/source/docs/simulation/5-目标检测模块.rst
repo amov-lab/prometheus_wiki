@@ -53,8 +53,7 @@
 >>>>>>>>>>>>
 .. raw:: html
 
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1Eo4y197cm&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=675677013&bvid=BV1eU4y1A7tP&cid=414715543&page=7" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 
@@ -114,8 +113,7 @@
 >>>>>>>>>>>>
 .. raw:: html
 
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1mv411e795&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=675677013&bvid=BV1eU4y1A7tP&cid=414715730&page=8" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 2.室外仿真
@@ -131,4 +129,4 @@
 
 .. raw:: html
 
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1vt4y1B7rz&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=675677013&bvid=BV1eU4y1A7tP&cid=414716050&page=9" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

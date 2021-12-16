@@ -11,7 +11,7 @@ roslaunch prometheus_detection web_cam0.launch
 ```
 然后利用ros自带的标定程序对相机进行标定<br/>
 ```
-rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.0245 image:=/prometheus/camera/rgb/image_raw
+rosrun camera_calibration cameracalibrator.py --size 9x6 --square 0.0193 image:=/prometheus/camera/rgb/image_raw
 ```
 
 其中：size为标点板尺寸（横纵向标点的个数），square为每个方格宽度(即两个标点之间的距离)，注意单位是米，image:=相机话题<br/>

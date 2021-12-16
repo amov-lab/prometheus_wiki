@@ -253,7 +253,7 @@ Oracle VM VirtualBox
 ^^^^^^^^^^^^^^^
 .. raw:: html
 
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1Tr4y1K7aF&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe width="696" height="422"  src="//player.bilibili.com/player.html?aid=675677013&bvid=BV1eU4y1A7tP&cid=414709792&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 系统安装
@@ -314,8 +314,7 @@ Oracle VM VirtualBox
 ^^^^^^^^^^^^^^^
 .. raw:: html
 
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1Sz4y1m7fP&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
+   <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=675677013&bvid=BV1eU4y1A7tP&cid=414713938&page=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 

@@ -1,6 +1,9 @@
 电调校准
 =======================
 
+.. attention::
+    禁止将电池空电电压设置到3.6V以下，防止电池过放造成损坏。
+    
 在电源设置界面下，点击如箭头所指的“校准”。
 
 注意：校准前不允许给飞机上电，把桨叶拆卸下来。
@@ -18,4 +21,4 @@
 
 .. raw:: html
 
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=971101299&bvid=BV1ev411e7Bj&cid=277323116&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=590699450&bvid=BV1Hq4y1o7Dt&cid=414694302&page=8" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
