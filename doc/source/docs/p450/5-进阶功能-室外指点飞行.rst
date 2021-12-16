@@ -20,15 +20,23 @@
       在室外操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定为use gps，EKF2_HGT_MODE设定为Barometric pressure。同时机头要一定指向东方。
 
       
+在启动脚本前，我们需要在QGC中先将飞控重启一下，操作如下，
+
+.. image:: ../../images/p450/first_fly/重启飞控1.png
+
+点击红框所圈出的图标，进入如下界面
+
+.. image:: ../../images/p450/first_fly/重启飞控2.png
+
+选择MAVLink Console，进入MAVLink控制终端，输入reboot,回车，听到飞控重启的提示音，即重启飞控成功。
+
+.. image:: ../../images/p450/first_fly/重启飞控3.png        
 
 首先启动基本gps脚本,启动后需要检查一下高度和位置信息是否正常可以手动拿一下看 图中 Postion [X Y Z] 那一行的数据是否显示正常。
 
 `roslaunch p450_experiment p450_gps_onboard.launch`
 
-.. image:: ../../images/p450/室外指点/指令一.png
-   :height: 121px
-   :width: 615 px
-   :scale: 100 %
+.. image:: ../../images/p450/室外指点/1指令一.png
    :alt: None
    :align: center
 
@@ -36,10 +44,7 @@
 
 `roslaunch p450_experiment p450_gps_control.launch`
 
-.. image:: ../../images/p450/室外指点/指令二.png
-   :height: 116px
-   :width: 578 px
-   :scale: 100 %
+.. image:: ../../images/p450/室外指点/1指令二.png
    :alt: None
    :align: center
 
@@ -52,7 +57,7 @@
 命令行控制终端详解
 ---------------------------
 
-.. image:: ../../images/p450/室外指点/控制终端.png
+.. image:: ../../images/p450/室外指点/1控制终端.png
    :height: 360px
    :width: 733 px
    :scale: 80 %
@@ -90,7 +95,7 @@ ENU_FRAME惯性坐标系始终以无人机初始上电点为原点，且x轴指�
 BODY_FRAME机体坐标系始终以无人机本身为原点，无论无人机飞到哪里都是以无人机当前位置为原点，且x轴指向无人机机头方向，y轴指向无人机正左方，z轴指向无人机正上方，单位为米。给无人机发送相对期望位置选择这个坐标系。
 
 
-.. image:: ../../images/p450/室外指点/控制终端输入.png
+.. image:: ../../images/p450/室外指点/1控制终端输入.png
    :height: 441px
    :width: 740 px
    :scale: 80 %
