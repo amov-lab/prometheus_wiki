@@ -3,16 +3,13 @@
 
 本节主要讲解T265相机配置下无人机的首次飞行。
 
-.. attention::
-   在执行飞行操作前，请保证已经熟悉wiki基本操作流程。
-
 飞行环境
 -----------------------------
 我们的飞行环境如下图所示
 
 .. attention::
 
-   飞机室内使用要求视觉特征点明显！要求用户把赠送的25张二维码，9张均匀贴在测试场地地上，16张均匀贴在测试场地四周；飞机室外使用要求上方空旷无卫星信号遮挡，远离强电等电磁干扰。
+    注意使用T265进行定位的飞行环境需要特征点丰富，比如有二维码或其他特征点明显的物体。
 
 
 
@@ -32,9 +29,6 @@ QGC的作用是连接到飞机，监控飞机本身的状态（传感器是否�
     `网盘链接 <https://pan.baidu.com/share/init?surl=M2ucIqRqnKoFI8ylLpgquQ>`_
     
     提取码: **amov**
-
-.. note::
-   若出现网盘提取错误，请右键链接在新标签页打开。
 
 .. image:: ../../images/p450/first_fly/package.png
 
@@ -83,9 +77,6 @@ p450无人机+富斯i6s遥控器
    :alt: None
    :align: center
 
-.. attention::
-   电池单片电压不能低于3.6V，防止电池过放造成损坏。
-
 遥控器电池
 
 .. image:: ../../images/p450/first_fly/2-rcbattery.png
@@ -104,28 +95,11 @@ p450无人机+富斯i6s遥控器
    :alt: None
    :align: center
 
-桨叶安装
-
-.. image:: ../../images/p450/first_fly/8-桨叶和电机关系.png
-   :height: 434px
-   :width: 769px
-   :scale: 60%
-   :alt: None
-   :align: center
-
-.. image:: ../../images/p450/first_fly/8-桨叶和电机关系2.png
-   :height: 434px
-   :width: 769px
-   :scale: 60%
-   :alt: None
-   :align: center
-电机要和桨叶对应，有白色的点桨叶对应有白色点的电机，黑色电机对黑色电机。
 
 qgc远程连接到飞机
 -----------------
 
-首先连接到飞机的数传wifi，命名为amov-uav#####,“#####”代表出厂序列号，或者名为amov-uav2100x 
-
+首先连接到飞机的数传wifi，命名为amov-uav#####,“#####”代表出厂序列号。
 
 .. image:: ../../images/p450/first_fly/3-connectwifi.png
    :height: 184px
@@ -210,13 +184,11 @@ nomachine远程连接
 查看板载计算机ip
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
 查看板载计算机ip，首先需要将板载计算机连接显示屏，下图是板载的HDMI接口
 
 .. image:: ../../images/p450/first_fly/HDMI接口.jpg
 
-查看板载计算机ip有三种方法，第一种方法是直接用板载计算机连接显示器，点击右上角“wifi信号”，选择“Connection Information”，
-
+有两种方法查看板载的ip地址，第一种方法是点击右上角“wifi信号”，选择“Connection Information”，
 在IPv4-IP Address下，用“红框”标记的就是板载计算机的ip地址。
 
 .. image:: ../../images/p450/first_fly/4-boardip1.png
@@ -250,17 +222,6 @@ nomachine远程连接
    :align: center
 
 .. image:: ../../images/p450/first_fly/4-boardip5.png
-   :height: 153px
-   :width: 701px
-   :scale: 100%
-   :alt: None
-   :align: center
-
-第三种方法使用arp报文,打卡windows的控制台输入
-'arp -a'
-可能会出现很多行，找到192.168.10.xx这个网段开头的网络,里面有192.168.10.1 ,还有一个192.168.10.10x就是板载计算机的ip
-
-.. image:: ../../images/p450/first_fly/9-NoMip的搜索.png
    :height: 153px
    :width: 701px
    :scale: 100%
@@ -428,21 +389,16 @@ Nomachine成功连接板载计算机后会显示如下界面
 
 起飞后如下图所示，进行定点模式飞行。
 
-.. image:: ../../images/p450/first_fly/7-viofly.png
-   :height: 779px
-   :width: 821px
-   :scale: 80%
+.. image:: ../../images/p450/first_fly/首次飞行.png
    :alt: None
    :align: center
 
 视频演示
 -------------------------
 
-.. note::
-   视频若需全屏播放，可跳转至哔哩哔哩观看。
-
 .. raw:: html
 
-   <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=720686559&bvid=BV1YQ4y1z71b&cid=414695439&page=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=311386031&page=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
+   <iframe  width="696" height="422" src="//player.bilibili.com/player.html?aid=549649530&bvid=BV1Mi4y1Z7u6&cid=458112531&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 

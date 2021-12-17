@@ -2,7 +2,7 @@
 ================================
 
 本节主要讲解P450系列无人机的EGOPlanner飞行演示。视频紧接上节内容 **首次飞行**  ，默认已经通过WiFi数传连接到QGC地面站和nomachine远程连接到板载计算机，
-主要分为以下几点进行讲解：传感器检查，操作，降落，以及最后的视频演示。
+主要分为一下几点进行讲解：传感器检查，操作，降落，以及最后的视频演示。
 
 .. attention::
 
@@ -102,11 +102,8 @@
 视频演示
 ---------------
 
-.. note::
-   视频若需全屏播放，可跳转至哔哩哔哩观看。
-
 无人机EGOPlanner功能演示视频如下：
 
 .. raw:: html
  
-    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=311396527&page=17" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe  width="696" height="422"  src="//player.bilibili.com/player.html?aid=549649530&bvid=BV1Mi4y1Z7u6&cid=462700575&page=7" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
