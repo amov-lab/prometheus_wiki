@@ -303,7 +303,7 @@ EGO-planner
 操作
 ^^^^^^^^^^^^^^^^^^^^
 
-在终端依次输入下面命令启动
+在终端输入下面命令启动
 
 `/home/amov/amovlab_ws/src/ego_sh/ego.sh`
 
@@ -311,11 +311,6 @@ EGO-planner
    :alt: None
    :align: center
 
-`roslaunch vins vins_node /home/amov/VINS_FUSION/src/VINS-Fusion/config/realsense_d435i/realsense_stereo_imu_config.yaml`
-
-.. image:: ../../images/p230/启动vins节点.png
-   :alt: None
-   :align: center
 
 等到程序完全启动后，依次查看每个终端是否有报错
 
@@ -356,7 +351,7 @@ EGO-planner
    :alt: None
    :align: center
 
-此时无人机会沿着这个生成的路径飞，绕开障碍物，且高度会保持不变。
+此时无人机会沿着这个生成的路径飞，绕开障碍物，完成壁障飞行功能。
 
 降落
 ^^^^^^^^^^^^^^^^^^^^^^
