@@ -2,7 +2,7 @@
 ================================
 
 本节主要讲解P450系列无人机在室内的指点飞行演示。视频紧接上节内容 **首次飞行**  ，默认已经通过WiFi数传连接到QGC地面站和nomachine远程连接到板载计算机，
-主要分为以下几点进行讲解：启动指令，命令行控制终端详解，起飞，指点飞，以及最后的视频演示。
+主要分为一下几点进行讲解：启动指令，命令行控制终端详解，起飞，指点飞，以及最后的视频演示。
 
 .. attention::
 
@@ -16,34 +16,37 @@
       在室内操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定如下图，EKF2_HGT_MODE设定为Vision。
         .. image:: ../../images/p450/first_fly/3-aid2.png
 
-首先启动基本vio脚本，启动后需要检查一下高度和位置信息是否正常可以手动拿一下看 图中 Postion [X Y Z] 那一行的数据是否显示正常。 
+输入启动脚本前，先在QGC重启飞控
+
+.. image:: ../../images/p450/first_fly/重启飞控1.png
+
+点击红框所圈出的图标，进入如下界面
+
+.. image:: ../../images/p450/first_fly/重启飞控2.png
+
+选择MAVLink Console，进入MAVLink控制终端，输入reboot,回车，听到飞控重启的提示音，即重启飞控成功。
+
+.. image:: ../../images/p450/first_fly/重启飞控3.png
+
+启动基本vio脚本 ，通过Nomachine访问板载终端，输入如下命令
 
 `roslaunch p450_experiment p450_vio_onboard.launch`
 
-.. image:: ../../images/p450/室内指点/启动指令onboard.png
-   :height: 411px
-   :width: 650 px
-   :scale: 80 %
+ .. image:: ../../images/p450/first_fly/run-script.png
    :alt: None
    :align: center
 
-然后再启动控制脚本
+然后重新打开一个终端，再启动控制脚本，命令如下
 
 `roslaunch p450_experiment p450_vio_control.launch`
 
-.. image:: ../../images/p450/室内指点/启动指令control.png
-   :height: 399px
-   :width: 647 px
-   :scale: 80 %
+.. image:: ../../images/p450/室内指点/1_启动指令control.png
    :alt: None
    :align: center
 
 之后会出现终端控制界面，提示有两种控制的输入方式，第一种是通过命令输入控制方式，另外一种是通过键盘按键控制方式。
 
-.. image:: ../../images/p450/室内指点/终端控制选择.png
-   :height: 327px
-   :width: 647 px
-   :scale: 80 %
+.. image:: ../../images/p450/室内指点/1终端控制选择.png
    :alt: None
    :align: center
 
@@ -52,10 +55,7 @@
 命令行控制终端详解
 ---------------------------
 
-.. image:: ../../images/p450/室内指点/命令行控制终端.png
-   :height: 327px
-   :width: 647 px
-   :scale: 80 %
+.. image:: ../../images/p450/室内指点/1命令行控制终端.png
    :alt: None
    :align: center
 
@@ -63,7 +63,7 @@
 
 1 表示的是 起飞；起飞点为当前点，起飞高度通过 yaml参数文档设置，单位是米，默认起飞高度是0.5m
 
-2 表示的是 悬停；飞机正在飞行过程中如果接受到 2 指令，会在当前时刻进入悬停状态。
+2 表示的是 悬停；飞机正在飞行过程中如何接受到 2 指令，会在当前时刻进入悬停状态。
 
 3 表示的是 降落；降落速度通过 yaml参数文档设置，单位是m/s ，默认降落速度为0.2m/s 。还有一个上锁高度，到达上锁高度之后飞机会进入飞控的本身降落模式进而缓缓着地，
 上锁高度通过 yaml 参数文档进行设置，单位是米，默认是 0.18m，即认为离地不到20cm的时候进入飞控本身的降落飞行模式。
@@ -77,10 +77,7 @@
 
 
 
-.. image:: ../../images/p450/室内指点/move模式介绍.png
-   :height: 148px
-   :width: 645 px
-   :scale: 100 %
+.. image:: ../../images/p450/室内指点/1move模式介绍.png
    :alt: None
    :align: center
 
@@ -89,26 +86,27 @@
 起飞
 --------------
 
-通过控制终端发送1起飞指令，这时候飞机通过板载计算机已经给飞机一直发送起飞指令，但是目前飞机还没有进入offboard模式和解锁，所以飞机是没有响应的。起飞前需要检查一下高度和位置信息是否正常可以手动拿一下看 图中 Postion [X Y Z] 那一行的数据是否显示正常。
+通过控制终端发送1起飞指令
 
+这时候飞机通过板载计算机已经给飞机一直发送起飞指令，但是目前飞机还没有进入offboard模式和解锁，所以飞机是没有响应的。
 
-.. image:: ../../images/p450/室内指点/起飞.png
+.. image:: ../../images/p450/室内指点/1起飞.png
    :height: 601px
    :width: 840 px
    :scale: 80 %
    :alt: None
    :align: center
 
-发送完起飞指令之后，遥控器切换到position模式，然后遥控器左边的摇杆打到右下进行解锁，最后拨动offboard飞行模式开关。飞机就会慢慢起飞起来，保持在0.5m的高度。
+然后遥控器切换到position模式，遥控器操作“内八”进行解锁，最后拨动offboard飞行模式开关。飞机就会慢慢起飞起来，保持在0.4m的高度。
 
-.. image:: ../../images/p450/室内指点/起飞完成.png
+.. image:: ../../images/p450/室内指点/起飞d到0.4米的高度.png
    :height: 878px
    :width: 1674 px
    :scale: 40 %
    :alt: None
    :align: center
 
-可以看到飞机起飞已经完成，保持在0.5m高度，接下来进行指点操作，这时候就不需要遥控器操作了，只需要看好遥控器，防止意外事情发生。如果出现不稳定状况可以切出offboard，进入定点模式,手动降落。
+可以看到飞机起飞已经完成，保持在0.4m高度，接下来进行指点操作，这时候就不需要遥控器操作了，只需要看好遥控器，防止意外事情发生；进入指点飞行过程。
 
 
 指点飞
@@ -116,18 +114,18 @@
 
 选择 4 move飞行模式，然后选择 0 空间位置控制，然后选择 0 ENU_FRAME惯性坐标系，最后输入期望的状态，空间位置xyz和航向角yaw。
 
-.. image:: ../../images/p450/室内指点/指点飞行.png
+.. image:: ../../images/p450/室内指点/1指点飞行.png
    :height: 666px
    :width: 893 px
    :scale: 80 %
    :alt: None
    :align: center
 
-这里我们发送的指令是x为0.5，y为0.5，z为0.8，yaw为0.让飞机往前x轴飞行0.5m，往左y轴飞行0.5m，往上z轴飞行到0.8m，航向角保持不变发送为0.
+这里我们发送的指令是x为0.5，y为0.5，z为0.5，yaw为0.让飞机往前x轴飞行0.5m，往左y轴飞行0.5m，往上z轴飞行到0.5m，航向角保持不变发送为0.
 
 飞机开始移动到我们设定空间位置
 
-.. image:: ../../images/p450/室内指点/指点飞行完成.png
+.. image:: ../../images/p450/室内指点/飞到指定位置.png
    :height: 773px
    :width: 1662 px
    :scale: 45 %
@@ -140,14 +138,18 @@
 视频演示
 -------------------
 
-.. note::
-   视频若需全屏播放，可跳转至哔哩哔哩观看。
-
-拍摄两段测试视频，预祝复现室内指点飞行成功。
+前两段测试视频为v1版本，第三段测试视频为v2版本功能演示，预祝复现室内指点飞行成功。
 
 .. raw:: html
 
     <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=311390318&page=4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 .. raw:: html
 
     <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=311391022&page=5" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+v2版本功能演示
+
+.. raw:: html
+
+    <iframe  width="696" height="422"  src="//player.bilibili.com/player.html?aid=549649530&bvid=BV1Mi4y1Z7u6&cid=458112620&page=4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
