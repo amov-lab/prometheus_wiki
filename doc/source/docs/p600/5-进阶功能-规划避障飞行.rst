@@ -172,3 +172,11 @@
 .. raw:: html
 
     <iframe  width="696" height="422" src="//player.bilibili.com/player.html?aid=418128941&bvid=BV17V411j7Em&cid=345272923&page=5" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
+常见问题
+--------------------------------
+
+1. 无法建图, 建图异常
+
+``ls /dev``查看是否多个 ``ttyUSB``, 如果有多个请将其他的拔掉，然后重新拔插激光雷达的串口线。具体原因见 :doc:`吊舱无法控制 <root:docs/p600/3-吊舱>` 的常见问题1。
