@@ -2,7 +2,7 @@
 ================================
 
 本节主要讲解P450系列无人机在室内的自主跟踪。视频紧接上节内容 **首次飞行**  ，默认已经通过WiFi数传连接到QGC地面站和nomachine远程连接到板载计算机，
-主要分为以下几点进行讲解：启动指令，命令行控制终端详解，起飞，指点飞，以及最后的视频演示。
+主要分为一下几点进行讲解：启动指令，命令行控制终端详解，起飞，指点飞，以及最后的视频演示。
 
 .. attention::
 
@@ -16,22 +16,32 @@
       在室内操作时，注意在QGC地面中查看自己的位置源是否更改，参数EKF2_AID_MASK设定如下图，EKF2_HGT_MODE设定为Vision。
         .. image:: ../../images/p450/first_fly/3-aid2.png
 
-首先启动基本vio脚本，启动后需要检查一下高度和位置信息是否正常可以手动拿一下看 图中 Postion [X Y Z] 那一行的数据是否显示正常。
+
+在启动脚本前，我们需要在QGC中先将飞控重启一下，操作如下，
+
+.. image:: ../../images/p450/first_fly/重启飞控1.png
+
+点击红框所圈出的图标，进入如下界面
+
+.. image:: ../../images/p450/first_fly/重启飞控2.png
+
+选择MAVLink Console，进入MAVLink控制终端，输入reboot,回车，听到飞控重启的提示音，即重启飞控成功。
+
+.. image:: ../../images/p450/first_fly/重启飞控3.png
+
+启动基本vio脚本 ，通过Nomachine访问板载终端，输入如下命令
 
 `roslaunch p450_experiment p450_vio_onboard.launch`
 
-.. image:: ../../images/p450/室内指点/启动指令onboard.png
-   :height: 411px
-   :width: 650 px
-   :scale: 80 %
+.. image:: ../../images/p450/first_fly/run-script.png
    :alt: None
    :align: center
 
-然后再启动跟踪脚本
+然后再开一个新终端，启动跟踪脚本
 
 `roslaunch p450_experiment p450_indoor_circle_tracking.launch`
 
-.. image:: ../../images/p450/室内跟踪/启动跟踪脚本.png
+.. image:: ../../images/p450/室内跟踪/1启动跟踪脚本.png
    :height: 458px
    :width: 735 px
    :scale: 80 %
@@ -70,10 +80,7 @@
 
 然后通过控制终端发送1起飞指令，这时候飞机通过板载计算机已经给飞机一直发送起飞指令，但是目前飞机还没有进入offboard模式和解锁，所以飞机是没有响应的。
 
-.. image:: ../../images/p450/室内跟踪/起飞.png
-   :height: 716px
-   :width: 638 px
-   :scale: 80 %
+.. image:: ../../images/p450/室内跟踪/1起飞.png
    :alt: None
    :align: center
 
@@ -84,8 +91,7 @@
 
 等待飞机起飞完成之后，保持在1m左右之后，且视野内识别到目标圆，再进行输入 1 ，进行跟踪保持
 
-.. image:: ../../images/p450/室内跟踪/跟踪.png
-   :height: 1080px
+.. image:: ../../images/p450/室内跟踪/跟踪起飞.png
    :width: 1920 px
    :scale: 38 %
    :alt: None
@@ -93,7 +99,7 @@
 
 与目标圆保持一定距离
 
-.. image:: ../../images/p450/室内跟踪/跟踪保持.png
+.. image:: ../../images/p450/室内跟踪/跟踪保持1.png
    :height: 1080px
    :width: 1920 px
    :scale: 38 %
@@ -102,7 +108,7 @@
 
 此时可以移动目标圆，进而飞机进行相应的移动
 
-.. image:: ../../images/p450/室内跟踪/跟踪移动过程.png
+.. image:: ../../images/p450/室内跟踪/跟踪移动.png
    :height: 1080px
    :width: 1920 px
    :scale: 38 %
@@ -114,7 +120,7 @@
 
 在想要结束室内自主跟踪实验时候，记得遥控器先退出offboard模式，
 
-.. image:: ../../images/p450/室内跟踪/退出offboard.png
+.. image:: ../../images/p450/室内跟踪/退出offboard_1.png
    :height: 1080px
    :width: 1920 px
    :scale: 38 %
@@ -128,10 +134,7 @@
 视频演示
 ----------------
 
-.. note::
-   视频若需全屏播放，可跳转至哔哩哔哩观看。
-
-该功能演示也拍摄了两段视频，预祝复现室内自主跟踪实验成功完美。
+该功能演示前两段视频为v1版本的功能演示视频，第三段视频是v2版本的功能演示视频，预祝复现室内自主跟踪实验成功完美。
 
 .. raw:: html
 
@@ -141,3 +144,7 @@
 .. raw:: html
 
     <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=289495747&bvid=BV1sf4y1478z&cid=311393642&page=7" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+.. raw:: html
+
+   <iframe  width="696" height="422" src="//player.bilibili.com/player.html?aid=549649530&bvid=BV1Mi4y1Z7u6&cid=458112637&page=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

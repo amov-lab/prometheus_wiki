@@ -66,7 +66,7 @@ QGC的作用是连接到飞机，监控飞机本身的状态（传感器是否�
 
 p230无人机+富斯i6s遥控器
 
-.. image:: ../../images/p230/15.png
+.. image:: ../../images/p230/p230_外观_1.jpg
    :alt: None
    :align: center
 
@@ -104,15 +104,23 @@ p230无人机+富斯i6s遥控器
 无人机电源上电如下图所示
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: ../../images/p230/4.png
+.. image:: ../../images/p230/电源上电_1.jpg
    :alt: None
-   :scale: 50%
+   :scale: 15%
    :align: center
    
 需要检查下各个接口有没有因为运输造成的接口松动。
+电机和遥控器接收机与飞控的连接。
 
-.. image:: ../../images/p230/50.png
-   :scale: 70%
+.. image:: ../../images/p230/飞控与电机和遥控器接收机的连接.jpg
+   :scale: 15%
+   :alt: None
+   :align: center
+
+飞控与板载电脑的连接。
+
+.. image:: ../../images/p230/飞控和板载通信接口.jpg
+   :scale: 15%
    :alt: None
    :align: center
 
@@ -122,6 +130,7 @@ p230无人机+富斯i6s遥控器
 查看板载计算机ip
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+<<<<<<< HEAD
 将配送的小米路由器上电后，再将飞机上电。用电脑连接到小米路由器
 的wifi，wifi名为P230_xxx(XXX为飞机编号)。
 
@@ -136,6 +145,11 @@ p230无人机+富斯i6s遥控器
 
 
 .. image:: ../../images/p230/noma_connect/noma_conn3.png
+=======
+我们配置了一个专用路由器用于连接板载计算机和使用者的电脑，P230和使用者的笔记本需要在同一个局域网内，在第一次连接不知道板载电脑IP的情况下，需要为板载计算机外接一个显示器查看ip，以后的连接在不更换路由器的情况下，ip一般不会变化。
+
+.. image:: ../../images/p230/板载IP.png
+>>>>>>> 0062772ab2728a1b1b3219f1cd829f063b93b084
    :alt: None
    :align: center
 
@@ -190,7 +204,7 @@ nomachine远程连接板载计算机
 
 Nomachine成功连接板载计算机后会显示如下界面
 
-.. image:: ../../images/p230/26.png
+.. image:: ../../images/p230/界面.png
 
 6.校准
 ---------------------------------
@@ -199,19 +213,19 @@ qgc远程连接到飞机
 >>>>>>>>>>>>>>>>>>>>>
 
 不同于P450的wifi数传，P230并不携带数传，我们需要通过UDP的方式连接到地面站。
-这里的IP地址是自己主机的IP地址，并且需要在一个区域网内。
+这里的IP地址是自己主机的IP地址，并且需要在一个局域网内。
 
-.. image:: ../../images/p230/11.png
+.. image:: ../../images/p230/主机ip.png
    :alt: None
    :align: center
 
-然后修改p230_vio_onboard.launch文件中的内容：
+然后修改p230_vio_onboard_vins.launch文件中的内容，把如下图所示的地址更改为使用者主机的ip地址：
 
-.. image:: ../../images/p230/24.png
+.. image:: ../../images/p230/修改IP.png
    :alt: None
    :align: center
 
-在终端执行roslaunch p230_experimentp230_vio_onboard.launch,就可以连接到地面站。
+在终端执行roslaunch p230_experiment p230_vio_onboard_vins.launch,就可以连接到地面站。
 
 需要校准的传感器如下：
 
@@ -248,7 +262,7 @@ qgc远程连接到飞机
     .. image:: ../../images/p450/first_fly/3-hgt2.png
 
    在执行飞行之前，都需要检查参数和检查飞机桨叶是否上紧，检查螺丝是否有松动。
-   一般传感器参数我们都会调整好，但运输过程可能会对飞机产生影响。这时就需要自己调整参数
+   一般传感器参数我们都会调整好，但运输过程可能会对飞机产生影响。这时就需要自己调整参数。
    调整完，记得重启飞控。
 
    最后保存退出,记得重启飞控。

@@ -30,10 +30,15 @@ from recommonmark.parser import CommonMarkParser
 # ones.
 extensions = [
     'recommonmark',
+    'sphinx.ext.intersphinx'
 ]
 
 source_parsers = {
     '.md': 'recommonmark.parser.CommonMarkParser',
+}
+
+intersphinx_mapping = {
+    'root': ('https://prometheus-wiki.readthedocs.io/zh_CN/main/', None),
 }
 
 # Add any paths that contain templates here, relative to this directory.
