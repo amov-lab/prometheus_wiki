@@ -14,7 +14,9 @@
 2.开箱视频
 -------------------------
 
-需补充。
+.. raw:: html
+
+   <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=251418301&bvid=BV1pv411T7f1&cid=482496491&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 3.电脑设置
@@ -128,9 +130,26 @@ p230无人机+富斯i6s遥控器
 查看板载计算机ip
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+<<<<<<< HEAD
+将配送的小米路由器上电后，再将飞机上电。用电脑连接到小米路由器
+的wifi，wifi名为P230_xxx(XXX为飞机编号)。
+
+.. image:: ../../images/p230/noma_connect/noma_conn1.png
+   :alt: None
+   :align: center
+
+
+
+打开谷歌浏览器，进入小米路由器的Web设置页面，IP为192.168.32.1，
+点击终端设备，即可查看到连接到网络的终端和对应的IP地址。
+
+
+.. image:: ../../images/p230/noma_connect/noma_conn3.png
+=======
 我们配置了一个专用路由器用于连接板载计算机和使用者的电脑，P230和使用者的笔记本需要在同一个局域网内，在第一次连接不知道板载电脑IP的情况下，需要为板载计算机外接一个显示器查看ip，以后的连接在不更换路由器的情况下，ip一般不会变化。
 
 .. image:: ../../images/p230/板载IP.png
+>>>>>>> 0062772ab2728a1b1b3219f1cd829f063b93b084
    :alt: None
    :align: center
 
@@ -139,12 +158,10 @@ nomachine远程连接板载计算机
 
 点击New
 
-.. image:: ../../images/p450/first_fly/4-nom-1.png
-   :height: 232px
-   :width: 1004px
-   :scale: 50%
+.. image:: ../../images/p230/noma_connect/noma_conn4.png
    :alt: None
    :align: center
+
 
 在Protocol下选择NX，点击Continue。
 
@@ -157,7 +174,7 @@ nomachine远程连接板载计算机
 
 在“Host”下填写板载计算机的ip地址，板载计算机地址参考步骤2，“Port”下默认4000。
 
-.. image:: ../../images/p230/12.png
+.. image:: ../../images/p230/noma_connect/noma_conn5.png
    :align: center
 
 
@@ -172,12 +189,12 @@ nomachine远程连接板载计算机
 
 在Save as下会生成默认的name，可以不做更改，点击“Done”。
 
-.. image:: ../../images/p230/13.png
+.. image:: ../../images/p230/noma_connect/noma_conn2.png
    :align: center
 
 按照上述步骤操作，会自动生成如下图所示用红框标起的链接，点击“Connect”。
 
-.. image:: ../../images/p230/14.png
+.. image:: ../../images/p230/noma_connect/noma_conn6.png
    :alt: None
    :align: center
 
