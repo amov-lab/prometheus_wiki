@@ -42,6 +42,7 @@ Prometheus系列科研无人机使用文档
    进阶功能-室内自主跟踪 <docs/p450/5-进阶功能-室内自主跟踪>
    进阶功能-室内自主降落 <docs/p450/5-进阶功能-室内自主降落>
    进阶功能-室内自主避障 <docs/p450/5-进阶功能-室内自主避障>
+   首次飞行(室外) <docs/p450/3-首次飞行(室外)>
    进阶功能-室外指点飞行 <docs/p450/5-进阶功能-室外指点飞行>
    进阶功能-室外自主降落 <docs/p450/5-进阶功能-室外自主降落>
    进阶功能-室外自主跟踪 <docs/p450/5-进阶功能-室外自主跟踪>
@@ -107,7 +108,7 @@ Prometheus系列科研无人机使用文档
    机架选择 <docs/baseconfig_for_px4/3-机架选择>
    传感器校准 <docs/baseconfig_for_px4/4-传感器校准>
    遥控器校准 <docs/baseconfig_for_px4/5-遥控器校准>
-   飞行模式设置 <docs/baseconfig_for_px4/6-飞行模式设置>
+   飞行模式 <docs/baseconfig_for_px4/6-飞行模式>
    电池校准 <docs/baseconfig_for_px4/7-电池校准>
    电调校准 <docs/baseconfig_for_px4/8-电调校准>
    常用参数设置 <docs/baseconfig_for_px4/9-常用参数设置>
