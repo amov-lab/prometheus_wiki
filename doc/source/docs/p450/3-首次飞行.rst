@@ -312,46 +312,46 @@ Nomachine成功连接板载计算机后会显示如下界面
 
 连接上机载电脑后，在桌面有一个sensor_inspect文件夹，里面存放的就是单传感器的检测脚本。
 
-.. image:: ../../images/P450/sensor_inspect_img/sensor_inspect1.png
+.. image:: ../../images/p450/sensor_inspect/sensor_inspect1.png
 
 其中四个脚本从左到右分别为单目、D435i、雷达、T265的检测脚本，打开一个新终端，将单目检测脚本拖进去，运行。
 
-.. image:: ../../images/P450/sensor_inspect_img/sensor_inspect2.png
+.. image:: ../../images/p450/sensor_inspect/sensor_inspect2.png
 
 下面为单目启动成功的界面，将rqt可视化界面切换到/camera/rgb/image_raw界面。
 
-.. image:: ../../images/P450/sensor_inspect_img/sensor_inspect3.png
+.. image:: ../../images/p450/sensor_inspect/sensor_inspect3.png
 
 rqt可视化界面显示了单目的画面，即表示单目正常。
 
-.. image:: ../../images/P450/sensor_inspect_img/sensor_inspect4.png
+.. image:: ../../images/p450/sensor_inspect/sensor_inspect4.png
 
 
 运行D435i.sh脚本，等待各个终端起来后，查看是否与下图所示相同，
 并将rqt可视化界面切换到/d400/color/image_raw界面，如能检测到D435i摄像头
 的画面，即表示D435i正常工作。
 
-.. image:: ../../images/P450/sensor_inspect_img/sensor_inspect5.png
+.. image:: ../../images/p450/sensor_inspect/sensor_inspect5.png
 
 运行Lidar.sh脚本，等待各个终端起来后，查看是否与下图所示相同，第一个终端
 是启动雷达节点的终端，第二个终端为实时打印的雷达数据的终端。
 
-.. image:: ../../images/P450/sensor_inspect_img/sensor_inspect6.png
+.. image:: ../../images/p450/sensor_inspect/sensor_inspect6.png
 
 若各终端均无报错，且雷达有数据打印，即表示雷达正常工作。
 
-.. image:: ../../images/P450/sensor_inspect_img/sensor_inspect7.png
+.. image:: ../../images/p450/sensor_inspect/sensor_inspect7.png
 
 
 运行T265.sh脚本，等待各个终端起来后，查看是否与下图所示相同，第一个终端
 是启动T265节点的终端，第二个终端是实时打印T265定位数据的终端。
 
-.. image:: ../../images/P450/sensor_inspect_img/sensor_inspect8.png
+.. image:: ../../images/p450/sensor_inspect/sensor_inspect8.png
 
 
 若各终端均无报错，且T265有数据打印，即表示T265正常工作。
 
-.. image:: ../../images/P450/sensor_inspect_img/sensor_inspect9.png
+.. image:: ../../images/p450/sensor_inspect/sensor_inspect9.png
    
 
 .. attention::
