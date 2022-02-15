@@ -75,6 +75,8 @@ MISSION：任务模式
 
 飞行模式设置
 -------------------
+.. attention::
+    遥控器设置通道时，无人机须处于断电状态。
 
 可以在遥控器上设置通道，一般三挡开关对应飞行模式1、飞行模式4、飞行模式6。如图所示，此时通道5设置的三个模式分别为自稳模式、定点模式、降落模式。
 
@@ -90,3 +92,58 @@ MISSION：任务模式
 .. raw:: html
 
     <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=590699450&bvid=BV1Hq4y1o7Dt&cid=414694447&page=6" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
+遥控器紧急开关设置
+-----------------------
+遥控器设置
+^^^^^^^^^^^^^^
+
+打开FS-I6S遥控器，进入功能设置页面。
+
+.. image:: ../../images/baseconfig_for_px4/5-flightmodes1.png
+
+点击进入辅助通道设置。
+
+.. image:: ../../images/baseconfig_for_px4/5-flightmodes2.png
+
+4、	将7通道开启，并设置为开关SWA，SWA对应的是左上角的两段开关。
+
+.. image:: ../../images/baseconfig_for_px4/5-flightmodes3.png
+
+.. image:: ../../images/baseconfig_for_px4/5-flightmodes4.png
+
+.. image:: ../../images/baseconfig_for_px4/5-flightmodes5.png
+
+QGC地面站软件映射
+^^^^^^^^^^^^^^
+连接上QGC，进入设置界面的飞行模式设置将Emergency Kill switch channel
+映射为7通道。
+
+.. image:: ../../images/baseconfig_for_px4/5-flightmodes6.png
+
+拨动遥控器的SWA开关，会有7通道的响应。
+
+.. image:: ../../images/baseconfig_for_px4/5-flightmodes7.png
+
+急停操作演示及注意事项
+^^^^^^^^^^^^^^
+
+急停开关是在飞机飞行过程中，进行紧急使用的，在急停开关启用的5s时间内，
+如果复位急停开关，那么电机又重新恢复旋转，所以在使用急停开关过程中建
+议至少超过5s时间再去复位急停开关。
+
+.. image:: ../../images/baseconfig_for_px4/5-flightmodes8.png
+
+.. image:: ../../images/baseconfig_for_px4/5-flightmodes9.png
+
+急停开关启用之后，会qgc提示急停开关已启用，在5s以内，飞机目前仍处于
+解锁状态，只不过急停开关让电机停止旋转，等待五秒之后，飞机进入未解锁状态。
+
+
+演示视频
+------------------
+
+.. raw:: html
+    
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=590699450&bvid=BV1Hq4y1o7Dt&cid=490529391&page=7" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
