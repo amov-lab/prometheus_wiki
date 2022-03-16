@@ -314,6 +314,16 @@ Nomachine成功连接板载计算机后会显示如下界面
 
 .. image:: ../../images/p450/sensor_inspect/sensor_inspect1.png
 
+若没有改文件夹，则只需在网盘下载并解压到桌面即可。
+
+.. hint::
+
+    软件安装包请在百度网盘自主下载
+    `网盘链接 <https://pan.baidu.com/s/1I1GY7kObbncZtRIMUeTBHg>`_
+    
+    提取码: **amov**
+
+
 其中四个脚本从左到右分别为单目、D435i、雷达、T265的检测脚本，打开一个新终端，将单目检测脚本拖进去，运行。
 
 .. image:: ../../images/p450/sensor_inspect/sensor_inspect2.png
