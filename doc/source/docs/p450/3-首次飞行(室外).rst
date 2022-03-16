@@ -3,168 +3,81 @@
 
 本节主要讲解GPS配置下无人机室外的首次飞行。
 
-电脑软件准备工作
+环境介绍
 ------------------
-
-准备一台笔记本电脑，电脑系统不做要求，可以是Windows7，Windows10或者是Ubuntu系统。需要安装QGroundControl(以下简称QGC)和nomachine。
-QGC的作用是连接到飞机，监控飞机本身的状态（传感器是否正常，参数配置是否正常）；nomachine用作远程连接到板载计算机。
-
-.. hint::
-
-    软件安装包请在百度网盘自主下载
-    `网盘链接 <https://pan.baidu.com/share/init?surl=M2ucIqRqnKoFI8ylLpgquQ>`_
-    
-    提取码: **amov**
-
-.. image:: ../../images/p450/first_fly/package.png
-
-从图中可以看到，有不同操作系统下的安装包，根据自己笔记本电脑系统安装相应的QGC和nomachine。
-
-安装QGC地面站
-^^^^^^^^^^^^^^^^^^^^^^^
-
-正确安装上面安装包之后，打开QGC地面站：
-
-.. image:: ../../images/p450/first_fly/1-qgc.png
 
 .. attention::
+         在室外飞行时，我们尽量选择空旷、无遮挡且无强电磁干扰的环境，这样才能保证无人机的GPS定位数据精准。
 
-    最下方的版本是V4.0.8
-
-.. image:: ../../images/p450/first_fly/1-qgc-vision.png
-
-安装nomachine
-^^^^^^^^^^^^^^^^^^^^^^^
-
-正常安装按完成之后，打开nomachine：
-
-.. image:: ../../images/p450/first_fly/1-nomachine.png
-
-硬件准备工作
+工具准备
 ------------------
 
-p450无人机+富斯i6s遥控器
-
-.. image:: ../../images/p450/first_fly/2-p450vehicle-logo.jpg
-
-5300mah/4000mah航模锂电池
-
-.. image:: ../../images/p450/first_fly/2-5300mah.png
-   :height: 800px
-   :width: 800px
-   :scale: 50%
-   :alt: None
+.. attention::
+      在外出测试前我们需要检测无人机的相关配件是否携带齐全，防止因配件遗漏导致无法测试，下图即是我们室外测试需要用到的工具。 
+.. image:: ../../images/p450/first_fly_outdoor/first_fly_outdoor1.png
    :align: center
 
-.. image:: ../../images/p450/first_fly/2-4000mah.png
-   :height: 800px
-   :width: 800px
-   :scale: 50%
-   :alt: None
+除图上的工具外，我们还需要携带一根USB数据线用于无人机的传感器校验，和折叠座凳用于放置电脑。
+
+我们在室外飞行给无人机使用的电源是4S的航母电池，这种航母电池一个电芯的安全使用电压是3.6~4.2V，若电压高于4.2则
+电池处于过充状态，电压低于3.6电池处于过放状态，过充过放都会影响电池的使用寿命，更严重者甚至会导致电池自燃或爆
+炸。所以我们在进行室外飞行时，需要将测电计插上电池监控电池电压。
+
+.. image:: ../../images/p450/first_fly_outdoor/first_fly_outdoor2.png
    :align: center
 
-遥控器电池
-
-.. image:: ../../images/p450/first_fly/2-rcbattery.png
-   :height: 912px
-   :width: 807px
-   :scale: 40%
-   :alt: None
-   :align: center
-
-安全绳
-
-.. image:: ../../images/p450/first_fly/2-safestring.png
-   :height: 434px
-   :width: 769px
-   :scale: 60%
-   :alt: None
-   :align: center
+使用测电器（BB响），首先我们将电池的排线插头无凸起的一面向上，然后将插头从测电器的第一根插针插入，听到测电器BB的响声就表
+示插入正常。我们就可以通过测电器观察电池电量，最先显示的是电池的总电压，然后会分别显示每块电芯的电压。
 
 
-qgc远程连接到飞机
+.. image:: ../../images/p450/first_fly_outdoor/first_fly_outdoor8.png
+   
+
+
+.. image:: ../../images/p450/first_fly_outdoor/first_fly_outdoor9.png
+   
+
+.. attention::
+   电池不用时，需保存在电池柜。保存电压需维持在总电压的2/3,这里我们用的4S就需要维持在11.2V左右。
+
+QGC远程连接到飞机
 -----------------
 
-首先连接到飞机的数传wifi，命名为amov-uav#####,“#####”代表出厂序列号。
+将无人机上电启动，并将遥控器开机，遥控器开机时所有挡杆拨到最上方。上电完成后，我们通过笔记本电脑去连接无人机的飞控，需要
+先连接到无人机的wifi进入局域网。无人机的wifi名为amov-uavXXXXX，可以通过无人机上的标签获取到。然后，我们打开QGC软件创建
+一个TCP连接，连接的IP同样可以在无人机标签上获取，一般为192.168.10.xxx，端口号为6000。
 
-.. image:: ../../images/p450/first_fly/3-connectwifi.png
-   :height: 184px
-   :width: 453px
-   :scale: 80%
-   :alt: None
-   :align: center
-
-密码为12345678
-
-电脑连上飞机的数传wifi后，打开QGC地面站，在通讯连接下面选择“添加”
-
-.. image:: ../../images/p450/first_fly/3-addwifi.png
-
-
-
-
-类型选择“	TCP”，主机地址为“192.168.10.###”，“###”为wifi名字的后三位数字。端口号为“6000”。
-
-.. image:: ../../images/p450/first_fly/3-tcp-ip.png
-   :height: 317px
-   :width: 417px
-   :scale: 90%
-   :alt: None
-   :align: center
-
-
-
-然后点击“连接”，连接成功后如下图所示
-
-.. image:: ../../images/p450/first_fly/3-connectsuccess.png
-
-.. attention::
-    如果做无人机室外测试，需要在地面站修改参数EKF2_AID_MASK，EKF2_HGT_MODE，详细操作如下：
-
-    首先点击参数（Parameters）按钮，进入参数修改界面，如下。
-
-    .. image:: ../../images/p450/first_fly_outdoor/first_fly_outdoor1.png
-
-    在search栏输入aid，选择EKF2_AID_MASK参数
-
-    .. image:: ../../images/p450/first_fly_outdoor/first_fly_outdoor2.png
-
-    在窗口右上侧会弹出子页面,如下图所示。
-
-    .. image:: ../../images/p450/first_fly_outdoor/first_fly_outdoor3.png
+.. image:: ../../images/p450/first_fly_outdoor/first_fly_outdoor10.png
    
-   这里我们使用默认选择use GPS作为室外飞行的定位数据来源。
 
-   在search栏输入hgt,选择EKF2_HGT_MODE参数栏
+连上飞机后，通常需要校准来消除传感器因颠簸和环境因素产生的误差。我们点击地面站的传感器一栏，分别对各个传感器进行校准，
+校准的步骤根据地面站的操作，校准完飞控需要重启才能生效。
 
-    .. image:: ../../images/p450/first_fly_outdoor/first_fly_outdoor4.png
+.. image:: ../../images/p450/first_fly_outdoor/first_fly_outdoor4.png
+   :align: center
 
-    在窗口右上弹出的子页面上，点击下拉菜单，选择Barometric pressure，如下图所示
+同时我们需要将飞控的定位来源更改，点击参数，在搜索栏输入aid，选择EKF2_AID_MASK这个参数，设置为use GPS并保存。
 
-    .. image:: ../../images/p450/first_fly_outdoor/first_fly_outdoor5.png
+.. image:: ../../images/p450/first_fly_outdoor/first_fly_outdoor5.png
+   :align: center
 
-    最后保存退出。
+再输入hgt，点击EKF2_HGT_MODE这个参数，修改为Barometric Pressure，然后再重启飞控。
 
+.. image:: ../../images/p450/first_fly_outdoor/first_fly_outdoor6.png
+   :align: center
 
-设置完参数后，我们需要在QGC中先将飞控重启一下，操作如下，
+飞控重启并连接后，我们点击卫星的标志查看GPS的状态，当GPS卫星数达到12颗星及以上并进入3D GPS Lock状态，代表飞机的定位数据良好，
+然后我们试着将遥控器的SWC摇杆拨到中间将无人机切入POSITION模式，并在地面站观察无人机是否进入PISITION，若正常进入即可解锁起飞。
 
-.. image:: ../../images/p450/first_fly/重启飞控1.png
-
-点击红框所圈出的图标，进入如下界面
-
-.. image:: ../../images/p450/first_fly/重启飞控2.png
-
-选择MAVLink Console，进入MAVLink控制终端，输入reboot,回车，听到飞控重启的提示音，即重启飞控成功。
-
-.. image:: ../../images/p450/first_fly/重启飞控3.png
-
-
-等待飞控重启完成后，无人机的航灯绿色常亮且QGC上无人机的卫星数量在13颗及以上时，即可将遥控器切定点进行室外飞行。
-
-
+.. image:: ../../images/p450/first_fly_outdoor/first_fly_outdoor7.png
+   :align: center
 
 视频演示
 -------------------------
 
 .. raw:: html
+
+    <iframe width="696" height="422" src="//player.bilibili.com/player.html?aid=723895958&bvid=BV1AS4y1C7Me&cid=505591195&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
 
